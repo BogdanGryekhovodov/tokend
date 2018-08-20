@@ -2050,6 +2050,9 @@ fieldset[disabled] .btn-danger.active {
   background-color: #1669ba;
   border-color: #1669ba; }
 
+.btn-request {
+  padding: 12px 26px !important; }
+
 .btn-dark:hover,
 .btn-dark:active,
 .btn-dark:focus {

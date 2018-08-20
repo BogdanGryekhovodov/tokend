@@ -602,6 +602,16 @@ a {
     user-select: none; } }
 
 /* 2.2.1 Navbar: Brand */
+.svg-color {
+  fill: white;
+  -webkit-transform: scale(1.07);
+  transform: scale(1.07); }
+
+.logo-svg {
+  width: 100px;
+  height: 40px;
+  margin-top: 8px; }
+
 .navbar-brand {
   height: 58px;
   width: 167px;
@@ -743,6 +753,9 @@ a {
   -webkit-transition: ease-in color .15s;
   transition: ease-in color .15s; }
 
+.navbar-main > li:nth-last-child(1) > a {
+  margin-right: 30px; }
+
 .navbar-main > li.active > a,
 .navbar-main > li.open > a,
 .navbar-main > li:hover > a,
@@ -756,7 +769,7 @@ a {
   color: #1e88e5; }
 
 .page-navbar .navbar-buttons > li > a {
-  font-size: 14px; }
+  font-size: 16px; }
 
 @media (max-width: 1199px) {
   .navbar-main > li > a {
@@ -988,7 +1001,7 @@ a {
   /* -webkit-transform: translateX(-50%);
   transform: translateX(-50%); */ }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .banner-slogan {
     position: fixed;
     -webkit-transform: translateX(-50%);
@@ -996,9 +1009,7 @@ a {
     z-index: 1000;
     left: 50%;
     top: 115px;
-    /* -webkit-transform: translateX(-50%);
-      transform: translateX(-50%); */ } }
-
+} } */
 .banner-slogan:after {
   display: block;
   content: "";
@@ -1021,7 +1032,7 @@ a {
   margin-right: auto;
   color: #fff;
   font-weight: 600;
-  text-transform: capitalize; }
+  /* text-transform: capitalize; */ }
 
 .slogan-desc {
   max-width: 700px;
@@ -1080,7 +1091,7 @@ a {
 /* 2.3.4 Banner: Image */
 .page-banner-home.page-banner .banner-image {
   position: relative;
-  margin: 405px 0 0 0;
+  margin: 30px 0 0 0;
   text-align: right;
   z-index: 1000; }
 
@@ -1301,15 +1312,17 @@ a {
   height: 750px; }
 
 .page-banner-home .slogan-desc {
-  font-size: 20px; }
+  font-size: 24px;
+  letter-spacing: 0.1px; }
 
 .page-banner-home .banner-slogan,
 .page-banner-center {
   text-align: center; }
 
 .page-banner-home .slogan-title {
-  font-size: 42px;
+  font-size: 55px;
   font-weight: bold;
+  letter-spacing: 0.3px;
   line-height: 48px; }
 
 .page-banner-home .banner-image {
@@ -7753,6 +7766,9 @@ html:not(.mobile) .person:hover .person-actions > * {
   float: left;
   height: 100%;
   min-height: 1px; }
+
+.slick-slide:hover {
+  cursor: pointer; }
 
 [dir='rtl'] .slick-slide {
   float: right; }
