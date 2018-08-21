@@ -1730,8 +1730,8 @@ a.panel:hover,
   max-width: 700px; }
 .section-center .section-title__blue {
 color: #197FE3;
-font-size: 24px;
-padding: 20px;
+font-size: 20px;
+padding: 10px;
  }
 
 .panel-buy__caption {
@@ -1759,8 +1759,7 @@ padding: 20px;
 
 
 .section-center .section-title__big {
-font-size: 28px;
-font-weight: bold; }
+font-size: 24px; }
 
 .section-center,
 .section-center .actions {
@@ -1797,7 +1796,7 @@ font-weight: bold; }
   }
 
   .section-text {
-    font-size: 24px;
+    font-size: 16px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -1809,28 +1808,28 @@ font-weight: bold; }
   }
 
   .panel-buy__evaluete {
-    font-size: 33px;
+    font-size: 24px;
     font-weight: bold;
    
     letter-spacing: 0.2px;
   }
 
   .panel-buy {
-    width: 470px;
+    width: 420px;
     margin-top: 20px;
 
     &:nth-child(1) {
-      margin-right: 30px;
+      margin-right: 20px;
     }
 
     .panel-buy__btn {
       width: 194px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
 
     .panel-buy__more {
-      font-size: 20px;
+      font-size: 16px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -1842,7 +1841,7 @@ font-weight: bold; }
     }
 
     .panel-buy__price {
-      font-size: 35px;
+      font-size: 24px;
       font-weight: bold;
       font-style: normal;
       font-stretch: normal;
@@ -1869,8 +1868,8 @@ font-weight: bold; }
       line-height: 35px;
       font-weight: bolder;
       position: relative; 
-      margin-left: 55px;
-      font-size: 20px;
+      margin-left: 35px;
+      font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -1880,13 +1879,37 @@ font-weight: bold; }
 
     .features__icon{
       margin-right: 10px;
-      font-size: 30px;
+      font-size: 20px;
       color: #197fe3;
       position: absolute;
-      left: -55px;;
+      left: -35px;;
       top: 12px;
     }
   }
+
+  .infographics {
+    display: flex;
+    max-width: 1170px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .infographics {
+    .section-title {
+      color: #fff;
+    } 
+
+    .section-desc {
+      color: rgba(196, 227, 255, 0.8);
+    }
+
+    .infographics__image {
+      width: 500px;
+      height: 300px;
+      background-color: #000;
+    }
+  }
+
 
 .image span {
   display: block; }
@@ -1942,7 +1965,7 @@ font-weight: bold; }
   color: #fff; }
 
   .section-blue .section-title {
-    font-size: 40px;
+    font-size: 24px;
     font-weight: bold;
     letter-spacing: 0.2px;
   }
