@@ -338,6 +338,8 @@ var checkBoxes = function (container)
   });
 };
 
+
+
 $(document).ready(function(){
   $('.browser__slider').slick({
     slidesToShow: 1,
@@ -348,6 +350,8 @@ $(document).ready(function(){
     arrows: false,
   });
 });
+
+
 
 
 // text fade-in and out ------------------------------------------------------------------------

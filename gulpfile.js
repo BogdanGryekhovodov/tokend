@@ -14,13 +14,13 @@ gulp.task('serve', ['sass'], function() {
         server: "./app"
     });
 
-    gulp.watch("app/css/*.css", ['sass']);
+    gulp.watch("app/scss/*.scss", ['sass']);
     gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src("app/css/*.css")
+    return gulp.src("app/scss/*.scss")
         .pipe(sass())
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest("app/css/"))

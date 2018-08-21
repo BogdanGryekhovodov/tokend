@@ -623,13 +623,10 @@ a {
 
 @media (max-width: 767px) {
   .page-navbar .container {
-    padding: 0 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    padding: 0 10px; 
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+    justify-content: space-between;
+  }
   .page-navbar .navbar-header {
     position: relative;
     z-index: 2;
@@ -759,18 +756,22 @@ a {
   -webkit-transition: ease-in color .15s;
   transition: ease-in color .15s; }
 
+.navbar-main > li:nth-last-child(1) > a {
 @media all and (min-width: 991px) {
-  .navbar-main > li:nth-last-child(1) > a {
-    margin-right: 30px; } }
+  margin-right: 30px;   
+}
+}
 
 a.panel:hover,
 .panel-link:hover,
 .panel.active {
-  border-color: #1e88e5; }
-
+	border-color: #1e88e5;
+}
 @media (max-width: 767px) {
   .panel-block {
-    padding: 24px; } }
+    padding: 24px;
+  }
+}
 
 .navbar-main > li.active > a,
 .navbar-main > li.open > a,
@@ -835,13 +836,11 @@ a.panel:hover,
     transition-timing-function: cubic-bezier(0.56, 1.19, 0.2, 1.05);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
+
   .navbar-open .page-navbar .navbar-buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    justify-content: center;
+  }
   .navbar-open.navbar-closing .page-navbar .navbar-buttons,
   .navbar-open .navbar-main > li:first-child {
     -webkit-transition-delay: 0.05s;
@@ -1020,9 +1019,12 @@ a.panel:hover,
     padding-top: 80px; } }
 
 /* 2.3.1 Banner: Slogan */
-@media all and (min-width: 991px) {
-  .banner-slogan .btn {
-    display: none; } }
+.banner-slogan {
+  .btn   {
+    @media all and (min-width: 991px) {
+      display: none;
+    }
+  }}
 
 /* @media (min-width: 768px) {
   .banner-slogan {
@@ -1129,7 +1131,8 @@ a.panel:hover,
 .banner-tabs,
 .banner-breadcrumbs {
   margin-top: 20px;
-  text-align: left; }
+  text-align: left;
+   }
 
 .banner-tabs.banner-tabs-pricing {
   margin-top: 30px; }
@@ -1335,7 +1338,8 @@ a.panel:hover,
   height: 750px; }
 
 .page-banner-home .slogan-desc {
-  font-size: 20px; }
+  font-size: 20px;
+ }
 
 .page-banner-home .banner-slogan,
 .page-banner-center {
@@ -1705,7 +1709,11 @@ a.panel:hover,
 
 .section-title {
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+
+  
+ 
+}
 
 .section-desc {
   margin-top: -4px;
@@ -1720,34 +1728,39 @@ a.panel:hover,
 .section-center .section-desc,
 .section-center .section-title {
   max-width: 700px; }
-
 .section-center .section-title__blue {
-  color: #197FE3;
-  font-size: 24px;
-  padding: 20px; }
+color: #197FE3;
+font-size: 24px;
+padding: 20px;
+ }
 
 .panel-buy__caption {
-  position: relative; }
-  .panel-buy__caption::before {
+  position: relative;
+  &::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 1px;
     top: 0;
     left: 0;
-    background-color: #b5b4b4; }
-  .panel-buy__caption::after {
+    background-color: #b5b4b4;
+}
+  &::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: #b5b4b4; }
+    background-color: #b5b4b4;
+}
+}
+
+
 
 .section-center .section-title__big {
-  font-size: 28px;
-  font-weight: bold; }
+font-size: 28px;
+font-weight: bold; }
 
 .section-center,
 .section-center .actions {
@@ -1774,16 +1787,17 @@ a.panel:hover,
   content: "";
   clear: both; }
 
-.section-title.flexible-settings {
-  font-size: 40px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0.2px; }
+  .section-title.flexible-settings {
+    font-size: 40px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.2px;
+  }
 
-.section-text {
-  font-size: 24px;
+  .section-text {
+    font-size: 24px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -1791,68 +1805,88 @@ a.panel:hover,
   letter-spacing: 0.1px;
   text-align: center;
   color: rgba(154, 211, 248, 0.8);
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  }
 
-.panel-buy__evaluete {
-  font-size: 33px;
-  font-weight: bold;
-  letter-spacing: 0.2px; }
-
-.panel-buy {
-  width: 470px;
-  margin-top: 20px; }
-  .panel-buy:nth-child(1) {
-    margin-right: 30px; }
-  .panel-buy .panel-buy__btn {
-    width: 194px;
-    margin-top: 20px; }
-  .panel-buy .panel-buy__more {
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.75;
-    letter-spacing: -0.2px;
-    text-align: center;
-    color: rgba(10, 163, 251, 0.8);
-    text-decoration: underline; }
-  .panel-buy .panel-buy__price {
-    font-size: 35px;
+  .panel-buy__evaluete {
+    font-size: 33px;
     font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1;
-    letter-spacing: -0.4px;
-    text-align: center;
-    color: #000000;
-    margin: 30px 0; }
-  .panel-buy .panel-buy__link {
-    padding: 0 30px 50px; }
-  .panel-buy .features {
-    padding: 10px 0 0;
-    list-style: none;
-    text-align: left; }
-  .panel-buy .features__item {
-    padding-top: 10px;
-    color: rgba(0, 0, 0, 0.6);
-    font-style: 20px;
-    line-height: 35px;
-    font-weight: bolder;
-    position: relative;
-    margin-left: 55px;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.75;
-    letter-spacing: -0.1px; }
-  .panel-buy .features__icon {
-    margin-right: 10px;
-    font-size: 30px;
-    color: #197fe3;
-    position: absolute;
-    left: -55px;
-    top: 12px; }
+   
+    letter-spacing: 0.2px;
+  }
+
+  .panel-buy {
+    width: 470px;
+    margin-top: 20px;
+
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
+
+    .panel-buy__btn {
+      width: 194px;
+      margin-top: 20px;
+    }
+
+
+    .panel-buy__more {
+      font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: -0.2px;
+  text-align: center;
+  color: rgba(10, 163, 251, 0.8);
+  text-decoration: underline;
+    }
+
+    .panel-buy__price {
+      font-size: 35px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: -0.4px;
+      text-align: center;
+      color: #000000;
+      margin: 30px 0;
+    }
+
+    .panel-buy__link {
+      padding: 0 30px 50px;
+    }
+    .features {
+      padding: 10px 0 0;
+      list-style: none;
+      text-align: left;
+    }
+
+    .features__item {
+      padding-top: 10px;
+      color: rgba(0, 0, 0, 0.6);
+      font-style: 20px;
+      line-height: 35px;
+      font-weight: bolder;
+      position: relative; 
+      margin-left: 55px;
+      font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.75;
+  letter-spacing: -0.1px;
+    }
+
+    .features__icon{
+      margin-right: 10px;
+      font-size: 30px;
+      color: #197fe3;
+      position: absolute;
+      left: -55px;;
+      top: 12px;
+    }
+  }
 
 .image span {
   display: block; }
@@ -1907,10 +1941,11 @@ a.panel:hover,
 .section-blue .section-title {
   color: #fff; }
 
-.section-blue .section-title {
-  font-size: 40px;
-  font-weight: bold;
-  letter-spacing: 0.2px; }
+  .section-blue .section-title {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+  }
 
 .section-blue .section-desc,
 .section-blue p {
@@ -2484,15 +2519,10 @@ a:hover > .service-icon-v2 {
 /* 3.7 Section: Features */
 .features-center {
   text-align: center; }
-
 .features-center__info {
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  text-align: center; 
+justify-content: center;
+display: flex;}
 
 .feature {
   padding-top: 20px;
@@ -7863,6 +7893,7 @@ html:not(.mobile) .person:hover .person-actions > * {
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
   z-index: 1000; }
+  
 
 .slick-list {
   position: relative;
