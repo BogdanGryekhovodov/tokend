@@ -5223,8 +5223,8 @@ button.close {
   opacity: 0; }
 
 .modal-backdrop.in {
-  filter: alpha(opacity=90);
-  opacity: .9; }
+  filter: alpha(opacity=50);
+  opacity: .5; }
 
 .modal-header {
   min-height: 16.42857143px;
@@ -11736,6 +11736,26 @@ button.close {
 .icon-other-problems:before {
   content: "\e953"; }
 
+.page-section.infogr {
+  border-bottom: none; }
+  @media all and (min-width: 768px) {
+    .page-section.infogr {
+      text-align: left; } }
+  .page-section.infogr .section-desc {
+    color: rgba(255, 255, 255, 0.8); }
+    @media all and (min-width: 768px) {
+      .page-section.infogr .section-desc {
+        text-align: left; } }
+  .page-section.infogr .section-title {
+    color: #fff; }
+    @media all and (min-width: 768px) {
+      .page-section.infogr .section-title {
+        text-align: left; } }
+  .page-section.infogr .black-square {
+    width: 100%;
+    height: 100%;
+    background-color: #000; }
+
 .page-section.blue-background {
   background: #026FCE;
   background: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
@@ -11744,3 +11764,36 @@ button.close {
   .page-section.blue-background .banner-tabs {
     max-width: 930px;
     margin: 0 auto; }
+    @media all and (max-width: 1040px) {
+      .page-section.blue-background .banner-tabs {
+        max-width: 90%; } }
+    @media all and (max-width: 1040px) {
+      .page-section.blue-background .banner-tabs .tabs-container {
+        padding: 0 10px; } }
+    @media all and (min-width: 639px) and (max-width: 1040px) {
+      .page-section.blue-background .banner-tabs .tabs-container .slick-list {
+        margin: 0 20px;
+        overflow: hidden; } }
+    .page-section.blue-background .banner-tabs .tabs-container .btn-prev {
+      top: unset;
+      bottom: 45px;
+      left: 20px; }
+    .page-section.blue-background .banner-tabs .tabs-container .btn-next {
+      top: unset;
+      bottom: 45px;
+      right: 0; }
+
+.choose-modal .modal-title {
+  text-align: center; }
+
+.choose-modal .modal-small-title {
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center; }
+
+.choose-modal .close {
+  top: 20px;
+  right: 30px;
+  font-size: 55px;
+  font-weight: 100;
+  color: #000; }

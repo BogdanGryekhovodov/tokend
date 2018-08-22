@@ -351,9 +351,6 @@ $(document).ready(function(){
   });
 });
 
-
-
-
 // text fade-in and out ------------------------------------------------------------------------
 // var bannerSlogan = $('.banner-slogan .container');
 // var offset = 100;
