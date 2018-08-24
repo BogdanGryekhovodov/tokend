@@ -996,18 +996,6 @@ a {
   padding: 115px 0 60px;
   color: #fff; }
 
-.page-banner:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  content: "";
-  width: 100%;
-  min-width: 700px;
-  background: #026FCE;
-  background: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
-  background-image: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%); }
-
 .page-banner .container {
   height: 100%;
   position: relative;
@@ -1027,10 +1015,6 @@ a {
     padding-top: 80px; } }
 
 /* 2.3.1 Banner: Slogan */
-@media all and (min-width: 991px) {
-  .banner-slogan .btn {
-    display: none; } }
-
 /* @media (min-width: 768px) {
   .banner-slogan {
     position: fixed;
@@ -1342,14 +1326,20 @@ a {
 
 /* 2.4.7 Banner: Home */
 .page-banner-home:after {
-  height: 750px; }
+  height: 750px;
+  z-index: -1;
+  display: none; }
 
 .page-banner-home .slogan-desc {
   font-size: 20px; }
 
 .page-banner-home .banner-slogan,
 .page-banner-center {
-  text-align: center; }
+  text-align: left; }
+  @media (max-width: 991px) {
+    .page-banner-home .banner-slogan,
+    .page-banner-center {
+      text-align: center; } }
 
 .page-banner-home .slogan-title {
   font-size: 42px;
@@ -1361,7 +1351,19 @@ a {
 
 @media (min-width: 768px) {
   .page-banner-home {
-    padding-bottom: 0; } }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 0;
+    height: 750px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .page-banner-home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 890px; } }
 
 @media (max-width: 767px) {
   .page-banner-home {
@@ -5082,7 +5084,13 @@ html:not(.mobile) .person:hover .person-actions > * {
   text-transform: uppercase; }
 
 .browser-xlg {
-  height: 580px; }
+  height: 480px; }
+  @media all and (max-width: 1200px) {
+    .browser-xlg {
+      height: 445px; } }
+  @media all and (max-width: 950px) {
+    .browser-xlg {
+      height: 515px; } }
 
 .browser-header {
   position: absolute;
@@ -5180,9 +5188,9 @@ html:not(.mobile) .person:hover .person-actions > * {
   background-color: #333d45; }
 
 .phone-xlg {
-  height: 445px;
-  width: 215px;
-  padding: 50px 10px;
+  height: 340px;
+  width: 164px;
+  padding: 36px 7px;
   border-radius: 30px; }
 
 .phone-header {
@@ -5214,26 +5222,16 @@ html:not(.mobile) .person:hover .person-actions > * {
   width: 100%; }
 
 .phone-btn {
-  height: 34px;
-  width: 34px;
-  margin: 8px auto;
+  height: 20px;
+  width: 20px;
+  margin: 21px auto;
   background-color: #22292e;
   border-radius: 100%; }
 
-.phone-btn::after {
-  content: '';
-  position: absolute;
-  background-color: #333D45;
-  width: 31px;
-  left: 43%;
-  top: 20%;
-  height: 31px;
-  border-radius: 50%; }
-
 @media (max-width: 1199px) {
   .phone-xlg {
-    height: 405px;
-    width: 200px; } }
+    height: 340px;
+    width: 164px; } }
 
 /* 5.3 Image: Storage How it works */
 .image-storage-how {
@@ -8108,7 +8106,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 70px; }
 
 .blue-background__image {
-  margin-left: -50px; }
+  width: 100%; }
 
 @media all and (min-width: 991px) {
   .footer-nav ul {
@@ -8134,13 +8132,17 @@ input[type=number]::-webkit-outer-spin-button {
 .point-nav {
   position: fixed;
   z-index: 1001;
-  right: 1px;
+  right: 15px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
+  @media all and (max-width: 991px) {
+    .point-nav {
+      display: none; } }
 
 .point-nav-items {
-  list-style-type: none; }
+  list-style-type: none;
+  padding: 0; }
 
 .point-nav-item {
   text-align: right; }
@@ -8152,7 +8154,10 @@ input[type=number]::-webkit-outer-spin-button {
 .point-nav span {
   float: right;
   -webkit-transform: scale(0.6);
-          transform: scale(0.6); }
+          transform: scale(0.6);
+  background-color: #1669BA;
+  color: white;
+  padding: 0 5px; }
 
 .point-nav-dot {
   width: 10px;
@@ -8184,3 +8189,20 @@ input[type=number]::-webkit-outer-spin-button {
 
 .navbar-main .active {
   color: #fff; }
+
+.top-background {
+  width: 100%;
+  height: 750px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  min-width: 700px;
+  background: #026FCE;
+  background: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
+  background-image: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%); }
+  @media (max-width: 768px) {
+    .top-background {
+      height: 350px; } }
