@@ -763,7 +763,7 @@ a {
   .navbar-main > li:nth-last-child(1) > a {
     margin-right: 30px; } }
 
-a.panel:hover,
+.panel-block-icon.panel:hover,
 .panel-link:hover,
 .panel.active {
   border-color: #1e88e5; }
@@ -771,6 +771,13 @@ a.panel:hover,
 @media (max-width: 767px) {
   .panel-block {
     padding: 24px; } }
+
+.rotating-block .rotating-block__icon {
+  height: 70px;
+  width: 70px; }
+
+.rotating-block .panel-block-icon.panel:hover {
+  border-color: #666666; }
 
 .navbar-main > li.active > a,
 .navbar-main > li.open > a,
@@ -1050,7 +1057,7 @@ a.panel:hover,
   padding-bottom: 0; }
 
 .slogan-title {
-  max-width: 610px;
+  max-width: 1030px;
   margin-left: auto;
   margin-right: auto;
   color: #fff;
@@ -1058,7 +1065,7 @@ a.panel:hover,
   /* text-transform: capitalize; */ }
 
 .slogan-desc {
-  max-width: 700px;
+  max-width: 850px;
   margin: -16px auto 16px auto;
   color: rgba(196, 227, 255, 0.8);
   font-size: 18px;
@@ -1160,6 +1167,9 @@ a.panel:hover,
   line-height: 18px;
   white-space: normal;
   text-transform: capitalize; }
+
+.banner-tabs .nav-tabs li > .banner-tab__item {
+  text-transform: none; }
 
 .banner-tabs .nav-tabs li,
 .banner-breadcrumbs li {
@@ -1690,6 +1700,10 @@ a.panel:hover,
 .mobile-slider2 .slick-slide:hover {
   cursor: default; }
 
+@media all and (min-width: 768px) {
+  .mobile-slider2 .section-row {
+    height: 210px; } }
+
 .page-section:last-child {
   border: none; }
 
@@ -1803,6 +1817,9 @@ a.panel:hover,
 .panel-buy {
   width: 420px;
   margin-top: 20px; }
+  @media all and (max-width: 500px) {
+    .panel-buy {
+      width: 100%; } }
   @media all and (min-width: 991px) {
     .panel-buy:nth-child(1) {
       margin-right: 20px; } }
@@ -2435,6 +2452,9 @@ a.package:hover {
 
 .service:hover {
   border-color: #e6e9eb; }
+
+.key-features .service:hover {
+  border-color: transparent; }
 
 .service-body p {
   margin-bottom: 24px;
@@ -8061,3 +8081,106 @@ input[type=number]::-webkit-outer-spin-button {
   padding-top: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 0; }
+
+.slider-features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left; }
+  .slider-features .slider-features__item {
+    padding: 10px;
+    margin-left: 10px;
+    position: relative; }
+    .slider-features .slider-features__item::before {
+      content: '';
+      font-size: 30px;
+      position: absolute;
+      left: -12px;
+      top: 18px;
+      height: 7px;
+      width: 7px;
+      background-color: #498CE4;
+      border-radius: 50%;
+      display: inline-block; }
+
+.key-features__images {
+  width: 70px;
+  height: 70px; }
+
+.blue-background__image {
+  margin-left: -50px; }
+
+@media all and (min-width: 991px) {
+  .footer-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.footer-nav ul li {
+  margin-right: 40px; }
+
+#fund {
+  position: absolute;
+  top: 2px;
+  left: 0; }
+
+#choose iframe {
+  height: 895px !important; }
+  @media all and (max-width: 560px) {
+    #choose iframe {
+      height: 930px !important; } }
+
+/* Vertical Fixed Navigation */
+.point-nav {
+  position: fixed;
+  z-index: 1001;
+  right: 1px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+.point-nav-items {
+  list-style-type: none; }
+
+.point-nav-item {
+  text-align: right; }
+
+.point-nav-item a {
+  text-decoration: none;
+  display: inline-block; }
+
+.point-nav span {
+  float: right;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6); }
+
+.point-nav-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #1669BA;
+  border-radius: 50%;
+  position: relative;
+  top: 4px;
+  margin-left: 14px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s; }
+
+.point-nav-label {
+  color: #1669BA;
+  opacity: 0;
+  -webkit-transition: opacity .3s, -webkit-transform .2s;
+  transition: opacity .3s, -webkit-transform .2s;
+  transition: transform .2s, opacity .3s;
+  transition: transform .2s, opacity .3s, -webkit-transform .2s; }
+
+.point-nav-item:hover .point-nav-label {
+  opacity: 1; }
+
+.point-nav-item:hover span, .point-active span {
+  -webkit-transform: scale(1);
+          transform: scale(1); }
+
+.navbar-main .active {
+  color: #fff; }

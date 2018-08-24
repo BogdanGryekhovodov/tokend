@@ -338,20 +338,83 @@ var checkBoxes = function (container)
   });
 };
 
-
-
+//  ---------------------------------------- phone and desktop slider -----------------------------------------------
 $(document).ready(function(){
-  $('.browser__slider').slick({
+  $('.desktop__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     pauseOnHover: false,
     pauseOnFocus: false,
     arrows: false,
+    asNavFor: '.phone__slider'
+  });
+  $('.phone__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    arrows: false,
+    asNavFor: '.desktop__slider'
+
   });
 });
+//  ---------------------------------------- phone and desktop slider -----------------------------------------------
 
-// text fade-in and out ------------------------------------------------------------------------
+
+//  ---------------------------------------- smooth nav scroll -----------------------------------------------
+
+jQuery(document).ready(function ($) {
+	var contentSections = $('#home, #benefits, #features, #fund'),
+    navigationItems = $('.point-nav a');
+    menuNavigationItems = $('.navbar-main a');
+    
+
+	updateNavigation();
+	$(window).on('scroll', function () {
+		updateNavigation();
+	});
+
+	//smooth scroll to the section
+	navigationItems.on('click', function (event) {
+		event.preventDefault();
+		smoothScroll($(this).attr('href'));
+  });
+  
+	menuNavigationItems.on('click', function (event) {
+		event.preventDefault();
+		smoothScroll($(this).attr('href'));
+  });
+
+	function updateNavigation() {
+		contentSections.each(function () {
+			$this = $(this);
+			var activeNavigationItem = $('.point-nav a[href="#' + $this.attr('id') + '"]');
+			var activeMenuNavigationItem = $('.navbar-main a[href="#' + $this.attr('id') + '"]');
+
+			if ($(window).scrollTop() >= $this.offset().top - $(window).height() / 2) {
+				navigationItems.removeClass('point-active');
+				activeNavigationItem.addClass('point-active');
+				menuNavigationItems.removeClass('active');
+				activeMenuNavigationItem.addClass('active');
+			}
+		});
+	}
+
+	function smoothScroll(target) {
+		$('body, html').animate(
+			{ 'scrollTop': $(target).offset().top },
+			600
+		);
+	}
+});
+
+//  ---------------------------------------- smooth nav scroll -----------------------------------------------
+
+
+
+// ----------------------------------------------------------text fade-in and out ------------------------------------------------------------------------
 // var bannerSlogan = $('.banner-slogan .container');
 // var offset = 100;
 // var animationFinishScrollHeight = 220;
@@ -381,4 +444,4 @@ $(document).ready(function(){
   
 // });
 
-// text fade-in and out ------------------------------------------------------------------------
+// ----------------------------------------------------------text fade-in and out ------------------------------------------------------------------------
