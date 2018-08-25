@@ -1,10 +1,10 @@
 .responsive-image .browser {
-  width: 700px;
+  width: 635px;
   -webkit-box-shadow: 0 10px 60px -10px rgba(37, 45, 51, 0.5);
   box-shadow: 0 10px 60px -10px rgba(37, 45, 51, 0.5); }
   @media all and (max-width: 1200px) {
     .responsive-image .browser {
-      width: 650px; } }
+      width: 500px; } }
 
 .responsive-image.desktop-size .browser {
   min-width: 768px; }
@@ -84,7 +84,7 @@
 
 @media (max-width: 1199px) {
   .page-banner-home .responsive-image .phone {
-    right: -30px; } }
+    right: -20px; } }
 
 @media (max-width: 991px) {
   .page-banner-home .responsive-image .phone {
@@ -220,11 +220,11 @@
 .cp-navbar .navbar-header {
   float: none;
   margin-bottom: 30px;
-  text-align: center; }
+  text-align: center;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2); }
 
 .cp-navbar .navbar-header > svg {
-  -webkit-transform: scale(0.7);
-  transform: scale(0.7);
   float: left;
   margin-left: -5px; }
 
