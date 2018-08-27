@@ -413,6 +413,39 @@ jQuery(document).ready(function ($) {
 //  ---------------------------------------- smooth nav scroll -----------------------------------------------
 
 
+// ------------------------------------------smooth anchors----------------------------------------
+
+$('.smooth-anchors').click(function (e) {
+  e.preventDefault();
+
+  document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+  });
+});
+
+// ------------------------------------------smooth anchors----------------------------------------
+
+
+// ------------------------------------------show/hide point-nav----------------------------------------
+let $pointNav = $('.point-nav');
+
+function checkHeightFromTop() {
+let scrollTop = $(this).scrollTop();
+
+  if (scrollTop > $(window).height()) {
+    $pointNav.fadeIn('fast');
+  } else {
+    $pointNav.fadeOut('fast');
+  }
+} 
+
+checkHeightFromTop();
+
+$(window).scroll(() => {
+  checkHeightFromTop(); 
+});
+// ------------------------------------------show/hide point-nav----------------------------------------
+
 
 // ----------------------------------------------------------text fade-in and out ------------------------------------------------------------------------
 // var bannerSlogan = $('.banner-slogan .container');

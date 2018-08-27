@@ -2561,7 +2561,19 @@ a.package:hover {
   padding: 24px;
   border: 1px solid transparent;
   text-align: center;
-  border-radius: 3px; }
+  border-radius: 3px;
+
+.btn {
+  opacity: 0;
+  transition: all 0.5s ease;
+}}
+
+.key-features__images {
+  transform: translateY(0);
+
+  transition: all 0.3s ease;
+
+}
 
 @media (min-width: 992px) {
   .service {
@@ -2569,13 +2581,22 @@ a.package:hover {
     padding-right: 24px; } }
 
 .service:hover {
-  border-color: #e6e9eb; }
+  border-color: #e6e9eb;
+  transition: all 0.3s;
 
-  .key-features {
-    .service:hover {
-      border-color: transparent;
-    }
+
+  .key-features__images {
+    transform: translateY(-10px);
   }
+
+  .btn {
+    opacity: 1;
+    &:hover {
+    text-decoration: underline;
+
+    }
+  }}
+
 
 .service-body p {
   margin-bottom: 24px;
@@ -8273,9 +8294,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Vertical Fixed Navigation */
 .point-nav {
+  display: none;
   position: fixed;
   z-index: 1001;
-	right: 15px;
+	right: 25px;
 	top: 50%;
   transform: translateY(-50%);
   
@@ -8377,8 +8399,7 @@ position: absolute;
         font-size: 30px;
         position: absolute;
         left: -20px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 9px;
         height: 7px;
         width: 7px;
         background-color: #498CE4;
@@ -8392,6 +8413,7 @@ position: absolute;
   .wide-features__img {
     width: 100%;
     height: auto;
+    max-height: 285px;
   }
 
   .wide-features__text {
@@ -8533,3 +8555,6 @@ position: absolute;
 
   }
 }
+
+
+
