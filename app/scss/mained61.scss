@@ -8422,9 +8422,13 @@ position: absolute;
     
 }
 
-.wide-features--right {
+.wide-features.wide-features--right {
   .wide-features__list {
     margin-left: 30px;
+  }
+
+  .wide-features__img {
+    width: 300px;
   }
 }
 
@@ -8577,95 +8581,95 @@ position: absolute;
 
 .crm-webform-header-container,
 .crm-webform-label-content {
-      background: transparent;
+      background: transparent!important;
  }
 
 .crm-webform-submit-button {
-    padding: 0 60px;
+    padding: 0 60px!important;
 }
 
 .page-theme-transparent .content {
-   background: transparent;
+   background: transparent!important;
 }
 
 .crm-webform-iframe {
-   background-color: transparent;
+   background-color: transparent!important;
 }
 
 .crm-webform-input {
-   background-color: rgba(0, 0, 0, 0.2);
+   background-color: rgba(0, 0, 0, 0.2)!important;
 }
 
 .crm-webform-input,
 .crm-webform-input-label {
-    border-radius: 3px;
+    border-radius: 3px!important;
 }
 
 .crm-webform-input:hover, .crm-webform-select:hover select, .crm-webform-textarea:hover textarea, .crm-webform-checkbox-container:hover i, .crm-webform-input, .crm-webform-select select, .crm-webform-textarea textarea {
-    border-color: transparent;
+    border-color: transparent!important;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(196, 227, 255, 0.8);
-    opacity: 1; /* Firefox */
-    font-weight: 100;
-    font-sixe: 16px;
+    color: rgba(196, 227, 255, 0.8)!important;
+    opacity: 1!important; /* Firefox */
+    font-weight: 100!important;
+    font-sixe: 16px!important;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgba(196, 227, 255, 0.8);
-    font-weight: 100;
-    font-sixe: 16px;
+    color: rgba(196, 227, 255, 0.8)!important;
+    font-weight: 100!important;
+    font-sixe: 16px!important;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-     color: rgba(196, 227, 255, 0.8);
-     font-weight: 100;
-     font-sixe: 16px;
+     color: rgba(196, 227, 255, 0.8)!important;
+     font-weight: 100!important;
+     font-sixe: 16px!important;
 }
 
 .crm-webform-input, .crm-webform-select select, .crm-webform-textarea textarea {
-   font-family: "Raleway", Helvetica, Arial, sans-serif;
-   color: #fff;
+   font-family: "Raleway", Helvetica, Arial, sans-serif!important;
+   color: #fff!important;
 }
 
 
 input {
-    min-height: 55px;
+    min-height: 55px!important;
 }
 
 .crm-webform-input-label .fa {
-    top: 50%;
+    top: 50%!important;
     transform: translateY(-50%);
-    color: #fff;
-    border-color: #fff;
+    color: #fff!important;
+    border-color: #fff!important;
 }
 
 .crm-webform-header {
-    color: #fff;
+    color: #fff!important;
 }
 
 .crm-webform-input-label {
-   font-size: 16px;
+   font-size: 16px!important;
 }
 
 
 .crm-webform-input, .crm-webform-select select, .crm-webform-textarea textarea {
     font-family: "Raleway", Helvetica, Arial, sans-serif;
 
-    font-family: 'Raleway';
-    font-weight: 100;
-    font-size: 16px;
+    font-family: 'Raleway'!important;
+    font-weight: 100!important;
+    font-size: 16px!important;
 }
 
 .crm-webform-label-required-field:after,
 .crm-webform-label {
-    color: rgba(245, 245, 245, 0.8);
+    color: rgba(245, 245, 245, 0.8)!important;
 }
 
 
 .crm-webform-error .crm-webform-input+.tooltip, .crm-webform-error .crm-webform-form-container .crm-webform-textarea textarea+.tooltip {
-    display: none;
+    display: none!important;
 }
 
 @media all and (min-width: 930px) {
@@ -8675,45 +8679,45 @@ input {
   }
 
    .crm-webform-fieldset .row:nth-child(odd) {
-       float: left;
-      width: 50%;
+       float: left!important;
+      width: 50%!important;
   }
 
   .crm-webform-fieldset .row:nth-child(odd) .col-md-12 {
-     padding-right: 0;
+     padding-right: 0!important;
   }
 
   .crm-webform-fieldset .row:nth-child(even) {
-      float: right;
-      width: 50%;
+      float: right!important;
+      width: 50%!important;
   }   
 
 
   .crm-webform-fieldset .row:nth-last-child(1) {
-      float: initial;
+      float: initial!important;
 
   }   
 
  .crm-webform-fieldset .row:nth-child(even) .col-md-12 {
-    padding-left: 0;
+    padding-left: 0!important;
  }
 }
 
 .crm-webform-header {
-    font-size: 26px;
+    font-size: 26px!important;
 }
 
 
 
 .crm-webform-body {
-    margin-top: -20px;
+    margin-top: -20px!important;
 }
 
 .crm-webform-icon {
-    display: none;
+    display: none!important;
 }
 
 .data-bx-webform-submit-btn {
-    background: black;
-    font-family: 'Raleway';
+    background: black!important;
+    font-family: 'Raleway'!important;
 }
