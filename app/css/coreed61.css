@@ -4907,7 +4907,9 @@ a.panel-block-icon.panel-block-sm .link {
   border-bottom: 0; }
 
 .rotating-block .panel-block-icon {
-  padding: 30px; }
+  padding: 40px;
+  width: 300px;
+  margin: 0 auto; }
 
 .rotating-block .panel-icon {
   margin-bottom: 10px; }

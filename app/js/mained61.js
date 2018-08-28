@@ -366,7 +366,7 @@ $(document).ready(function(){
 //  ---------------------------------------- smooth nav scroll -----------------------------------------------
 
 jQuery(document).ready(function ($) {
-	var contentSections = $('#home, #benefits, #features, #fund'),
+	var contentSections = $('#pricing, #benefits, #features, #resources, #fund'),
     navigationItems = $('.point-nav a');
     menuNavigationItems = $('.navbar-main a');
     
@@ -397,7 +397,7 @@ jQuery(document).ready(function ($) {
 				navigationItems.removeClass('point-active');
 				activeNavigationItem.addClass('point-active');
 				menuNavigationItems.removeClass('active');
-				activeMenuNavigationItem.addClass('active');
+				// activeMenuNavigationItem.addClass('active');
 			}
 		});
 	}
@@ -428,11 +428,12 @@ $('.smooth-anchors').click(function (e) {
 
 // ------------------------------------------show/hide point-nav----------------------------------------
 let $pointNav = $('.point-nav');
+let offsetForPoints = 350;
 
 function checkHeightFromTop() {
 let scrollTop = $(this).scrollTop();
 
-  if (scrollTop > $(window).height()) {
+  if (scrollTop > offsetForPoints) {
     $pointNav.fadeIn('fast');
   } else {
     $pointNav.fadeOut('fast');
