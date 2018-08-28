@@ -8633,6 +8633,7 @@ input {
 .crm-webform-icon {
   display: none !important; }
 
-.data-bx-webform-submit-btn {
+.crm-webform-submit-button {
   background: black !important;
-  font-family: "Raleway" !important; }
+  font-family: "Raleway" !important;
+  font: bold 16px "Raleway", Helvetica, Arial, sans-serif !important; }
