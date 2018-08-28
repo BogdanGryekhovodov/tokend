@@ -445,6 +445,19 @@ $(window).scroll(() => {
   checkHeightFromTop(); 
 });
 // ------------------------------------------show/hide point-nav----------------------------------------
+setTimeout(function() {
+  // $('#bx_form_iframe_2').click(function() {
+  //   console.log(123);
+  //  });
+
+  var iframe = document.getElementById("bx_form_iframe_2");
+  console.log(document.getElementById("bx_form_iframe_2").contentWindow.document);
+
+   var innerDoc = iframe.contentWindow.document;
+   console.log(innerDoc.body);
+}, 2000);
+
+$(document).click(function(a) { console.log(a.target) });
 
 
 // ----------------------------------------------------------text fade-in and out ------------------------------------------------------------------------

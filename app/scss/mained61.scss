@@ -8557,4 +8557,163 @@ position: absolute;
 }
 
 
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyCMIT5lu.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v12/1Ptug8zYS_SKggPNyC0ITw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
+
+.crm-webform-header-container,
+.crm-webform-label-content {
+      background: transparent;
+ }
+
+.crm-webform-submit-button {
+    padding: 0 60px;
+}
+
+.page-theme-transparent .content {
+   background: transparent;
+}
+
+.crm-webform-iframe {
+   background-color: transparent;
+}
+
+.crm-webform-input {
+   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.crm-webform-input,
+.crm-webform-input-label {
+    border-radius: 3px;
+}
+
+.crm-webform-input:hover, .crm-webform-select:hover select, .crm-webform-textarea:hover textarea, .crm-webform-checkbox-container:hover i, .crm-webform-input, .crm-webform-select select, .crm-webform-textarea textarea {
+    border-color: transparent;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(196, 227, 255, 0.8);
+    opacity: 1; /* Firefox */
+    font-weight: 100;
+    font-sixe: 16px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(196, 227, 255, 0.8);
+    font-weight: 100;
+    font-sixe: 16px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+     color: rgba(196, 227, 255, 0.8);
+     font-weight: 100;
+     font-sixe: 16px;
+}
+
+.crm-webform-input, .crm-webform-select select, .crm-webform-textarea textarea {
+   font-family: "Raleway", Helvetica, Arial, sans-serif;
+   color: #fff;
+}
+
+
+input {
+    min-height: 55px;
+}
+
+.crm-webform-input-label .fa {
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    border-color: #fff;
+}
+
+.crm-webform-header {
+    color: #fff;
+}
+
+.crm-webform-input-label {
+   font-size: 16px;
+}
+
+
+.crm-webform-input, .crm-webform-select select, .crm-webform-textarea textarea {
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+
+    font-family: 'Raleway';
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.crm-webform-label-required-field:after,
+.crm-webform-label {
+    color: rgba(245, 245, 245, 0.8);
+}
+
+
+.crm-webform-error .crm-webform-input+.tooltip, .crm-webform-error .crm-webform-form-container .crm-webform-textarea textarea+.tooltip {
+    display: none;
+}
+
+@media all and (min-width: 930px) {
+  
+  .flexible-middle-width .content-wrap {
+      max-width: 1170px!important;
+  }
+
+   .crm-webform-fieldset .row:nth-child(odd) {
+       float: left;
+      width: 50%;
+  }
+
+  .crm-webform-fieldset .row:nth-child(odd) .col-md-12 {
+     padding-right: 0;
+  }
+
+  .crm-webform-fieldset .row:nth-child(even) {
+      float: right;
+      width: 50%;
+  }   
+
+
+  .crm-webform-fieldset .row:nth-last-child(1) {
+      float: initial;
+
+  }   
+
+ .crm-webform-fieldset .row:nth-child(even) .col-md-12 {
+    padding-left: 0;
+ }
+}
+
+.crm-webform-header {
+    font-size: 26px;
+}
+
+
+
+.crm-webform-body {
+    margin-top: -20px;
+}
+
+.crm-webform-icon {
+    display: none;
+}
+
+.data-bx-webform-submit-btn {
+    background: black;
+    font-family: 'Raleway';
+}
