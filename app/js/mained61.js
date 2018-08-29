@@ -419,8 +419,9 @@ $('.smooth-anchors').click(function (e) {
   e.preventDefault();
 
   document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-  });
+      behavior: 'smooth',
+      block: 'start'
+      });
 });
 
 // ------------------------------------------smooth anchors----------------------------------------

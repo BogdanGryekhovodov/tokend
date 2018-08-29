@@ -8538,10 +8538,13 @@ input[type=number]::-webkit-outer-spin-button {
   .infogr-slider .slick-list.draggable {
     height: 100% !important;
     overflow: hidden; }
-  .infogr-slider img.slick-slide {
-    -webkit-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out; }
 
 #full-featured {
   left: 0;
   top: 0; }
+
+.all-features.page-section {
+  padding: 30px 0; }
+
+.all-features .page-section {
+  padding: 0; }
