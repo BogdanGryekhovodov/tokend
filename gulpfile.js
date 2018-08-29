@@ -11,7 +11,7 @@ var autoprefixerOptions = {
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        server: "./app"
+        server: "./"
     });
 
     gulp.watch("app/scss/*.scss", ['sass']);

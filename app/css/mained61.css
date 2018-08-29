@@ -2685,7 +2685,8 @@ a:hover > .service-icon-v2 {
 .location-container {
   position: absolute;
   top: 50%;
-  left: 50%; }
+  left: 50%;
+  overflow: hidden; }
 
 .section-dark .location-map .map {
   opacity: 0.5; }
@@ -8139,7 +8140,8 @@ input[type=number]::-webkit-outer-spin-button {
   height: 70px; }
 
 .blue-background__image {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 .footer-nav ul li {
   margin-right: 40px; }
@@ -8286,7 +8288,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .desktop__slider img {
   width: 615px;
-  height: 394px; }
+  height: 615px; }
 
 .desktop__slider img.slick-slide {
   width: 100%; }
@@ -8528,3 +8530,18 @@ input[type=number]::-webkit-outer-spin-button {
 .small-star {
   color: #CC0000;
   font-size: 18px; }
+
+.infogr-slider {
+  height: 100%;
+  width: 100%; }
+  .infogr-slider .slick-track,
+  .infogr-slider .slick-list.draggable {
+    height: 100% !important;
+    overflow: hidden; }
+  .infogr-slider img.slick-slide {
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out; }
+
+#full-featured {
+  left: 0;
+  top: 0; }
