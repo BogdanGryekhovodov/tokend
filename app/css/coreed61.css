@@ -4910,6 +4910,9 @@ a.panel-block-icon.panel-block-sm .link {
   padding: 40px;
   width: 300px;
   margin: 0 auto; }
+  @media (max-width: 990px) {
+    .rotating-block .panel-block-icon {
+      margin-top: 20px; } }
 
 .rotating-block .panel-icon {
   margin-bottom: 10px; }

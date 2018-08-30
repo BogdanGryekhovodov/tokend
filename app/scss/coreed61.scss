@@ -4911,11 +4911,16 @@ a.panel-block-icon.panel-block-sm .link {
   
 .rotating-block {
   .panel-block-icon {
-padding: 40px;
-width: 300px;
-margin: 0 auto;
-  
+    padding: 40px;
+    width: 300px;
+    margin: 0 auto;
+
+    @media (max-width: 990px) {
+      margin-top: 20px;
     }
+  
+}
+
   .panel-icon {
     margin-bottom: 10px;
   }    

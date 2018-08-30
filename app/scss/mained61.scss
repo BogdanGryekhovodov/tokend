@@ -8296,7 +8296,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Vertical Fixed Navigation */
 .point-nav {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1001;
 	right: 25px;
