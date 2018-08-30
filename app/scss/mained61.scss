@@ -1068,7 +1068,11 @@ a {
   margin-right: auto;
   color: #fff;
   font-weight: 600;
+
+@media (min-width: 767px) {
   margin-top: 0;
+}
+
   /* text-transform: capitalize; */ }
 
 .slogan-desc {
@@ -8378,7 +8382,10 @@ position: absolute;
 
 
     @media (max-width: 767px) {
-        height: 350px;
+        height: 400px;
+      }
+    @media (max-width: 448px) {
+        height: 500px;
       }
 
 }
