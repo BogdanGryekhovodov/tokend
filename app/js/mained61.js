@@ -344,6 +344,8 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    fade: true,
+speed: 10,
     pauseOnHover: false,
     pauseOnFocus: false,
     arrows: false,
@@ -353,11 +355,13 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    fade: true,
+speed: 10,
+
     pauseOnHover: false,
     pauseOnFocus: false,
     arrows: false,
     asNavFor: '.desktop__slider'
-
   });
 });
 //  ---------------------------------------- phone and desktop slider -----------------------------------------------

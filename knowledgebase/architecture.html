@@ -1,0 +1,806 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.2, mkdocs-material-3.0.3">
+    
+    
+      
+        <title>Architecture - TokenD Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#architecture" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="index.html" title="TokenD Knowledge Base" class="md-header-nav__button md-logo">
+          
+            <img src="images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                TokenD Knowledge Base
+              </span>
+              <span class="md-header-nav__topic">
+                Architecture
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="index.html" title="TokenD Knowledge Base" class="md-nav__button md-logo">
+      
+        <img src="images/logo.svg" width="48" height="48">
+      
+    </a>
+    TokenD Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="index.html" title="Knowledge Base" class="md-nav__link">
+      Knowledge Base
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="SUMMARY.html" title="Table of contents" class="md-nav__link">
+      Table of contents
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Architecture
+      </label>
+    
+    <a href="architecture.html" title="Architecture" class="md-nav__link md-nav__link--active">
+      Architecture
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-cluster" title="Core Cluster" class="md-nav__link">
+    Core Cluster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core" title="Core" class="md-nav__link">
+    Core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizon" title="Horizon" class="md-nav__link">
+    Horizon
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payment-services-integration-module-psim-cluster" title="Payment Services Integration Module (PSIM) Cluster" class="md-nav__link">
+    Payment Services Integration Module (PSIM) Cluster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deposit" title="Deposit" class="md-nav__link">
+    Deposit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funnel" title="Funnel" class="md-nav__link">
+    Funnel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withdraw" title="Withdraw" class="md-nav__link">
+    Withdraw
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ratesync-cluster" title="RateSync Cluster" class="md-nav__link">
+    RateSync Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-cluster" title="API Cluster" class="md-nav__link">
+    API Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keychain-cluster" title="KeyChain Cluster" class="md-nav__link">
+    KeyChain Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyserver-cluster" title="KeyServer Cluster" class="md-nav__link">
+    KeyServer Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notificator-cluster" title="Notificator Cluster" class="md-nav__link">
+    Notificator Cluster
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="coming_soon.html" title="Coming Soon" class="md-nav__link">
+      Coming Soon
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="features/atomic_swaps.html" title="Atomic Swaps" class="md-nav__link">
+      Atomic Swaps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="features/customization.html" title="Platform customization and Application development" class="md-nav__link">
+      Platform customization and Application development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="features/dex.html" title="Decentralized Exchange*" class="md-nav__link">
+      Decentralized Exchange*
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="features/exsys_connection.html" title="External Systems Interconnection" class="md-nav__link">
+      External Systems Interconnection
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="features/kyc.html" title="Know Your Customer" class="md-nav__link">
+      Know Your Customer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="features/tokens_issuance.html" title="Tokens Issuance" class="md-nav__link">
+      Tokens Issuance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="features/tokens_management.html" title="Tokens Management" class="md-nav__link">
+      Tokens Management
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Tech
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Tech
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tech/accounts.html" title="Accounts" class="md-nav__link">
+      Accounts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tech/buy_as.html" title="Create Atomic Swap Buy Request" class="md-nav__link">
+      Create Atomic Swap Buy Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tech/manage_key_value.html" title="Manage Key Value" class="md-nav__link">
+      Manage Key Value
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tech/review_request_op.html" title="Review Request" class="md-nav__link">
+      Review Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tech/reviewable_request.html" title="Reviewable request" class="md-nav__link">
+      Reviewable request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tech/security.html" title="Security" class="md-nav__link">
+      Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tech/sell_as.html" title="Manage Atomic Swap Sell Request" class="md-nav__link">
+      Manage Atomic Swap Sell Request
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="tech/signers.html" title="Signers" class="md-nav__link">
+      Signers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-cluster" title="Core Cluster" class="md-nav__link">
+    Core Cluster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core" title="Core" class="md-nav__link">
+    Core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizon" title="Horizon" class="md-nav__link">
+    Horizon
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payment-services-integration-module-psim-cluster" title="Payment Services Integration Module (PSIM) Cluster" class="md-nav__link">
+    Payment Services Integration Module (PSIM) Cluster
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deposit" title="Deposit" class="md-nav__link">
+    Deposit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funnel" title="Funnel" class="md-nav__link">
+    Funnel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withdraw" title="Withdraw" class="md-nav__link">
+    Withdraw
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ratesync-cluster" title="RateSync Cluster" class="md-nav__link">
+    RateSync Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-cluster" title="API Cluster" class="md-nav__link">
+    API Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keychain-cluster" title="KeyChain Cluster" class="md-nav__link">
+    KeyChain Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyserver-cluster" title="KeyServer Cluster" class="md-nav__link">
+    KeyServer Cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notificator-cluster" title="Notificator Cluster" class="md-nav__link">
+    Notificator Cluster
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="architecture">Architecture</h1>
+<p><img alt="Architecture of TokenD system" src="https://lh4.googleusercontent.com/_ELztJW0hlR4-b6Og0mXEcFnX2O_5trs1P75pxxGvI3OuzGZZ0AxhZE0XEfjYpucadE20M8OHkbgQtadu7hN-1bkaS-7lv2D4I1LM1U5cHCMalzmVXdjh_NcuLPiPfCKepxIpaQv" /></p>
+<h2 id="core-cluster">Core Cluster</h2>
+<p>Min number of instances: 4;
+Modules: Core, Horizon;</p>
+<h3 id="core">Core</h3>
+<p>Core is a replicated state machine that maintains a local copy of a cryptographic ledger and processes transactions against it, in consensus with a set of peers. It implements the federated consensus protocol. It is written in C++11. Requires PostgreSQL database to store most recent state of the ledger; and AWS S3 to store full history of transactions.</p>
+<h3 id="horizon">Horizon</h3>
+<p>Horizon is the client facing API server. It acts as the interface between core and applications that want to access the network. It allows to submit transactions to the network, check the status of accounts, view transaction history. Requires PostgreSQL database to store history of transactions. Horizon is only entrypoint into instance.</p>
+<h2 id="payment-services-integration-module-psim-cluster">Payment Services Integration Module (PSIM) Cluster</h2>
+<p>Min number of instances: 2;
+Modules: deposit, funnel, withdraw.</p>
+<h3 id="deposit">Deposit</h3>
+<p>Deposit is module which monitors state of external system (BTC, ETH blockchains, Banks, Payment Gateway) and reflects deposit operations (using multisignature) into TokenD system. Guaranties that all deposit operations are processed and processed only once. Does not require any additional storage. Requires access to external system (does not require local instance). No publically available entry points. </p>
+<h3 id="funnel">Funnel</h3>
+<p>Funnel is module which is only required for the systems working in BTC, ETH. Monitors state of HD wallets (provided to users to perform deposits) and transfers all available assets to hot or cold wallet (depending on state of the hot wallet); Requires access to external system. In case of BTC and ETH does not require local instance. No publically available entry points.</p>
+<h3 id="withdraw">Withdraw</h3>
+<p>Withdraw is module which monitors state of TokenD system and reflects withdrawal operations into external system. Confirmation of withdrawal request and actual transaction into external system are performed using multisig. Guaranties that review of withdrawal operation is atomic. Signature of review of the request and actual withdrawal in case of (BTC and ETH) is performed in two steps. First: agree on approval/rejection of the request and on payload of transaction and submit not signed transaction into Core of TokenD. Second: sign transaction, add signatures into Core of TokenD and confirm request, submit signed transaction into external System. In case of Payment Gateways withdrawal is guaranteed to be atomic by idempotent ID of the request (functionality provided by Payment Gateway). Requires access to external system (does not require local instance). Does not require any additional storage. No publically available entry points.</p>
+<h2 id="ratesync-cluster">RateSync Cluster</h2>
+<p>Min number of instances: 1;
+Recommended number of instances: 2;
+RateSync is module which pulls exchange rates data from External Systems (Poloniex, CoinmarketCap, etc.). Finds consens between providers on current exchange rate and using multisignature sends exchange rates to core of the system. Does not require any additional store; No publically available entry points.</p>
+<h2 id="api-cluster">API Cluster</h2>
+<p>Min number of instances: 1;
+Recommended number of instances: 2;
+API is module which stores users related data: KYC data of the users and project specific data, AccountID-Email linking. Requires S3 to KYC docs storage and Postgres RDS to store KYC data; Has publically available entry point.</p>
+<h2 id="keychain-cluster">KeyChain Cluster</h2>
+<p>Min number of instances: 1;
+Recommended number of instances: 2;
+KeyChain is module which stores private keys used to encrypt KYC data of the users. Gives keys only to admins or owner of keys based on data retrieved from Horizon. Has publically available entry point. Requires Postgres RDS to store private keys (Completely separate from API); API and KeyChain must be connected to different Horizon-Core pairs.</p>
+<h2 id="keyserver-cluster">KeyServer Cluster</h2>
+<p>Min number of instances: 1;
+Recommended number of instances: 2;
+KeyServer is module which stores client side encrypted private keys of the users. Gives encrypted payload only to users who provided proof of knowing encryption secret, allows to enable 2FA (Google Authenticator).</p>
+<h2 id="notificator-cluster">Notificator Cluster</h2>
+<p>Min number of instances: 1;
+Recommended number of instances: 2;
+Notificator is middleware module between all modules of the system and external providers (mailgun, twilio, etc.). Ensures delivery of the messages. Has no publically available entry point.Requires Postgres RDS to store already sent messages.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="SUMMARY.html" title="Table of contents" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Table of contents
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="coming_soon.html" title="Coming Soon" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Coming Soon
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.2",url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

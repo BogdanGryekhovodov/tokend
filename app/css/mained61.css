@@ -2445,9 +2445,9 @@ a.package:hover {
     padding-top: 68px;
     padding-bottom: 75px; } }
 
-@media (max-width: 991px) {
+@media (max-width: 990px) {
   .page-section {
-    padding-top: 25px;
+    padding-top: 70px;
     padding-bottom: 35px; }
   .section-row {
     padding-bottom: 35px;
@@ -5126,7 +5126,7 @@ html:not(.mobile) .person:hover .person-actions > * {
       height: 340px; } }
   @media all and (max-width: 991px) {
     .browser-xlg {
-      height: 440px; } }
+      height: 500px; } }
 
 .browser-header {
   position: absolute;
@@ -8548,7 +8548,8 @@ input[type=number]::-webkit-outer-spin-button {
   top: 0; }
 
 .all-features.page-section {
-  padding: 30px 0; }
+  padding: 30px 0;
+  overflow: hidden; }
 
 .all-features .page-section {
   padding: 0; }

@@ -1,0 +1,2071 @@
+
+<!doctype html>
+<html>
+  
+<!-- Mirrored from tokend.gitlab.io/docs/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Aug 2018 13:33:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>TokenD API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;http&quot;,&quot;js&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="http">http</a>
+              <a href="#" data-language-name="js">js</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#overview" class="toc-h1 toc-link" data-title="Overview">Overview</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#making-requests" class="toc-h2 toc-link" data-title="Making requests">Making requests</a>
+                  </li>
+                  <li>
+                    <a href="#signing-requests" class="toc-h2 toc-link" data-title="Signing requests">Signing requests</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#general-http-response-status-codes" class="toc-h2 toc-link" data-title="General HTTP response status codes">General HTTP response status codes</a>
+                  </li>
+                  <li>
+                    <a href="#application-specific-error-codes" class="toc-h2 toc-link" data-title="Application-specific error codes">Application-specific error codes</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#wallets" class="toc-h1 toc-link" data-title="Wallets">Wallets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-kdf-params" class="toc-h2 toc-link" data-title="Get KDF params">Get KDF params</a>
+                  </li>
+                  <li>
+                    <a href="#create-wallet" class="toc-h2 toc-link" data-title="Create wallet">Create wallet</a>
+                  </li>
+                  <li>
+                    <a href="#email-verification" class="toc-h2 toc-link" data-title="Email verification">Email verification</a>
+                  </li>
+                  <li>
+                    <a href="#requesting-email-resend" class="toc-h2 toc-link" data-title="Requesting email resend">Requesting email resend</a>
+                  </li>
+                  <li>
+                    <a href="#get-wallet" class="toc-h2 toc-link" data-title="Get Wallet">Get Wallet</a>
+                  </li>
+                  <li>
+                    <a href="#update-wallet" class="toc-h2 toc-link" data-title="Update wallet 🔒">Update wallet 🔒</a>
+                  </li>
+                  <li>
+                    <a href="#index" class="toc-h2 toc-link" data-title="Index">Index</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#client-redirects" class="toc-h1 toc-link" data-title="Client redirects">Client redirects</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#redirect-types" class="toc-h2 toc-link" data-title="Redirect types">Redirect types</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create" class="toc-h2 toc-link" data-title="Create 🔒">Create 🔒</a>
+                  </li>
+                  <li>
+                    <a href="#get" class="toc-h2 toc-link" data-title="Get 🔒">Get 🔒</a>
+                  </li>
+                  <li>
+                    <a href="#index-2" class="toc-h2 toc-link" data-title="Index 🔒">Index 🔒</a>
+                  </li>
+                  <li>
+                    <a href="#update" class="toc-h2 toc-link" data-title="Update 🔒">Update 🔒</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#two-factor-authentication" class="toc-h1 toc-link" data-title="Two-factor authentication">Two-factor authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#response-3" class="toc-h2 toc-link" data-title="Response">Response</a>
+                  </li>
+                  <li>
+                    <a href="#factor-types" class="toc-h2 toc-link" data-title="Factor types">Factor types</a>
+                  </li>
+                  <li>
+                    <a href="#get-factors" class="toc-h2 toc-link" data-title="Get factors">Get factors</a>
+                  </li>
+                  <li>
+                    <a href="#create-totp-factor" class="toc-h2 toc-link" data-title="Create TOTP factor 🔒">Create TOTP factor 🔒</a>
+                  </li>
+                  <li>
+                    <a href="#factor-verification" class="toc-h2 toc-link" data-title="Factor verification">Factor verification</a>
+                  </li>
+                  <li>
+                    <a href="#update-factor" class="toc-h2 toc-link" data-title="Update factor">Update factor</a>
+                  </li>
+                  <li>
+                    <a href="#delete-factor" class="toc-h2 toc-link" data-title="Delete factor 🔒">Delete factor 🔒</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#submit-transaction" class="toc-h1 toc-link" data-title="Submit transaction">Submit transaction</a>
+          </li>
+          <li>
+            <a href="#documents" class="toc-h1 toc-link" data-title="Documents">Documents</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#document-types" class="toc-h2 toc-link" data-title="Document types">Document types</a>
+                  </li>
+                  <li>
+                    <a href="#allowed-content-types" class="toc-h2 toc-link" data-title="Allowed content types">Allowed content types</a>
+                  </li>
+                  <li>
+                    <a href="#upload" class="toc-h2 toc-link" data-title="Upload 🔒">Upload 🔒</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#blobs" class="toc-h1 toc-link" data-title="Blobs">Blobs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#blob-types" class="toc-h2 toc-link" data-title="Blob types">Blob types</a>
+                  </li>
+                  <li>
+                    <a href="#create-user-owned-blob" class="toc-h2 toc-link" data-title="Create user-owned blob">Create user-owned blob</a>
+                  </li>
+                  <li>
+                    <a href="#create-master-owned-blob" class="toc-h2 toc-link" data-title="Create master-owned blob">Create master-owned blob</a>
+                  </li>
+                  <li>
+                    <a href="#get" class="toc-h2 toc-link" data-title="Get">Get</a>
+                  </li>
+                  <li>
+                    <a href="#filter" class="toc-h2 toc-link" data-title="Filter">Filter</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#balances" class="toc-h1 toc-link" data-title="Balances">Balances</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#account" class="toc-h2 toc-link" data-title="Account 🔒">Account 🔒</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#javascript" class="toc-h1 toc-link" data-title="Javascript">Javascript</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#wallet-js" class="toc-h2 toc-link" data-title="wallet.js">wallet.js</a>
+                  </li>
+                  <li>
+                    <a href="#js-base" class="toc-h2 toc-link" data-title="js-base">js-base</a>
+                  </li>
+                  <li>
+                    <a href="#js-sdk" class="toc-h2 toc-link" data-title="js-sdk">js-sdk</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='overview'>Overview</h1>
+<p>The TokenD API tries its best to follow <a href="http://jsonapi.org/format/1.0/">JSONAPI</a>.
+Most important parts of protocol will be included here, but to get better feel of what&#39;s going on it&#39;s advised to get yourself familiar with JSONAPI before continuing.</p>
+
+<table><thead>
+<tr>
+<th>Legend</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>🔒</td>
+<td>Request requires signature (See <a href="#signing-requests">signing requests</a>)</td>
+</tr>
+</tbody></table>
+<h2 id='making-requests'>Making requests</h2>
+<p>Each request must include correct content negotiation headers.</p>
+<h2 id='signing-requests'>Signing requests</h2>
+<blockquote>
+<p>For the following request:</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/users?type=2</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.tokend.io</span>
+<span class="na">Date</span><span class="p">:</span> <span class="s">Sun, 05 Jan 2014 21:31:40 GMT</span>
+</code></pre>
+<blockquote>
+<p>Signing string would be:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>date: Sun, 05 Jan 2018 21:31:40 GMT
+(request-target): get /users?type=2
+</code></pre>
+<blockquote>
+<p>For <code>SCDMOOXVNMO6SA22AYUMZDIGLDJMBUTVEGB73FFNTLFJILBJWIU4NQ3D</code> private key gives following signature string:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>keyId="GBLTOG6EJS5OWDNQNSCEAVDNMPBY6F73XZHHKR27YE5AKE23ZZEXOLBK",algorithm="ed25519-sha256",signature="0cvTqLDn+5i8pInkeSR833HrNSMI4xB9m1eN7rofiDVnoutKQJvpwB9hl2GhsMPcMbVXo4beUR96Stf/qU+iAg==",headers="date (request-target)"
+</code></pre>
+<p>Request signature implementation is based on <a href="https://tools.ietf.org/html/draft-cavage-http-signatures">IETF HTTP Signatures draft RFC</a>
+except of implicit <code>headers</code> parameter is not supported, clients must explicitly specify headers used for signing.</p>
+
+<p>Only signature algorithm supported is <code>ed25519-sha256</code> which uses public signer key as <code>keyId</code>.</p>
+
+<p>Both <code>Signature</code> and <code>Authorization</code> HTTP authentication schemas are supported.</p>
+
+<p>The minimum recommended data to sign is the <code>(request-header)</code> and <code>date</code>. </p>
+<h1 id='errors'>Errors</h1>
+<p>API uses conventional HTTP response codes to indicate the success or failure of a request.
+In general, codes in the <code>2xx</code> range indicate success, codes in the <code>4xx</code> range indicate an error that 
+failed given the information provided and codes in <code>5xx</code> range indicate an problem with TokenD servers.</p>
+<h2 id='general-http-response-status-codes'>General HTTP response status codes</h2>
+<p>If not stated otherwise client should expect one of the following status codes:</p>
+
+<table><thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200 OK</td>
+<td></td>
+</tr>
+<tr>
+<td>201 Created</td>
+<td></td>
+</tr>
+<tr>
+<td>204 No Content</td>
+<td>The server successfully processed the request and is not returning any content</td>
+</tr>
+<tr>
+<td>400 Bad Request</td>
+<td>Request was invalid in some way, response should contain details</td>
+</tr>
+<tr>
+<td>401 Unauthorized</td>
+<td>Request signature was invalid or you are not authorized to access resource</td>
+</tr>
+</tbody></table>
+<h2 id='application-specific-error-codes'>Application-specific error codes</h2>
+<table><thead>
+<tr>
+<th>Error code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>tfa_required</code></td>
+<td>See <a href="#two-factor-authentication">docs section</a> for details</td>
+</tr>
+<tr>
+<td><code>verification_required</code></td>
+<td>Wallet with verified email is required before proceeding</td>
+</tr>
+</tbody></table>
+<h1 id='wallets'>Wallets</h1>
+<p>Wallet is used to store encrypted user keys used for signing requests. Wallet is identified by wallet id: a unique string
+composed from email and password.</p>
+<h2 id='get-kdf-params'>Get KDF params</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/kdf</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "data": {
+        "type": "kdf",
+        "id": "2",
+        "attributes": {
+            "algorithm": "scrypt",
+            "bits": 256,
+            "n": 4096,
+            "r": 8,
+            "p": 1
+        }
+    }
+}
+</code></pre>
+<p>Returns current default derivation parameters. Should be used for all new keychains derivation.</p>
+
+<p>If <code>email</code> is not provided will return default KDF parameters.</p>
+
+<p>If corresponding wallet is not exist will return <code>404 Not Found</code>.</p>
+<h3 id='request'>request</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>email</code></td>
+<td>f</td>
+<td>will return KDF parameters for wallet keychain</td>
+</tr>
+<tr>
+<td><code>is_recovery</code></td>
+<td>f</td>
+<td>boolean denoting if client wants to get KDF for recovery keychain</td>
+</tr>
+</tbody></table>
+<h3 id='response'>response</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>version of KDF parameters used to derive wallet data</td>
+</tr>
+<tr>
+<td></td>
+<td>1 - means that wallet id should be calculated as is, without any formatting</td>
+</tr>
+<tr>
+<td></td>
+<td>2 - means that wallet id should be calculated with lowercased email</td>
+</tr>
+<tr>
+<td><code>attributes</code></td>
+<td>KDF parameters which should be used for derivation</td>
+</tr>
+</tbody></table>
+<h2 id='create-wallet'>Create wallet</h2><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/wallets</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4fdf134f5d33982c117a20bf1e9866ffaab826d2f3eeed6c65b14998442a0526"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GCBLMZGOAM5ZMYOSQVHW57NISOCHFE3ISXKOHZ43UBP3K6EMDEXLVCY2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vasil@tokend.io"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"salt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qonp0sJgd30NQ916fzpO2A=="</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"keychain_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJJViI6IldsSkFUdEFydmljZTJjdWkiLCJjaXBoZXJUZXh0IjoiaGtFa2UzZlFSdVNFdTIzdVhhK0JFa2ZCQzFDL1ZqVXFydE9TUXMrU3hsOUkzSVRHWXNRTXVhRkI2eDVjaG1HZnM1U28zc0UwNDRWYXkrOFY1RWU2Nk5tNWlnemVIbjh5UENiNXFrYmd0V0E2SFNobmo2VUdMUVNlODN2MjJ6TnhGZ3R6VWtsMDFiS25RTmJIS3preEF6d1g2MVJxTlc0dS9iTmJWV1d1YU43TTZJYWZkaVBEV3B6MzFUdFJDT3grNFQzNHV6VUZ4QTloMUE9PSIsImNpcGhlck5hbWUiOiJhZXMiLCJtb2RlTmFtZSI6ImdjbSJ9"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wallet"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"kdf"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kdf"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"factor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GBOZ32WRZENUCOHPVSCDUMGMPJRZV7WEOEZ4BIC4ITWPICIPGEYQMKEB"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"keychain_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJJViI6IndYeHJ4aHlLOFprV1JuZXYiLCJjaXBoZXJUZXh0IjoiaTM2dDRyZ1lOUUZ5VGNpSHNSOWRoVU5McUU3dGxqZVRpTVJORWFQTzloc3VxbDUreXBwc3g0Q0RZSlI2d0lEQVdsQVpJcEpNNGtlaitzMTRtZ0NuVTVRZTAwUlBXSm5INVlibWlWMnRjSWVKT1RXNy9sSmFpSHlsRWpKckpMa2VXN0lBaHR4SU5DbnhNZldIZjZGcUZvQktxRUtnNXNBTk9oOFVUdldxekk0T3hVNy9DM29wbkZpQ0Z4TElrY2RpQ0tGcGxhYXRqbWgxZXc9PSIsImNpcGhlck5hbWUiOiJhZXMiLCJtb2RlTmFtZSI6ImdjbSJ9"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"salt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AmsucaCaXzVeeGaNU1emew=="</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"recovery"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b0a55d16f6bd6d92e0b891bba35b98b97271247f5f443d8a176c6e601a534b5e"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GCR645KV4GLENGKH3QUB2OOZZRHZA6PIQGM24TSHN2BG2HIVZERJMDJX"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"keychain_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJJViI6IjlFN0ovQkwxRXNrZFVrQ0giLCJjaXBoZXJUZXh0IjoiVUlTZ3Z1bXIyOUZic1U1cElZb2ZBdWdoRTBydm9VdVF2aVRqMVpxTTZsZG5ERDdNaTI5dFplUlV3UUdiemFUOUpKQ2I5cFpLWnljOTVBMHFzb3JNS21rOE1LMG1ETU5KZG52SjFtbUE1SjJIUG9wM2lZVDJvQVRnRXczcmhHdE1jOXRTRWRqL1o5NjZGUEJEQUtpQWhla1dkMEtzb2M0V1I4MFdlbWh1b08rb2h4c2J0ajRzZ1QvRzVZM0EwWHJkNTZaT1lienV3Y2pMSXc9PSIsImNpcGhlck5hbWUiOiJhZXMiLCJtb2RlTmFtZSI6ImdjbSJ9"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"salt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7gyTQ4paDohhWdLDP5FiRg=="</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">201</span><span class="w">
+</span><span class="err">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="err">application/json</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wallet"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4fdf134f5d33982c117a20bf1e9866ffaab826d2f3eeed6c65b14998442a0526"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GCBLMZGOAM5ZMYOSQVHW57NISOCHFE3ISXKOHZ43UBP3K6EMDEXLVCY2"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vasil@tokend.io"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"keychain_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJJViI6IldsSkFUdEFydmljZTJjdWkiLCJjaXBoZXJUZXh0IjoiaGtFa2UzZlFSdVNFdTIzdVhhK0JFa2ZCQzFDL1ZqVXFydE9TUXMrU3hsOUkzSVRHWXNRTXVhRkI2eDVjaG1HZnM1U28zc0UwNDRWYXkrOFY1RWU2Nk5tNWlnemVIbjh5UENiNXFrYmd0V0E2SFNobmo2VUdMUVNlODN2MjJ6TnhGZ3R6VWtsMDFiS25RTmJIS3preEF6d1g2MVJxTlc0dS9iTmJWV1d1YU43TTZJYWZkaVBEV3B6MzFUdFJDT3grNFQzNHV6VUZ4QTloMUE9PSIsImNpcGhlck5hbWUiOiJhZXMiLCJtb2RlTmFtZSI6ImdjbSJ9"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Create wallet requests should contain following resources:</p>
+<h4 id='wallet'>Wallet</h4>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>lowercase, hex-encoded string with key derived from password, email and salt using KDF parameters</td>
+</tr>
+<tr>
+<td><code>account_id</code></td>
+<td>address of derived from wallet secret key</td>
+</tr>
+<tr>
+<td><code>salt</code></td>
+<td>client-generated salt</td>
+</tr>
+<tr>
+<td><code>keychain_data</code></td>
+<td>clients keychain data encrypted with password, email and salt</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>wallet email address</td>
+</tr>
+</tbody></table>
+<h4 id='kdf'>KDF</h4>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>version of KDF parameters used to derive wallet data</td>
+</tr>
+</tbody></table>
+<h4 id='factor'>Factor</h4>
+<p>Second wallet with different secret key encrypted by same email/password used as second factor to confirm password possession.</p>
+<h4 id='recovery'>Recovery</h4>
+<p>Keychain encrypted with email and recovery secret key used to recover access to account if password were lost.</p>
+<h3 id='response-2'>Response</h3>
+<p>Succeeded request will have response with current wallet state.</p>
+<h2 id='email-verification'>Email verification</h2><pre class="highlight http tab-http"><code><span class="nf">PUT</span> <span class="nn">/wallets/388108095960430b80554ac3efb6807a9f286854033aca47f6f466094ab50876/verification</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JOqIgfCNSjnGWDrTPWbW"</span><span class="w">
+        </span><span class="p">}</span><span class="w">   
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">204</span><span class="w">
+</span></code></pre>
+<p>Once wallet is created at <code>verified</code> is false user should receive email with verification link with <a href="#client-redirects">client router payload</a>.</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>token</code></td>
+<td>Email verification token</td>
+</tr>
+<tr>
+<td><code>wallet_id</code></td>
+<td>Related wallet id</td>
+</tr>
+</tbody></table>
+<h2 id='requesting-email-resend'>Requesting email resend</h2><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/wallets/5xkxn3nfjmfx9p58geo5stt9/verification</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+
+HTTP/1.1 204
+</code></pre><h2 id='get-wallet'>Get Wallet</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/wallets/8ba282a0ca7c096c702507b6ec6e0a4dd0d1b26d6c543469eb51e68e72bf4fba</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+
+
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+  "data": {
+    "type": "wallet",
+    "id": "8ba282a0ca7c096c702507b6ec6e0a4dd0d1b26d6c543469eb51e68e72bf4fba",
+    "attributes": {
+      "account_id": "GBKPHVR3Q4ZSHHZJT4GZYGHIMVMJBJLC44TE37BJK276URNUPF5XVJ4V",
+      "email": "comrad.awsum@gmail.com",
+      "keychain_data": "eyJJViI6IlRaRHppWWRTNEdKMjBYbisiLCJjaXBoZXJUZXh0Ijoib1MwTjVpaE1qcEozNUlsTDJWd1FsTzFvODJpb0JwOVFHdkY1eVBqcWREQk5XR29FTmM4eUEzeGhVcSs2UW1IeVMwNysxVXlLd0lzSThxYzZFRk04TEtSNTBNZ0xSZVE1eFpjdFdKUlk4dGhhMFJtWHdteC9iWlBwQVBwekM5Y09LNUE1V3B2YitsSENhQU1VOEU2aDlxK0U2WjdWbTI3aDRJYkdRUlovQkk3MHNWRWVDOHVVN09DMXBHcExQMHh3aTUzQWtsZ1puclVoK3c9PSIsImNpcGhlck5hbWUiOiJhZXMiLCJtb2RlTmFtZSI6ImdjbSJ9",
+      "verified": true,
+      "last_sent_at": "2018-05-14T13:18:19.41825Z"
+    },
+    "relationships": {}
+  }
+}
+</code></pre>
+<aside class="notice">Previously knows as <code>POST /wallets/show</code></aside>
+<h3 id='request-params'>Request params</h3>
+<table><thead>
+<tr>
+<th>Param</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>lowercase, hex-encoded string with key derived from password, email and salt using KDF parameters</td>
+</tr>
+</tbody></table>
+<h3 id='response-fields'>Response fields</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>account_id</code></td>
+<td>unique identifier of user account. Firstly, it is the public key from seed, generated when <a href="#create-wallet">creating user wallet</a>, but when the seed changes, account id remains the same</td>
+</tr>
+<tr>
+<td><code>keychain_data</code></td>
+<td>encrypted JSON string contains user&#39;s secret seed and it&#39;s public key (may be different from account id). See how to decrypt it in <a href="#wallet-js">wallet.js</a></td>
+</tr>
+</tbody></table>
+
+<p>Derived secret seed now allows you to sign transactions and private requests see <a href="#js-sdk">js-sdk</a></p>
+<h2 id='update-wallet'>Update wallet 🔒</h2><pre class="highlight http tab-http"><code><span class="err">PUT /wallets/5xkxn3nfjmfx9p58geo5stt9
+Content-Type: application/vnd.api+json
+Accept: application/vnd.api+json
+
+{
+    "data": {
+        "type": "wallet",
+        "id": "isheebk4wi962pjpnvc1pp66r",
+        "attributes": {
+            "account_id": "GAAAAAAA",
+            "salt": "salt==",
+            "keychain_data": "foo..bar"
+        },
+        "relationships": {
+            "transaction": {
+                "data": {
+                    "attributes": {
+                        "envelope": "AAA...AAAA"
+                    }
+                }   
+            },
+            "kdf": {
+                "data": {
+                    "type": "kdf",
+                    "id": "1"
+                }
+            },
+            "factor": {
+                "data": {
+                    "type": "password",
+                    "attributes": {
+                        "account_id": "GDI54FYDBF2S6GEQJHBLS3HMIEYYKDLVT7YCCI33K5J6B4JTGNP77DEK",
+                        "keychain_data": "foo...bar",
+                        "salt": "salt"
+                    }
+                }
+            }
+        }
+    }
+}
+
+HTTP/1.1 204
+</span></code></pre>
+<aside class="notice">Previously known as <code>POST /wallets/update</code></aside>
+
+<p>Same request is used for wallet recovery but instead of primary wallet id request should be to recovery one and signed with recovery signer.</p>
+<h2 id='index'>Index</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/wallets?page=1</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w">
+</span><span class="err">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="err">application/vnd.api+json</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GCCJPB7QQLNEMCJ72CQJ4ODAZFFGXHET5UPOGSDWT222GXQPMTO6ZQW3"</span><span class="p">,</span><span class="w"> 
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yr0a3ke29d78skm2030kep14i@test.com"</span><span class="p">,</span><span class="w"> 
+                </span><span class="s2">"keychain_data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo"</span><span class="p">,</span><span class="w"> 
+                </span><span class="s2">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="p">},</span><span class="w"> 
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"912svl5uj6hxtypnonryhkt9"</span><span class="p">,</span><span class="w"> 
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wallet"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w"> 
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/wallets?page=3"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"prev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/wallets?page=1"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/wallets?page=2"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameters</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>page</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>Mask to filter wallets by state</td>
+</tr>
+</tbody></table>
+<h3 id='wallet-states'>Wallet states</h3>
+<table><thead>
+<tr>
+<th>State</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>1</code></td>
+<td>email has not been confirmed</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>email has been confirmed</td>
+</tr>
+</tbody></table>
+<h1 id='client-redirects'>Client redirects</h1>
+<blockquote>
+<p>link format</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>http://client.com/r/eyAic3RhdHVzIjoyMDAsImF...G4zbmZqbWZ4OXA1OGdlbzVzdHQ5In19
+</code></pre>
+<blockquote>
+<p>decoded value</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JOqIgfCNSjnGWDrTPWbW"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"wallet_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"388108095960430b80554ac3efb6807a9f286854033aca47f6f466094ab50876"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>status</code></td>
+<td>Action result code following HTTP status code semantics, might be omitted if 200</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><a href="#redirect-types">Redirect type</a></td>
+</tr>
+<tr>
+<td><code>meta</code></td>
+<td>Types specific meta-information, might be omitted if empty</td>
+</tr>
+</tbody></table>
+<h2 id='redirect-types'>Redirect types</h2>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>1</code></td>
+<td>Email confirmation token, meta will include verification <code>token</code> and <code>wallet_id</code></td>
+</tr>
+</tbody></table>
+<h1 id='users'>Users</h1><h4 id='types'>Types</h4>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Filter</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>not_verified</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>syndicate</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>general</code></td>
+<td>4</td>
+</tr>
+</tbody></table>
+<h4 id='states'>States</h4>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>nil</code></td>
+<td>1</td>
+<td>Initial user state</td>
+</tr>
+<tr>
+<td><code>waiting_for_approval</code></td>
+<td>2</td>
+<td>User is waiting for KYC approval</td>
+</tr>
+<tr>
+<td><code>approved</code></td>
+<td>4</td>
+<td>User has approved KYC</td>
+</tr>
+<tr>
+<td><code>rejected</code></td>
+<td>8</td>
+<td>User has rejected KYC</td>
+</tr>
+</tbody></table>
+<h2 id='create'>Create 🔒</h2><pre class="highlight http tab-http"><code><span class="nf">PUT</span> <span class="nn">/users/GBT3XFWQUHUTKZMI22TVTWRA7UHV2LIO2BIFNRCH3CXWPYVYPTMXMDGC</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">204</span><span class="w">
+</span></code></pre><h2 id='get'>Get 🔒</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/users/GBT3XFWQUHUTKZMI22TVTWRA7UHV2LIO2BIFNRCH3CXWPYVYPTMXMDGC</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="w">
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w">
+</span><span class="err">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="err">application/vnd.api+json</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"syndicate"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GCCJPB7QQLNEMCJ72CQJ4ODAZFFGXHET5UPOGSDWT222GXQPMTO6ZQW3"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test@test.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nil"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='index-2'>Index 🔒</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/users</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w">
+</span><span class="err">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="err">application/vnd.api+json</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"syndicate"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GCCJPB7QQLNEMCJ72CQJ4ODAZFFGXHET5UPOGSDWT222GXQPMTO6ZQW3"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yr0a3ke29d78skm2030kep14i@test.com"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"waiting_for_approval"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/users?page=1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/users?page=2"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>page</code></td>
+<td>Pagination cursor</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>Bit mask to filter users by state</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>Bit mask to filter users by type</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Substring to match against user emails</td>
+</tr>
+<tr>
+<td><code>address</code></td>
+<td>Substring to match against account addresses</td>
+</tr>
+</tbody></table>
+<h2 id='update'>Update 🔒</h2>
+<blockquote>
+<p>set user type</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="nf">PATCH</span> <span class="nn">/users/GBT3XFWQUHUTKZMI22TVTWRA7UHV2LIO2BIFNRCH3CXWPYVYPTMXMDGC</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"syndicate"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">204</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>approve user</p>
+</blockquote>
+<pre class="highlight http tab-http"><code><span class="nf">PATCH</span> <span class="nn">/users/</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"approved"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"envelope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAA...AAA"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">   
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">204</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>User</th>
+<th>Admin</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>/data/type</code></td>
+<td>+</td>
+<td>-</td>
+<td>Updating user type is allowed only if current type is <code>not_verified</code></td>
+</tr>
+<tr>
+<td><code>/data/attributes/state</code></td>
+<td>+</td>
+<td>+</td>
+<td>Used by admin to update state from <code>waiting_for_approval</code> to <code>rejected</code> or <code>approved</code>. User could try to set state to <code>waiting_for_approval</code> why KYC is ready for review.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id='two-factor-authentication'>Two-factor authentication</h1>
+<blockquote>
+<p>example second factor error</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Forbidden"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"detail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Additional factor required"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"403"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"factor_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"factor_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c64c45125a5a846dbfa8cbbaf1b7f3dcc8c3ce9d"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"wallet_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"388108095960430b80554ac3efb6807a9f286854033aca47f6f466094ab50876"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Second factor verification is required when accessing some resources. Clients should expect <code>tfa_required</code> error code for any request and prompt user to provide OTP.</p>
+
+<p>Subsequent requests will have same <code>token</code> . </p>
+
+<p>After successful OTP verification user should be able to access requested resource.</p>
+<h3 id='response-3'>Response</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>factor_id</code></td>
+<td>ID of a factor which triggered verification</td>
+</tr>
+<tr>
+<td><code>token</code></td>
+<td>Hash based on request</td>
+</tr>
+<tr>
+<td><code>wallet_id</code></td>
+<td>ID of a wallet for which verification was triggered</td>
+</tr>
+<tr>
+<td><code>factor_type</code></td>
+<td>Type of the factor which triggered verification</td>
+</tr>
+</tbody></table>
+<h3 id='factor-types'>Factor types</h3>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>password</code></td>
+<td>Created during signup, updated only with change password flow</td>
+</tr>
+<tr>
+<td><code>totp</code></td>
+<td>Optional Google Authenticator token</td>
+</tr>
+</tbody></table>
+<h2 id='get-factors'>Get factors</h2><pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="sr">/wallets/</span><span class="mi">388108095960430</span><span class="n">b80554ac3efb6807a9f286854033aca47f6f466094ab50876</span><span class="o">/</span><span class="n">factors</span>
+<span class="no">Content</span><span class="o">-</span><span class="no">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">vnd</span><span class="p">.</span><span class="nf">api</span><span class="o">+</span><span class="n">json</span>
+<span class="no">Accept</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">vnd</span><span class="p">.</span><span class="nf">api</span><span class="o">+</span><span class="n">json</span>
+
+<span class="no">HTTP</span><span class="o">/</span><span class="mi">1</span><span class="o">.</span><span class="mi">1</span> <span class="mi">200</span>
+<span class="no">Content</span><span class="o">-</span><span class="no">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">vnd</span><span class="p">.</span><span class="nf">api</span><span class="o">+</span><span class="n">json</span>
+
+<span class="p">{</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"totp"</span><span class="p">,</span>
+            <span class="s2">"id"</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+            <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"priority"</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<aside class="notice">Previously known as <code>GET /tfa</code></aside>
+<h2 id='create-totp-factor'>Create TOTP factor 🔒</h2><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/wallets/388108095960430b80554ac3efb6807a9f286854033aca47f6f466094ab50876/factors</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"totp"</span><span class="w">
+    </span><span class="p">}</span><span class="w">  
+</span><span class="p">}</span><span class="w">
+
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">201</span><span class="w">
+</span><span class="err">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="err">application/vnd.api+json</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"totp"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4FW4QD2NGGE45NOA"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"seed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"otpauth://totp/%7B%7B%20.Project%20%7D%7D:fo@ob.ar?algorithm=SHA1&amp;digits=6&amp;issuer=%7B%7B+.Project+%7D%7D&amp;period=30&amp;secret=4FW4QD2NGGE45NOA"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>POST /wallets/{wallet-id}/factors</code></p>
+
+<p>Single TOTP factor is allowed per wallet, subsequent requests will result in <code>409 Conflict</code></p>
+<h3 id='response-4'>Response</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>secret</code></td>
+<td>HMAC secret</td>
+</tr>
+<tr>
+<td><code>seed</code></td>
+<td>Google Authenticator URI for generating QR-code</td>
+</tr>
+</tbody></table>
+<h2 id='factor-verification'>Factor verification</h2><pre class="highlight http tab-http"><code><span class="nf">PUT</span> <span class="nn">/wallets/82dc746c10b28f87eb6eae695fc3c5ab91c31988ea43b692c8ae50f52f24b9d6/factors/31/verification</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f86e176643374de6d13690e499440229d43e2cb7"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"otp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"697313"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">204</span><span class="w">
+</span></code></pre>
+<p><code>PUT /wallets/{wallet-id}/factors/{factor-id}/verification</code></p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>token</code></td>
+<td>Request based hash return by <code>tfa_required</code> error</td>
+</tr>
+<tr>
+<td><code>otp</code></td>
+<td>Factor specific one-time password</td>
+</tr>
+</tbody></table>
+<h3 id='totp'>TOTP</h3>
+<p>For <code>totp</code> factor <code>otp</code> is current time based token provide by user&#39;s application.</p>
+<h3 id='password'>Password</h3>
+<p>For <code>password</code> factor <code>otp</code> is <code>token</code> signed with seed from factor keychain.</p>
+<h2 id='update-factor'>Update factor</h2><pre class="highlight ruby tab-ruby"><code><span class="no">PATCH</span> <span class="sr">/wallets/</span><span class="mi">82</span><span class="n">dc746c10b28f87eb6eae695fc3c5ab91c31988ea43b692c8ae50f52f24b9d6</span><span class="o">/</span><span class="n">factors</span><span class="o">/</span><span class="mi">26</span>
+<span class="no">Content</span><span class="o">-</span><span class="no">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">vnd</span><span class="p">.</span><span class="nf">api</span><span class="o">+</span><span class="n">json</span>
+
+<span class="p">{</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"attributes"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"priority"</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="no">HTTP</span><span class="o">/</span><span class="mi">1</span><span class="o">.</span><span class="mi">1</span> <span class="mi">204</span>
+</code></pre>
+<aside class="notice">Previously known as <code>POST /tfa/{id}</code></aside>
+
+<p>Only factors with <code>priority</code> greater than 0 will be considered enabled.</p>
+<h2 id='delete-factor'>Delete factor 🔒</h2><pre class="highlight ruby tab-ruby"><code><span class="no">DELETE</span> <span class="sr">/wallets/</span><span class="mi">388108095960430</span><span class="n">b80554ac3efb6807a9f286854033aca47f6f466094ab50876</span><span class="o">/</span><span class="n">factors</span><span class="o">/</span><span class="mi">24</span>
+
+<span class="no">HTTP</span><span class="o">/</span><span class="mi">1</span><span class="o">.</span><span class="mi">1</span> <span class="mi">204</span>
+</code></pre>
+<p><code>DELETE /wallets/{wallet-id}/factors/{factor}</code></p>
+<h1 id='submit-transaction'>Submit transaction</h1><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/transactions</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"tx"</span><span class="p">:</span><span class="s2">"AAAAAOrvzCPL0o0ceEl0zxM3XMqk69UdcIcx0MD3mb99zxyrAAAAAAAAAAAAAAAAAAAAAAAAAABa7b0SAAAAAAAAAAIAAAAAAAAAEAAAAADhH3yEnpcHRPllk9TygwiMTJu7vdl+6g9pf7Nytm8lQAAAAABWXLEGmC8J1zFPAXqjylhXnAdFLyBFPGMlLhDJ3f+wIAAAAAEAAAAAAAAAAAAAAAAAD0JAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAABAAAAAAAAAAAAAAAQAAAAAOEffISelwdE+WWT1PKDCIxMm7u92X7qD2l/s3K2byVAAAAAAFZcsQaYLwnXMU8BeqPKWFecB0UvIEU8YyUuEMnd/7AgAAAAAQAAAAAAidCmAAAAAAAPQkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAF9zxyrAAAAQP3SfLq1jMerbQNS05WT8v9qFA65ruSZd1ma5wWHFpyLUPWqXo1K4tAQqR1mvpNiOSbcMwgm6vN8ZPNSkQ3J/gI="</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w">
+</span><span class="err">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="err">application/vnd.api+json</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.demo.tokend.org/transactions/43e9ee5dc24aa7be1d2c98bdaae2bc4b58983f2837ac52f064e07de241c06ab2"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"43e9ee5dc24aa7be1d2c98bdaae2bc4b58983f2837ac52f064e07de241c06ab2"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ledger"</span><span class="p">:</span><span class="w"> </span><span class="mi">157031</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"envelope_xdr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAAAAOrvzCPL0o0ceEl0zxM3XMqk69UdcIcx0MD3mb99zxyrAAAAAAAAAAAAAAAAAAAAAAAAAABa7b0SAAAAAAAAAAIAAAAAAAAAEAAAAADhH3yEnpcHRPllk9TygwiMTJu7vdl+6g9pf7Nytm8lQAAAAABWXLEGmC8J1zFPAXqjylhXnAdFLyBFPGMlLhDJ3f+wIAAAAAEAAAAAAAAAAAAAAAAAD0JAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAABAAAAAAAAAAAAAAAQAAAAAOEffISelwdE+WWT1PKDCIxMm7u92X7qD2l/s3K2byVAAAAAAFZcsQaYLwnXMU8BeqPKWFecB0UvIEU8YyUuEMnd/7AgAAAAAQAAAAAAidCmAAAAAAAPQkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAF9zxyrAAAAQP3SfLq1jMerbQNS05WT8v9qFA65ruSZd1ma5wWHFpyLUPWqXo1K4tAQqR1mvpNiOSbcMwgm6vN8ZPNSkQ3J/gI="</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result_xdr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAABAAAAAAAAAAAAAAAANDQVQAAAAAA0VUSAAAAAAAAAAAAAAAAAYAAAAAAAAAAQAAAADq78wjy9KNHHhJdM8TN1zKpOvVHXCHMdDA95m/fc8cqwAAAAEAAAADQ0FUAAAAAANFVEgAAAAAAOEffISelwdE+WWT1PKDCIxMm7u92X7qD2l/s3K2byVAAAAAAFZcsQaYLwnXMU8BeqPKWFecB0UvIEU8YyUuEMnd/7AgAAAAAACJ0KYAAAAAAInQpgAAAABa5JCkAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0JAAAAAAAAAAAAAAAAA"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result_meta_xdr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAAAAAAAAAIAAAADAAAAAQACZWcAAAARAAAAAAAAAAEAAAAAf99LEq1lJl9fZHkXl/uv25/nRVP6iKuauQfnV/s9oycAAAADQ0FUAAAAAABMsNfQAAAAAFxrKuAAAAADU1VOAAAAAAJUC+QAAAAABKgXyAAAAAAAAAAAAAFjRXhdigAAAAABRHsibmFtZSI6IkNBVCIsInNob3J0X2Rlc2NyaXB0aW9uIjoiQ0FUIiwiZGVzY3JpcHRpb24iOiJLWTdVRjQ1SlVDVlFKWFBCREZaR1hSN1RYUTJCTUhDTVBCUjZBUkRBSkk0SVE3M0pKWUtRIiwibG9nbyI6eyJrZXkiOiJkcHVyYWg0aW5mcmViamhjb3N0N2Z2bGR0N3VheG43aGtybG1xNTVsMmd3bm5lamFqM3U2aWg0bSIsInVybCI6Imh0dHBzOi8vc3RvcmFnZS5kZXYuc3VudHJpLmlvL2FwaS9kcHVyYWg0aW5mcmViamhjb3N0N2Z2bGR0N3VheG43aGtybG1xNTVsMmd3bm5lamFqM3U2aWg0bSIsInR5cGUiOiJpbWFnZS9qcGVnIn0sInlvdXR1YmVfdmlkZW9faWQiOiIifQAAAAIAAAADQlRDAAAAAAAAD0JAAAAAAFrJUKmlRFjjsdRLBCm1HEJckxr61UvsXbLJ077y7EmxAAAAAAAXpTUAAAAAAAAAA0VUSAAAAAAAAA9CQAAAAACYNnNnJNW3XN1FjWVd6u2Qg99cMmm2grwFH3XdCmwKaQAAAAAAZoS9AAAAAAAAAACF8a8wrVAJ4hPxQpHOiY4mhB4zp5bndUx5eVrcjwBKfwAAAAQAAAACAAAAAAAAAAAAAAACAAAADQAAAAAAAAAFAAAAAOrvzCPL0o0ceEl0zxM3XMqk69UdcIcx0MD3mb99zxyrAAAAAQACZWcAAAAEAAAAAFZcsQaYLwnXMU8BeqPKWFecB0UvIEU8YyUuEMnd/7AgAAAAA0VUSAAAAAAA6u/MI8vSjRx4SXTPEzdcyqTr1R1whzHQwPeZv33PHKsAAAAAO5rKAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAACZWcAAAANAAAAAAAAAAYAAAAAAAAAAQAAAADq78wjy9KNHHhJdM8TN1zKpOvVHXCHMdDA95m/fc8cqwAAAAEAAAADQ0FUAAAAAANFVEgAAAAAAOEffISelwdE+WWT1PKDCIxMm7u92X7qD2l/s3K2byVAAAAAAFZcsQaYLwnXMU8BeqPKWFecB0UvIEU8YyUuEMnd/7AgAAAAAACJ0KYAAAAAAInQpgAAAABa5JCkAAAAAAAAAAAAAAAAAAAAAAAAAAAAD0JAAAAAAAAAAAAAAAABAAJlZwAAAAQAAAAA4R98hJ6XB0T5ZZPU8oMIjEybu73ZfuoPaX+zcrZvJUAAAAADQ0FUAAAAAADq78wjy9KNHHhJdM8TN1zKpOvVHXCHMdDA95m/fc8cqwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAmVnAAAABAAAAABWXLEGmC8J1zFPAXqjylhXnAdFLyBFPGMlLhDJ3f+wIAAAAANFVEgAAAAAAOrvzCPL0o0ceEl0zxM3XMqk69UdcIcx0MD3mb99zxyrAAAAADsQ+VoAAAAAAInQpgAAAAAAAAAAAAAAAQACZWcAAAARAAAAAAAAAAEAAAAAf99LEq1lJl9fZHkXl/uv25/nRVP6iKuauQfnV/s9oycAAAADQ0FUAAAAAABMsNfQAAAAAFxrKuAAAAADU1VOAAAAAAJUC+QAAAAABKgXyAAAAAAAAAAAAAFjRXhdigAAAAABRHsibmFtZSI6IkNBVCIsInNob3J0X2Rlc2NyaXB0aW9uIjoiQ0FUIiwiZGVzY3JpcHRpb24iOiJLWTdVRjQ1SlVDVlFKWFBCREZaR1hSN1RYUTJCTUhDTVBCUjZBUkRBSkk0SVE3M0pKWUtRIiwibG9nbyI6eyJrZXkiOiJkcHVyYWg0aW5mcmViamhjb3N0N2Z2bGR0N3VheG43aGtybG1xNTVsMmd3bm5lamFqM3U2aWg0bSIsInVybCI6Imh0dHBzOi8vc3RvcmFnZS5kZXYuc3VudHJpLmlvL2FwaS9kcHVyYWg0aW5mcmViamhjb3N0N2Z2bGR0N3VheG43aGtybG1xNTVsMmd3bm5lamFqM3U2aWg0bSIsInR5cGUiOiJpbWFnZS9qcGVnIn0sInlvdXR1YmVfdmlkZW9faWQiOiIifQAAAAIAAAADQlRDAAAAAAAAD0JAAAAAAFrJUKmlRFjjsdRLBCm1HEJckxr61UvsXbLJ077y7EmxAAAAAAAXpTUAAAAAAAAAA0VUSAAAAAAAAA9CQAAAAACYNnNnJNW3XN1FjWVd6u2Qg99cMmm2grwFH3XdCmwKaQAAAAAA8FVjAAAAAAAAAACF8a8wrVAJ4hPxQpHOiY4mhB4zp5bndUx5eVrcjwBKfwAAAAQAAAACAAAAAAAAAAA="</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>POST /transactions</code></p>
+<h1 id='documents'>Documents</h1><h3 id='document-types'>Document types</h3>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Visibility</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>asset_logo</code></td>
+<td>public</td>
+</tr>
+<tr>
+<td><code>fund_logo</code></td>
+<td>public</td>
+</tr>
+<tr>
+<td><code>fund_document</code></td>
+<td>public</td>
+</tr>
+<tr>
+<td><code>nav_report</code></td>
+<td>public</td>
+</tr>
+</tbody></table>
+<h3 id='allowed-content-types'>Allowed content types</h3>
+<ul>
+<li><code>application/pdf</code></li>
+<li><code>image/jpeg</code></li>
+<li><code>image/tiff</code></li>
+<li><code>image/png</code></li>
+<li><code>image/gif</code></li>
+</ul>
+<h2 id='upload'>Upload 🔒</h2><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/users/GBT3XFWQUHUTKZMI22TVTWRA7UHV2LIO2BIFNRCH3CXWPYVYPTMXMDGC/documents</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asset_logo"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"content_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/png"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w">
+</span><span class="err">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="err">application/vnd.api+json</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"upload_policy"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"bucket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"api"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dpurgh4infjubjhcost7fvmaij6y2s3as33sueqfjdmnyrxig3qwm3uc"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"policy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJleHBpcmF0aW9...ZXF1ZXN0Il1dfQ=="</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:9000/api/"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"x-amz-algorithm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AWS4-HMAC-SHA256"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"x-amz-credential"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2SRMRAST49JEIMUUKWKH/20171225/us-east-1/s3/aws4_request"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"x-amz-date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20171225T001154Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"x-amz-signature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4881f2cada23e19df7f5a92fd1d82fe4c8e4b33ea69e61f05ca2a8860d9a5f3b"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='blobs'>Blobs</h1><h3 id='blob-types'>Blob types</h3>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Filter</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>asset_description</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>fund_overview</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>fund_update</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>nav_update</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><code>fund_document</code></td>
+<td>16</td>
+</tr>
+<tr>
+<td><code>alpha</code></td>
+<td>32</td>
+</tr>
+<tr>
+<td><code>bravo</code></td>
+<td>64</td>
+</tr>
+<tr>
+<td><code>charlie</code></td>
+<td>128</td>
+</tr>
+<tr>
+<td><code>delta</code></td>
+<td>256</td>
+</tr>
+<tr>
+<td><code>token_terms</code></td>
+<td>512</td>
+</tr>
+<tr>
+<td><code>token_metrics</code></td>
+<td>1024</td>
+</tr>
+<tr>
+<td><code>kyc_form</code></td>
+<td>2048</td>
+</tr>
+<tr>
+<td><code>kyc_id_document</code></td>
+<td>4096</td>
+</tr>
+<tr>
+<td><code>kyc_poa</code></td>
+<td>8192</td>
+</tr>
+<tr>
+<td><code>identity_mind_reject</code></td>
+<td>16384</td>
+</tr>
+</tbody></table>
+<h2 id='create-user-owned-blob'>Create user-owned blob</h2><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/users/GCCJPB7QQLNEMCJ72CQJ4ODAZFFGXHET5UPOGSDWT222GXQPMTO6ZQW3/blobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+<span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asset_description"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foobar"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+
+</span><span class="err">HTTP/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">201</span><span class="w">
+</span><span class="err">Content-Type</span><span class="p">:</span><span class="w"> </span><span class="err">application/vnd.api+json</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CMKFL7K43ZG6E4S3QFEYFYM2F7GS2QJHQPLI25PIWFYMT5V4ZOKQ"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asset_description"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foobar"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='create-master-owned-blob'>Create master-owned blob</h2><h2 id='get'>Get</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/users/GCCJPB7QQLNEMCJ72CQJ4ODAZFFGXHET5UPOGSDWT222GXQPMTO6ZQW3/blobs/CMKFL7K43ZG6E4S3QFEYFYM2F7GS2QJHQPLI25PIWFYMT5V4ZOKQ</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+
+HTTP/1.1 200
+Content-Type: application/vnd.api+json
+
+{
+    "data": {
+        "id": "CMKFL7K43ZG6E4S3QFEYFYM2F7GS2QJHQPLI25PIWFYMT5V4ZOKQ",
+        "type": "asset_description",
+        "attributes": {
+            "value": "foobar"
+        }
+    }
+}
+</code></pre><h2 id='filter'>Filter</h2><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/users/GCCJPB7QQLNEMCJ72CQJ4ODAZFFGXHET5UPOGSDWT222GXQPMTO6ZQW3/blobs</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/vnd.api+json</span>
+
+
+HTTP/1.1 200
+Content-Type: application/vnd.api+json
+
+{
+    "data": [
+        {
+            "id": "ZCPGS6E3MH7I7WNWAHHYW3C6PZI2R4ONUMCEERN35J33MQBAGJ3Q",
+            "type": "fund_overview",
+            "attributes": {
+                "value": "aaaa"
+            }
+        },
+        {
+            "id": "57UOND563OVFKI6BDZU7DBPDZFJJORIGFPEMHZQ44IQLWO4RYUOQ",
+            "type": "nav_update",
+            "attributes": {
+                "value": "bbbb"
+            }
+        }
+    ]
+}
+</code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>type</code></td>
+<td>Filter by type bitmask</td>
+</tr>
+</tbody></table>
+
+<p>Blobs index also supports filtering by user-provided relationships types.</p>
+<h1 id='balances'>Balances</h1><h3 id='account'>Account 🔒</h3>
+<p>All user balances are placed in account structure</p>
+<pre class="highlight ruby tab-ruby"><code><span class="no">GET</span> <span class="sr">/accounts/</span><span class="no">GCZA6YVQBH46NYQ5PL2MXVA6U4PEFMNNHOB27N3GD6T5AU2YDFOP3ESJ</span>
+
+<span class="p">{</span>
+  <span class="s2">"_links"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"self"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"href"</span><span class="p">:</span> <span class="s2">"https://api.demo.tokend.org/accounts/GA43MKTMTE7NKDVLORPIZ6UVIL6DUH6L6WAVXB4JAHNAYH72K6HE5VEI"</span>
+    <span class="p">},</span>
+    <span class="s2">"transactions"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"href"</span><span class="p">:</span> <span class="s2">"https://api.demo.tokend.org/accounts/GA43MKTMTE7NKDVLORPIZ6UVIL6DUH6L6WAVXB4JAHNAYH72K6HE5VEI/transactions{?cursor,limit,order}"</span><span class="p">,</span>
+      <span class="s2">"templated"</span><span class="p">:</span> <span class="kp">true</span>
+    <span class="p">},</span>
+    <span class="s2">"operations"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"href"</span><span class="p">:</span> <span class="s2">"https://api.demo.tokend.org/accounts/GA43MKTMTE7NKDVLORPIZ6UVIL6DUH6L6WAVXB4JAHNAYH72K6HE5VEI/operations{?cursor,limit,order}"</span><span class="p">,</span>
+      <span class="s2">"templated"</span><span class="p">:</span> <span class="kp">true</span>
+    <span class="p">},</span>
+    <span class="s2">"payments"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"href"</span><span class="p">:</span> <span class="s2">"https://api.demo.tokend.org/accounts/GA43MKTMTE7NKDVLORPIZ6UVIL6DUH6L6WAVXB4JAHNAYH72K6HE5VEI/payments{?cursor,limit,order}"</span><span class="p">,</span>
+      <span class="s2">"templated"</span><span class="p">:</span> <span class="kp">true</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"GA43MKTMTE7NKDVLORPIZ6UVIL6DUH6L6WAVXB4JAHNAYH72K6HE5VEI"</span><span class="p">,</span>
+  <span class="s2">"account_id"</span><span class="p">:</span> <span class="s2">"GA43MKTMTE7NKDVLORPIZ6UVIL6DUH6L6WAVXB4JAHNAYH72K6HE5VEI"</span><span class="p">,</span>
+  <span class="s2">"is_blocked"</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+  <span class="s2">"block_reasons_i"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">"block_reasons"</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="s2">"account_type_i"</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="s2">"account_type"</span><span class="p">:</span> <span class="s2">"AccountTypeNotVerified"</span><span class="p">,</span>
+  <span class="s2">"referrer"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+  <span class="s2">"thresholds"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"low_threshold"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"med_threshold"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"high_threshold"</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="p">},</span>
+  <span class="s2">"balances"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"balance_id"</span><span class="p">:</span> <span class="s2">"BBJ6SSJCEPOYL5OHDI2J4TZ44DSBXI2FIT2ZSNSM3WQSB2FOUBDV3SXK"</span><span class="p">,</span>
+      <span class="s2">"account_id"</span><span class="p">:</span> <span class="s2">"GA43MKTMTE7NKDVLORPIZ6UVIL6DUH6L6WAVXB4JAHNAYH72K6HE5VEI"</span><span class="p">,</span>
+      <span class="s2">"asset"</span><span class="p">:</span> <span class="s2">"BTC"</span><span class="p">,</span>
+      <span class="s2">"balance"</span><span class="p">:</span> <span class="s2">"0.000000"</span><span class="p">,</span>
+      <span class="s2">"locked"</span><span class="p">:</span> <span class="s2">"0.000000"</span><span class="p">,</span>
+      <span class="s2">"require_review"</span><span class="p">:</span> <span class="kp">false</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"balance_id"</span><span class="p">:</span> <span class="s2">"BBVI4C7EA54D2R3JLDHA3I4FGGB3MJX2A4RU6EDKJYWXI7KQLGKN2WEB"</span><span class="p">,</span>
+      <span class="s2">"account_id"</span><span class="p">:</span> <span class="s2">"GA43MKTMTE7NKDVLORPIZ6UVIL6DUH6L6WAVXB4JAHNAYH72K6HE5VEI"</span><span class="p">,</span>
+      <span class="s2">"asset"</span><span class="p">:</span> <span class="s2">"ETH"</span><span class="p">,</span>
+      <span class="s2">"balance"</span><span class="p">:</span> <span class="s2">"0.000000"</span><span class="p">,</span>
+      <span class="s2">"locked"</span><span class="p">:</span> <span class="s2">"0.000000"</span><span class="p">,</span>
+      <span class="s2">"require_review"</span><span class="p">:</span> <span class="kp">false</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"signers"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">.</span><span class="nf">.</span><span class="o">.</span>
+  <span class="p">],</span>
+  <span class="s2">"limits"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"daily_out"</span><span class="p">:</span> <span class="s2">"9223372036854.775807"</span><span class="p">,</span>
+    <span class="s2">"weekly_out"</span><span class="p">:</span> <span class="s2">"9223372036854.775807"</span><span class="p">,</span>
+    <span class="s2">"monthly_out"</span><span class="p">:</span> <span class="s2">"9223372036854.775807"</span><span class="p">,</span>
+    <span class="s2">"annual_out"</span><span class="p">:</span> <span class="s2">"9223372036854.775807"</span>
+  <span class="p">},</span>
+  <span class="s2">"statistics"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"daily_outcome"</span><span class="p">:</span> <span class="s2">"0.000000"</span><span class="p">,</span>
+    <span class="s2">"weekly_outcome"</span><span class="p">:</span> <span class="s2">"0.000000"</span><span class="p">,</span>
+    <span class="s2">"monthly_outcome"</span><span class="p">:</span> <span class="s2">"0.000000"</span><span class="p">,</span>
+    <span class="s2">"annual_outcome"</span><span class="p">:</span> <span class="s2">"0.000000"</span>
+  <span class="p">},</span>
+  <span class="s2">"policies"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"account_policies_type_i"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"account_policies_types"</span><span class="p">:</span> <span class="n">null</span>
+  <span class="p">},</span>
+  <span class="s2">"account_kyc"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"KYCData"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"blob_id"</span><span class="p">:</span> <span class="s2">"MA36J5T2B4WPEQ3QUGMEA2RWHTDH7VL5PH4S3NHUALL5OLNMIJUA"</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"external_system_accounts"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"bitcoin"</span><span class="p">,</span>
+        <span class="s2">"value"</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="s2">"data"</span><span class="p">:</span> <span class="s2">"1LnCYq8zqJiEaii8QGyjBkUWjt4oK34SBC"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"type"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"ethereum"</span><span class="p">,</span>
+        <span class="s2">"value"</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="p">},</span>
+      <span class="s2">"data"</span><span class="p">:</span> <span class="s2">"0xA7F7f6C40f05c2E5D8751E4b3cf7b5f680B820e3"</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">"referrals"</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+
+
+<span class="no">HTTP</span><span class="o">/</span><span class="mi">1</span><span class="o">.</span><span class="mi">1</span> <span class="mi">204</span>
+</code></pre><h1 id='javascript'>Javascript</h1>
+<p>Here are some common cases where using one of this libraries may largely simplify working with API.</p>
+<h2 id='wallet-js'>wallet.js</h2>
+<p><a href="https://gitlab.com/tokend/wallet-js">View on github</a></p>
+
+<p>You will need wallet.js to make calculation of <code>walletId</code> and <code>walletKey</code> and then to decrypt keychain data using
+<code>walletKey</code>. Methods reference:</p>
+<h3 id='calculatewalletparams-password-email-salt-kdfparams'>calculateWalletParams(password, email, salt, kdfParams)</h3><pre class="highlight javascript tab-javascript"><code>    <span class="kr">import</span> <span class="nx">wallet</span> <span class="nx">from</span> <span class="s1">'wallet.js'</span>
+
+    <span class="kr">const</span> <span class="nx">walletParams</span> <span class="o">=</span> <span class="nx">wallet</span><span class="p">.</span><span class="nx">calculateWalletParams</span><span class="p">(</span>
+        <span class="s1">'qwe123'</span><span class="p">,</span>
+        <span class="s1">'alice@mail.com'</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="s2">"algorithm"</span><span class="p">:</span><span class="s2">"scrypt"</span><span class="p">,</span>
+            <span class="s2">"bits"</span><span class="p">:</span><span class="mi">256</span><span class="p">,</span>
+            <span class="s2">"n"</span><span class="p">:</span><span class="mi">4096</span><span class="p">,</span>
+            <span class="s2">"r"</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
+            <span class="s2">"p"</span><span class="p">:</span><span class="mi">1</span>
+        <span class="p">},</span>
+        <span class="s2">"ivuWp73O0vkp/0vUekW6Xw=="</span>
+    <span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">walletParams</span><span class="p">.</span><span class="nx">walletId</span><span class="p">)</span> <span class="c1">// b6ea7c162a601f4c2ff00735ba1845016f98278eca202e7edbeb113014e9ae24</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">walletParams</span><span class="p">.</span><span class="nx">walletKey</span><span class="p">)</span> <span class="c1">// [998723670, -411326144, -1009165736, -798437100, 351233684, -730655273, 546018851, 1686940172]</span>
+</code></pre><h4 id='parameters'>parameters</h4>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>password</td>
+<td>User provided password</td>
+</tr>
+<tr>
+<td>email</td>
+<td>User provided email</td>
+</tr>
+<tr>
+<td>kdfParams</td>
+<td>Key derive function params, see <a href="#get-kdf-params">kdf</a></td>
+</tr>
+<tr>
+<td>salt</td>
+<td>Salt, comes with <code>kdfParams</code></td>
+</tr>
+</tbody></table>
+<h4 id='return-value'>return value</h4>
+<p><code>walletParams</code></p>
+
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>walletParams.walletId</td>
+<td>string that identifies wallet</td>
+</tr>
+<tr>
+<td>walletParams.walletKey</td>
+<td>byte array that is used to decrypt keychain data</td>
+</tr>
+</tbody></table>
+<h3 id='decryptkeychaindata-keychaindata-rawwalletkey'>decryptKeychainData (keychainData, rawWalletKey)</h3><pre class="highlight javascript tab-javascript"><code>    <span class="kr">import</span> <span class="nx">wallet</span> <span class="nx">from</span> <span class="s1">'wallet.js'</span>
+
+    <span class="kr">const</span> <span class="nx">walletKey</span> <span class="o">=</span> <span class="p">[</span><span class="mi">998723670</span><span class="p">,</span> <span class="o">-</span><span class="mi">411326144</span><span class="p">,</span> <span class="o">-</span><span class="mi">1009165736</span><span class="p">,</span> <span class="o">-</span><span class="mi">798437100</span><span class="p">,</span> <span class="mi">351233684</span><span class="p">,</span> <span class="o">-</span><span class="mi">730655273</span><span class="p">,</span> <span class="mi">546018851</span><span class="p">,</span> <span class="mi">1686940172</span><span class="p">]</span>
+    <span class="kr">const</span> <span class="nx">encryptedKeychain</span> <span class="o">=</span> <span class="s1">'eyJJViI6IjN...I6ImdjbSJ9'</span>
+    <span class="kr">const</span> <span class="nx">decryptedKeychain</span> <span class="o">=</span> <span class="nx">wallet</span><span class="p">.</span><span class="nx">decryptKeychainData</span><span class="p">(</span><span class="nx">encryptedKeychain</span><span class="p">,</span> <span class="nx">walletKey</span><span class="p">)</span>
+    <span class="kr">const</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">decryptedKeychain</span><span class="p">)</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">keys</span><span class="p">.</span><span class="nx">seed</span><span class="p">)</span> <span class="c1">// SBCTRYOGBPDVEA7PLBVDYYCPFQGTGZS4QHVGHC6OWBLSGLAP5FUOY4CN</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">keys</span><span class="p">.</span><span class="nx">accountId</span><span class="p">)</span> <span class="c1">// GCZMY36JI2GGYJHY5MJYFOQMG4NDZTREEKGS4UL4MIGLFLKM533GN7CF</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>keychainData</td>
+<td>encrypted keychain data</td>
+</tr>
+<tr>
+<td>rawWalletKey</td>
+<td>wallet key, derived when using <code>calculateWalletParams</code></td>
+</tr>
+</tbody></table>
+<h4 id='return-value-2'>return value</h4>
+<p><code>decryptedKeychainData</code> - JSON string with object containing keys</p>
+
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>decryptedKeychainData.seed</td>
+<td>secret seed to sign requests and transactions</td>
+</tr>
+<tr>
+<td>decryptedKeychainData.accountId</td>
+<td>unique identifier of user account</td>
+</tr>
+</tbody></table>
+<h2 id='js-base'>js-base</h2>
+<p>js-base is a library for creating transactions, that you may need to send to TokenD core. There are a lot of transaction
+types, and it contains builders for all of them.</p>
+<h3 id='manageassetbuilder-assetcreationrequest-opts'>ManageAssetBuilder.assetCreationRequest(opts)</h3>
+<p>Creates operation to create asset creation request</p>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kr">import</span> <span class="p">{</span> <span class="nx">ManageAssetBuilder</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'js-sdk'</span>
+
+    <span class="kr">const</span> <span class="nx">createAssetOp</span> <span class="o">=</span> <span class="nx">ManageAssetBuilder</span><span class="p">.</span><span class="nx">assetCreationRequest</span><span class="p">({</span>
+      <span class="na">requestID</span><span class="p">:</span> <span class="s1">'0'</span><span class="p">,</span>
+      <span class="na">code</span><span class="p">:</span> <span class="s1">'QTK'</span><span class="p">,</span>
+      <span class="na">policies</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="na">details</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="s1">'AwesomeCoin'</span><span class="p">,</span>
+        <span class="na">logo</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">key</span><span class="p">:</span> <span class="s1">'dpurah4infkubjhcost7fvprgkop4owgfxvfzeoxip5ni6rqh2otp2oq'</span><span class="p">,</span>
+          <span class="na">type</span><span class="p">:</span> <span class="s1">'image/png'</span>
+        <span class="p">},</span>
+        <span class="na">terms</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">key</span><span class="p">:</span> <span class="s1">'dpurah4infkubjhcost7fvprgkop4owgfxvfzeoxip5ni6rqh2otp2oq'</span><span class="p">,</span>
+          <span class="na">type</span><span class="p">:</span> <span class="s1">'application/pdf'</span><span class="p">,</span>
+          <span class="na">name</span><span class="p">:</span> <span class="s1">'AwesomeCoin terms.pdf'</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="na">maxIssuanceAmount</span><span class="p">:</span> <span class="s1">'1000000.000000'</span><span class="p">,</span>
+      <span class="na">initialPreissuedAmount</span><span class="p">:</span> <span class="s1">'1000000.000000,
+      preissuedAssetSigner: '</span><span class="nx">GD2QOSZSKTSUP42AVEMFOJ7ZOBAF6GIQ4BMLVJNI3KZBGBIQIIK3L5PF</span><span class="err">'</span>
+    <span class="p">})</span>
+</code></pre><h4 id='parameters-2'>parameters</h4>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>requestID</td>
+<td>request ID, if &#39;0&#39; - creates new, updates otherwise</td>
+</tr>
+<tr>
+<td>string</td>
+<td>code</td>
+<td>Asset code</td>
+</tr>
+<tr>
+<td>string</td>
+<td>preissuedAssetSigner</td>
+<td>AccountID of keypair which will sign request for asset to be authrorized to be issued</td>
+</tr>
+<tr>
+<td>string</td>
+<td>maxIssuanceAmount</td>
+<td>Max amount can be issued of that asset</td>
+</tr>
+<tr>
+<td>number</td>
+<td>policies</td>
+<td>Asset policies</td>
+</tr>
+<tr>
+<td>string</td>
+<td>initialPreissuedAmount</td>
+<td>Amount of pre issued tokens available after creation of the asset</td>
+</tr>
+<tr>
+<td>object</td>
+<td>details</td>
+<td>Additional details about asset</td>
+</tr>
+<tr>
+<td>string</td>
+<td>details.name</td>
+<td>Name of the asset</td>
+</tr>
+<tr>
+<td>string</td>
+<td>details.logo</td>
+<td>Details of the logo (see <a href="#documents">documents</a>, here you need to previously upload &#39;asset_logo&#39;)</td>
+</tr>
+<tr>
+<td>string</td>
+<td>details.logo.key</td>
+<td>Key to compose asset picture url</td>
+</tr>
+<tr>
+<td>string</td>
+<td>details.logo.type</td>
+<td>Content type of asset logo</td>
+</tr>
+<tr>
+<td>string</td>
+<td>details.terms</td>
+<td>Asset terms</td>
+</tr>
+<tr>
+<td>string</td>
+<td>details.terms.type</td>
+<td>Content type of terms document</td>
+</tr>
+<tr>
+<td>string</td>
+<td>details.terms.name</td>
+<td>Name of terms document</td>
+</tr>
+<tr>
+<td>string</td>
+<td>source</td>
+<td>The source account for the operation. Defaults to the transaction&#39;s source account.</td>
+</tr>
+</tbody></table>
+<h3 id='salerequestbuilder-createsalecreationrequest-opts'>SaleRequestBuilder.createSaleCreationRequest(opts)</h3>
+<p>Creates operation to create sale creation request</p>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kr">import</span> <span class="p">{</span> <span class="nx">SaleRequestBuilder</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'js-sdk'</span>
+
+    <span class="kr">const</span> <span class="nx">createSaleOp</span> <span class="o">=</span> <span class="nx">SaleRequestBuilder</span><span class="p">.</span><span class="nx">createSaleCreationRequest</span><span class="p">({</span>
+        <span class="na">defaultQuoteAsset</span><span class="p">:</span> <span class="s1">'SUN'</span><span class="p">,</span>
+        <span class="na">price</span><span class="p">:</span> <span class="s1">'1.231223'</span><span class="p">,</span>
+        <span class="na">startTime</span><span class="p">:</span> <span class="mi">1544572800</span>
+        <span class="na">endTime</span><span class="p">:</span> <span class="mi">1602288000</span><span class="p">,</span>
+        <span class="na">softCap</span><span class="p">:</span> <span class="s1">'1000.000000'</span><span class="p">,</span>
+        <span class="na">hardCap</span><span class="p">:</span> <span class="s1">'2000.000000'</span><span class="p">,</span>
+        <span class="na">requestID</span><span class="p">:</span> <span class="s1">'0'</span><span class="p">,</span>
+        <span class="na">baseAsset</span><span class="p">:</span> <span class="s1">'QTK'</span><span class="p">,</span>
+        <span class="na">quoteAssets</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+              <span class="na">asset</span><span class="p">:</span> <span class="s1">'BTC'</span><span class="p">,</span>
+              <span class="na">price</span><span class="p">:</span> <span class="s1">'0.0021'</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+              <span class="na">asset</span><span class="p">:</span> <span class="s1">'ETH'</span><span class="p">,</span>
+              <span class="na">price</span><span class="p">:</span> <span class="s1">'0.0123'</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="na">details</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">name</span><span class="p">:</span> <span class="s1">'IO name'</span><span class="p">,</span>
+          <span class="na">short_description</span><span class="p">:</span> <span class="s1">'IO description, max 180 symbols'</span><span class="p">,</span>
+          <span class="na">description</span><span class="p">:</span> <span class="s1">'ZP5B3NPOKCG7OIHO4HMWCGT4QHMJVC3XTVERBDEYRRLY2P5THSDQ'</span><span class="p">,</span>
+          <span class="na">logo</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">key</span><span class="p">:</span> <span class="s1">'dpurah4infkubjhcost7fvprgkop4owgfxvfzeoxip5ni6rqh2otp2oq'</span><span class="p">,</span>
+            <span class="na">type</span><span class="p">:</span> <span class="s1">'image/png'</span>
+          <span class="p">},</span>
+          <span class="na">youtube_video_id</span><span class="p">:</span> <span class="s1">'GuReK0GsLFA'</span>
+        <span class="p">},</span>
+        <span class="na">isCrowdfunding</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">})</span>
+</code></pre><h4 id='parameters-3'>parameters</h4>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>string</td>
+<td>requestID</td>
+<td>ID of the request. 0 - to create new;</td>
+</tr>
+<tr>
+<td>string</td>
+<td>baseAsset</td>
+<td>asset for which sale will be performed</td>
+</tr>
+<tr>
+<td>string</td>
+<td>defaultQuoteAsset</td>
+<td>asset in which hardcap/soft cap will be calculated</td>
+</tr>
+<tr>
+<td>string</td>
+<td>startTime</td>
+<td>start time of the sale</td>
+</tr>
+<tr>
+<td>string</td>
+<td>endTime</td>
+<td>close time of the sale</td>
+</tr>
+<tr>
+<td>string</td>
+<td>softCap</td>
+<td>minimum amount of quote asset to be received at which sale will be considered a successful</td>
+</tr>
+<tr>
+<td>string</td>
+<td>hardCap</td>
+<td>max amount of quote asset to be received</td>
+</tr>
+<tr>
+<td>object</td>
+<td>details</td>
+<td>sale specific details</td>
+</tr>
+<tr>
+<td>object</td>
+<td>details.name</td>
+<td>name of the sale</td>
+</tr>
+<tr>
+<td>object</td>
+<td>details.short_description</td>
+<td>short description of the sale</td>
+</tr>
+<tr>
+<td>object</td>
+<td>details.description</td>
+<td>blob ID of the description (see <a href="#blobs">blobs</a>, here you need to previously upload <code>fund_overview</code>)</td>
+</tr>
+<tr>
+<td>object</td>
+<td>details.logo</td>
+<td>details of the logo (see <a href="#documents">documents</a>, here you need to previously upload <code>fund_logo</code>)</td>
+</tr>
+<tr>
+<td>array</td>
+<td>quoteAssets</td>
+<td>accepted assets</td>
+</tr>
+<tr>
+<td>object</td>
+<td>quoteAsset.price</td>
+<td>price for 1 baseAsset in terms of quote asset</td>
+</tr>
+<tr>
+<td>object</td>
+<td>quoteAsset.asset</td>
+<td>asset code of the quote asset</td>
+</tr>
+<tr>
+<td>object</td>
+<td>isCrowdfunding</td>
+<td>states if sale type is crowd funding</td>
+</tr>
+<tr>
+<td>string</td>
+<td>source</td>
+<td>The source account for the operation. Defaults to the transaction&#39;s source account.</td>
+</tr>
+</tbody></table>
+<h2 id='js-sdk'>js-sdk</h2>
+<p><a href="https://gitlab.com/tokend/js-sdk">View on github</a></p>
+
+<p>js-sdk is a helper module to simplify the workflow with transactions backend modules. It also uses
+<a href="#js-base">js-base</a> internally, but you don&#39;t need to import js-base itself, you can import js-base methods
+from js-sdk itself</p>
+<h3 id='keypair'>Keypair</h3><pre class="highlight javascript tab-javascript"><code>    <span class="kr">import</span> <span class="p">{</span> <span class="nx">Keypair</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'js-sdk'</span>
+
+    <span class="kr">const</span> <span class="nx">keypair</span> <span class="o">=</span> <span class="nx">Keypair</span><span class="p">.</span><span class="nx">fromSecret</span><span class="p">(</span><span class="s1">'SBCTRYOGBPDVEA7PLBVDYYCPFQGTGZS4QHVGHC6OWBLSGLAP5FUOY4CN'</span><span class="p">)</span>
+    <span class="nx">keypair</span> <span class="c1">// =&gt; now returns valid instance, which can be used to sign a request/transaction.</span>
+</code></pre>
+<p><code>Keypair</code> class is needed to make manipulations with your keys. You always have 2 keys: secret key (seed) and public key.
+ To make a signature, you need a raw instance of your keypair. You can get it in a simple way by passing your seed (as a string)
+ to <code>Keypair.fromSecret(here_your_seed)</code></p>
+<h3 id='server'>server</h3>
+<p>js-sdk <code>server</code> is a factory of builders for making responses to horizon server. it contains lots of builders for making
+<code>GET</code> requests for tx records, and also provides an interface to simplify crafting and sending a transaction.</p>
+<h3 id='call-builder'>call builder</h3><pre class="highlight javascript tab-javascript"><code>    <span class="kr">import</span> <span class="p">{</span> <span class="nx">server</span><span class="p">,</span> <span class="nx">Keypair</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'js-sdk'</span>
+
+    <span class="nx">async</span> <span class="kd">function</span> <span class="nx">getBalances</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">respnse</span> <span class="o">=</span> <span class="nx">await</span>
+            <span class="nx">server</span>
+             <span class="p">.</span><span class="nx">accounts</span><span class="p">()</span>
+             <span class="p">.</span><span class="nx">accountId</span><span class="p">(</span><span class="s1">'GCZMY36JI2GGYJHY5MJYFOQMG4NDZTREEKGS4UL4MIGLFLKM533GN7CF'</span><span class="p">)</span>
+             <span class="p">.</span><span class="nx">callWithSignature</span><span class="p">(</span><span class="nx">Keypair</span><span class="p">.</span><span class="nx">fromSecret</span><span class="p">(</span><span class="s1">'SBCTRYOGBPDVEA7PLBVDYYCPFQGTGZS4QHVGHC6OWBLSGLAP5FUOY4CN'</span><span class="p">))</span>
+    <span class="p">}</span>
+</code></pre>
+<p>Call builder is a helper module to make <code>GET</code> requests. Call builder has simple structure for building a requests. Also it gives you a possibility
+to sign a request/transaction. Simply call the <code>callWithSignature</code> method at the end of build chain and request will be signed automatically</p>
+<h3 id='server-_getconfig-requesturl-keypair'>server._getConfig(requestUrl, keypair)</h3>
+<p>Allows you to get a signed request config without using CallBuilder instance</p>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kr">import</span> <span class="p">{</span> <span class="nx">server</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'js-sdk'</span>
+
+    <span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">server</span><span class="p">.</span><span class="nx">_getConfig</span><span class="p">(</span><span class="s1">'http://example.com?some_param=123'</span><span class="p">,</span> <span class="nx">Keypair</span><span class="p">.</span><span class="nx">fromSecret</span><span class="p">(</span><span class="s1">'SBCTRYOGBPDVEA7PLBVDYYCPFQGTGZS4QHVGHC6OWBLSGLAP5FUOY4CN'</span><span class="p">))</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span>
+    <span class="cm">/* =&gt;
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "X-AuthValidUnTillTimestamp": '1523719161721'
+            "X-AuthPublicKey": 'GCZMY36JI2GGYJHY5MJYFOQMG4NDZTREEKGS4UL4MIGLFLKM533GN7CF'
+            "X-AuthSignature": '38/9uAAAAED3Yn1h7ykqEw0fACNQLiuAyPL4mnoE7f+uFqV3fiHltFjcO0dazslGeCs1uWJLG6VR55rpUNVWSfPoqqpyFUsC'
+        },
+        timeout: 600000
+    */</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requestUrl</td>
+<td>actual request url, with all query params</td>
+</tr>
+<tr>
+<td>keypair</td>
+<td><code>Keypair</code> instance (see <a href="#keypair">Keypair</a>)</td>
+</tr>
+</tbody></table>
+<h3 id='server-submitoperationgroup-operations-source-keypair'>server.submitOperationGroup(operations, source, keypair)</h3><pre class="highlight javascript tab-javascript"><code>    <span class="kr">import</span> <span class="p">{</span> <span class="nx">Keypair</span><span class="p">,</span> <span class="nx">server</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'js-sdk'</span>
+
+    <span class="nx">async</span> <span class="kd">function</span> <span class="nx">signAndSubmitTransaction</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">seed</span> <span class="o">=</span> <span class="s1">'SBCTRYOGBPDVEA7PLBVDYYCPFQGTGZS4QHVGHC6OWBLSGLAP5FUOY4CN'</span>
+        <span class="kr">const</span> <span class="nx">source</span> <span class="o">=</span> <span class="s1">'GCZMY36JI2GGYJHY5MJYFOQMG4NDZTREEKGS4UL4MIGLFLKM533GN7CF'</span>
+
+        <span class="nx">await</span> <span class="nx">server</span><span class="p">.</span><span class="nx">submitOperationGroup</span> <span class="p">([</span><span class="nx">createAssetOp</span><span class="p">,</span> <span class="nx">createSaleOp</span><span class="p">],</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">Keypair</span><span class="p">.</span><span class="nx">fromSecret</span><span class="p">(</span><span class="nx">seed</span><span class="p">))</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'done'</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>operations</td>
+<td>an array <code>Operation</code> objects, each representing an operation. (Every operation here will be included in transaction. If there is an error in any of operation, all transaction will be rejected)</td>
+</tr>
+<tr>
+<td>source</td>
+<td>account ID that is the performs a transaction</td>
+</tr>
+<tr>
+<td>keypair</td>
+<td>keypair derived from seed to sign the transaction</td>
+</tr>
+</tbody></table>
+
+<p>n request. All you need, is to call the <code>callWithSignature</code> at the and of chaining builders methods</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="http">http</a>
+                <a href="#" data-language-name="js">js</a>
+          </div>
+      </div>
+    </div>
+  </body>
+
+<!-- Mirrored from tokend.gitlab.io/docs/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Aug 2018 13:33:32 GMT -->
+</html>
