@@ -8159,7 +8159,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Vertical Fixed Navigation */
 .point-nav {
-  display: block;
   position: fixed;
   z-index: 1001;
   right: 25px;
@@ -8168,7 +8167,7 @@ input[type=number]::-webkit-outer-spin-button {
           transform: translateY(-50%); }
   @media all and (max-width: 991px) {
     .point-nav {
-      display: none; } }
+      display: none !important; } }
 
 .point-nav-items {
   list-style-type: none;
