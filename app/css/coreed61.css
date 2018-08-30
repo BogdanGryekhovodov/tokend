@@ -11779,7 +11779,7 @@ button.close {
   padding-bottom: 0;
   border-bottom: none; }
   .page-section.blue-background .banner-tabs {
-    max-width: 1080px;
+    max-width: 700px;
     margin: 0 auto; }
     @media all and (max-width: 1040px) {
       .page-section.blue-background .banner-tabs {
