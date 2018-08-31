@@ -345,7 +345,8 @@ $(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     fade: true,
-speed: 10,
+    speed: 10,
+    autoplaySpeed: 10000,
     pauseOnHover: false,
     pauseOnFocus: false,
     arrows: false,
@@ -356,8 +357,8 @@ speed: 10,
     slidesToScroll: 1,
     autoplay: true,
     fade: true,
-speed: 10,
-
+    speed: 10,
+    autoplaySpeed: 10000,
     pauseOnHover: false,
     pauseOnFocus: false,
     arrows: false,
@@ -485,3 +486,68 @@ $(window).scroll(() => {
 // });
 
 // ----------------------------------------------------------text fade-in and out ------------------------------------------------------------------------
+
+//ticking machine
+var percentTime;
+var tick;
+var progressBarIndex = 0;
+let currentSlide;
+let nextSlide;
+
+$('.progressBarContainer .progressBar').each(function(index) {
+    var progress = "<div class='inProgress inProgress" + index + "'></div>";
+    $(this).html(progress);
+});
+
+function startProgressbar() {
+    resetProgressbar();
+    percentTime = 0;
+    tick = setInterval(interval, 8);
+}
+
+function interval() {
+    if (($('.browser__slider .slick-track img[data-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+        progressBarIndex++;
+        startProgressbar();
+    } else {
+        percentTime += 0.1;
+        $('.inProgress' + progressBarIndex).css({
+            width: percentTime + "%"
+        });
+
+        // if (percentTime >= 25) {
+        //   $('.browser__slider').slick('slickNext');
+        // }
+
+        
+
+        if (percentTime >= 100) {
+          currentSlide = $('.browser__slider .slick-track .slick-current.slick-active').data("index");
+          nextSlide = $('.browser__slider .slick-track img[data-index="' + (currentSlide + 1) + '"]').data('slickIndex');
+
+          if (!$('.browser__slider .slick-track img[data-index="' + (currentSlide + 1) + '"]').length) {
+            $('.browser__slider').slick('slickGoTo', 0, false);
+            progressBarIndex = 0;
+          }
+      
+          $('.browser__slider').slick('slickGoTo', nextSlide, false);
+          startProgressbar();
+        }
+    }
+}
+
+function resetProgressbar() {
+    $('.inProgress').css({
+        width: 0 + '%'
+    });
+    clearInterval(tick);
+}
+startProgressbar();
+// End ticking machine
+
+$('.progressBarContainer div').click(function () {
+  clearInterval(tick);
+  var goToThisIndex = $(this).find("span").data("index");
+  $('.browser__slider').slick('slickGoTo', goToThisIndex, false);
+  startProgressbar();
+});
