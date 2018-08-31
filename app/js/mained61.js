@@ -346,6 +346,7 @@ $(document).ready(function(){
     autoplay: true,
     fade: true,
     speed: 10,
+    swipe: false,
     autoplaySpeed: 10000,
     pauseOnHover: false,
     pauseOnFocus: false,
@@ -358,6 +359,7 @@ $(document).ready(function(){
     autoplay: true,
     fade: true,
     speed: 10,
+    swipe: false,
     autoplaySpeed: 10000,
     pauseOnHover: false,
     pauseOnFocus: false,
@@ -493,6 +495,8 @@ var tick;
 var progressBarIndex = 0;
 let currentSlide;
 let nextSlide;
+let currentFlowCount;
+let currentSlideIndex;
 
 $('.progressBarContainer .progressBar').each(function(index) {
     var progress = "<div class='inProgress inProgress" + index + "'></div>";
@@ -502,36 +506,114 @@ $('.progressBarContainer .progressBar').each(function(index) {
 function startProgressbar() {
     resetProgressbar();
     percentTime = 0;
-    tick = setInterval(interval, 8);
+    tick = setInterval(interval, 0.001);
+}
+function drow() {
+  currentSlide = $('.browser__slider .slick-track .slick-current.slick-active').data("index");
+  nextSlide = $('.browser__slider .slick-track img[data-index="' + (currentSlide + 1) + '"]').data('slickIndex');
+  progressBarIndex++;
+
+  if (!$('.browser__slider .slick-track img[data-index="' + (currentSlide + 1) + '"]').length) {
+    $('.browser__slider').slick('slickGoTo', 0, false);
+    progressBarIndex = 0;
+  }
+
+  $('.browser__slider').slick('slickGoTo', nextSlide, false);
+  startProgressbar();
 }
 
 function interval() {
+  currentSlideIndex = $('.browser__slider .slick-track .slick-current.slick-active').data("index");
     if (($('.browser__slider .slick-track img[data-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
-        progressBarIndex++;
-        startProgressbar();
+        progressBarIndex = $('.browser__slider .slick-current.slick-active').data("index");
+        percentTime += 0.1;
+
+        $('.inProgress' + progressBarIndex).css({
+          width: percentTime + "%"
+        });
+
+        if (currentFlowCount == 3) {
+          if (percentTime >= 33.9 && percentTime <= 34) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 66.9 && percentTime <= 67) {
+            $('.browser__slider').slick('slickNext');
+          }
+        }  
+        if (currentFlowCount == 4) {
+          if (percentTime >= 24.9 && percentTime <= 25) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 49.9 && percentTime <= 50) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 74.9 && percentTime <= 75) {
+            $('.browser__slider').slick('slickNext');
+          }
+        }  
+        if (currentFlowCount == 5) {
+          if (percentTime >= 19.9 && percentTime <= 20) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 39.9 && percentTime <= 40) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 59.9 && percentTime <= 60) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 79.9 && percentTime <= 80) {
+            $('.browser__slider').slick('slickNext');
+          }
+        }  
+  
+
+        if (percentTime >= 100) {
+          drow();
+        }
+
     } else {
+      currentFlowCount = $('.browser__slider .slick-track img[data-index="' + currentSlideIndex + '"]').length;
         percentTime += 0.1;
         $('.inProgress' + progressBarIndex).css({
             width: percentTime + "%"
         });
 
-        // if (percentTime >= 25) {
-        //   $('.browser__slider').slick('slickNext');
-        // }
-
-        
+        if (currentFlowCount == 3) {
+          if (percentTime >= 33.9 && percentTime <= 34) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 66.9 && percentTime <= 67) {
+            $('.browser__slider').slick('slickNext');
+          }
+        }  
+        if (currentFlowCount == 4) {
+          if (percentTime >= 24.9 && percentTime <= 25) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 49.9 && percentTime <= 50) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 74.9 && percentTime <= 75) {
+            $('.browser__slider').slick('slickNext');
+          }
+        }  
+        if (currentFlowCount == 5) {
+          if (percentTime >= 19.9 && percentTime <= 20) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 39.9 && percentTime <= 40) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 59.9 && percentTime <= 60) {
+            $('.browser__slider').slick('slickNext');
+          }
+          if (percentTime >= 79.9 && percentTime <= 80) {
+            $('.browser__slider').slick('slickNext');
+          }
+        }  
 
         if (percentTime >= 100) {
-          currentSlide = $('.browser__slider .slick-track .slick-current.slick-active').data("index");
-          nextSlide = $('.browser__slider .slick-track img[data-index="' + (currentSlide + 1) + '"]').data('slickIndex');
-
-          if (!$('.browser__slider .slick-track img[data-index="' + (currentSlide + 1) + '"]').length) {
-            $('.browser__slider').slick('slickGoTo', 0, false);
-            progressBarIndex = 0;
-          }
-      
-          $('.browser__slider').slick('slickGoTo', nextSlide, false);
-          startProgressbar();
+          drow();
         }
     }
 }

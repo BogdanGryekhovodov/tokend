@@ -8566,7 +8566,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .progressBarContainer div {
   display: block;
-  width: 8%;
+  width: 19%;
   padding: 0;
   cursor: pointer;
   margin-right: 2%;
@@ -8578,7 +8578,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .progressBarContainer div span.progressBar {
   width: 100%;
-  height: 15px;
+  height: 7px;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.4);
   display: block; }
@@ -8587,4 +8587,4 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: white;
   width: 0%;
   border-radius: 3px;
-  height: 15px; }
+  height: 7px; }
