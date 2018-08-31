@@ -345,7 +345,7 @@ $(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     fade: true,
-    speed: 10,
+    speed: 1,
     swipe: false,
     autoplaySpeed: 10000,
     pauseOnHover: false,
@@ -358,7 +358,7 @@ $(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     fade: true,
-    speed: 10,
+    speed: 1,
     swipe: false,
     autoplaySpeed: 10000,
     pauseOnHover: false,
@@ -506,7 +506,7 @@ $('.progressBarContainer .progressBar').each(function(index) {
 function startProgressbar() {
     resetProgressbar();
     percentTime = 0;
-    tick = setInterval(interval, 0.001);
+    tick = setInterval(interval, 7);
 }
 function drow() {
   currentSlide = $('.browser__slider .slick-track .slick-current.slick-active').data("index");
