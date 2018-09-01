@@ -373,7 +373,7 @@ $(document).ready(function(){
 //  ---------------------------------------- smooth nav scroll -----------------------------------------------
 
 jQuery(document).ready(function ($) {
-	var contentSections = $('#pricing, #benefits, #features, #resources, #fund'),
+	var contentSections = $('#home, #benefits, #benefits, #white-label, #unprecedented-security, #well-documented, #enterprise-ready, #easy-to-deploy, #affordable, #full-featured, #resources, #pricing'),
     navigationItems = $('.point-nav a');
     menuNavigationItems = $('.navbar-main a');
     
