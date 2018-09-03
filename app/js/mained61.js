@@ -633,3 +633,26 @@ $('.progressBarContainer div').click(function () {
   $('.browser__slider').slick('slickGoTo', goToThisIndex, false);
   startProgressbar();
 });
+let pricesContainer = document.querySelector('.prices .container');
+let pricesTypesRow = document.querySelector('.prices__types-row');
+let pricesTypesNav = document.querySelector('.prices__types-nav');
+let pricesList = document.querySelector('.prices__list');
+
+
+function setPricingHeaderTOAbsolute() {
+
+  console.log(pricesContainer.getBoundingClientRect().top);
+  if (window.matchMedia('(max-width: 990px)').matches) {
+    if (pricesContainer.getBoundingClientRect().top < 0) {
+      pricesTypesRow.classList.add('prices__types-row--absolute');
+      $(pricesTypesNav).show();
+      pricesList.classList.add('prices__list--padding');
+    } 
+    else if (pricesContainer.getBoundingClientRect().top > 60) {
+      pricesTypesRow.classList.remove('prices__types-row--absolute');
+      $(pricesTypesNav).hide();
+      pricesList.classList.remove('prices__list--padding');
+    }
+  }
+}
+$(document).scroll(setPricingHeaderTOAbsolute);
