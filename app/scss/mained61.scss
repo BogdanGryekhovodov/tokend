@@ -8333,7 +8333,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .point-nav-item {
-	text-align: right;
+  text-align: right;
+  padding-top: 10px;
 }
 
 .point-nav-item a {
@@ -8343,11 +8344,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .point-nav span {
 	float: right;
-  // transform: scale(.6);
   background-color: rgba(0,0,0, 0.2);
-  // background-color: #1669BA;
   color: white;
-  // padding: 0 5px;
 }
 
 .point-nav-dot {
@@ -8372,7 +8370,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .point-nav-item:hover span, .point-active span {
-  // transform: scale(1);
   background-color: rgba(0,0,0, 0.5);
 }
 
@@ -8918,3 +8915,216 @@ position: absolute;
   }
 
 }
+
+.bx-imopenlines-config-sidebar-info-block-container {
+  display: none!important;
+}
+
+.bx-imopenlines-config-sidebar-header {
+  background-color: #1B7DD5!important;
+}
+
+.bx-imopenlines-config-sidebar-message-item {
+  color: #fff!important;
+}
+
+.bx-imopenlines-config-sidebar-cloud-middle,
+.bx-imopenlines-config-sidebar-cloud-bottom,
+.bx-imopenlines-config-sidebar-circle {
+  display: none;
+}
+
+
+.bx-messenger-body-bg {
+  background: none!important;
+}
+
+.bx-imopenlines-config-sidebar-message-item {
+  margin-top: 7px!important;
+}
+
+.bx-imopenlines-config-sidebar-back-item, .bx-imopenlines-config-sidebar-rollup-item, .bx-imopenlines-config-sidebar-close-item {
+  filter: brightness(2);
+}
+
+.bx-imopenlines-config-sidebar-back-item,
+.bx-imopenlines-config-sidebar-close-item {
+  vertical-align: initial!important;
+}
+
+
+.b24-widget-button-inner-mask,
+.b24-widget-button-pulse,
+.b24-widget-button-inner-block {
+  background: #1C81DC!important;
+  border-color: #1C81DC;
+}
+
+.b24-widget-button-pulse {
+  border: 1px solid #1C81DC;
+  border-color: #1C81DC;
+}
+
+.b24-widget-button-social-item.b24-widget-button-openline_livechat {
+  background-color: #1C81DC!important;
+}
+
+.b24-widget-button-crmform {
+  background-color: #1C81DC!important;
+}
+
+.contact__form {
+  input,
+  textarea {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: #fff;
+  }
+ 
+  ::placeholder { 
+    color: rgba(154, 211, 248, 0.8);
+  }
+
+  .crm-webform-header {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+
+.bx-crm-widget-form-config-sidebar {
+  @media (max-width: 1600px) {
+  width: 300px!important;
+ 
+  }
+}
+.bx-crm-widget-form-config-sidebar-header {
+  @media (max-width: 1600px) {
+    height: 40px!important;
+  }
+}
+.bx-crm-widget-form-config-sidebar-info {
+  @media (max-width: 1600px) {
+    top: 40px!important;
+  }
+}
+.bx-crm-widget-form-copyright-disabled .bx-crm-widget-form-config-sidebar-info {
+  background-color: #1B7DD5;
+  height: 100%!important;
+}
+
+.crm-webform-no-borders .crm-webform-header {
+  
+  @media (max-width: 1600px) {
+    font-size: 10px!important;
+  }
+}
+
+.bx-crm-widget-form-config-sidebar-close-item {
+  filter: brightness(2);
+}
+
+.bx-crm-widget-form-config-sidebar-header {
+  border-bottom: 1px solid #1b7dd5!important;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,0.13)!important;
+  background: #1b7dd5!important;
+}
+
+
+.bx-crm-widget-form-config-sidebar-message-item {
+  color: #fff!important;
+}
+
+.alert-success.alert-white-green {
+  color: #ffffff!important;
+  background-color: #81C784;
+}
+
+.b24-widget-button-pulse {
+  border-color: #1C81DC!important;
+}
+
+// ---------------------------------------- partners page ------------------------------------------
+.partners {
+  margin-top: -40px;
+
+  .partners__captions {
+    padding: 150px 0 50px 0;
+    background: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
+    background-image: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
+  }
+
+  .main__caption {
+    color: #fff;
+  }
+
+  .main__sub-caption {
+    color: rgba(196, 227, 255, 0.6);
+  }
+  
+
+  .partner {
+    border-bottom: 1px solid #e3e5e8;
+    padding: 50px 0;
+
+    &__services,
+    &__location,
+    &__phone,
+    &__website,
+    &__email {
+      display: flex;
+    }
+
+    &__right {
+      border: 1px solid #e3e5e8;
+      border-radius: 3px;
+      padding: 15px 20px;
+    }
+    
+    &__info-name {
+      // color: rgba(196, 227, 255, 0.9);
+      font-weight: bolder;
+    }
+    
+    &__info-value {
+      margin-left: 10px;
+    }
+
+    
+    @media (min-width: 768px) {
+      .row {
+        display: flex;
+        align-items: center;
+      }  
+    }
+  }
+
+  .filter {
+    display: flex;
+    border: 1px solid #e3e5e8;    
+    margin-top: 20px;
+
+  }
+
+  .filter__select {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-right: 1px solid #e3e5e8; 
+    padding: 5px;
+    color: #616366;
+
+    &:nth-last-child(1){
+      border-right: none;
+      
+      &:hover {
+        background-color: rgb(243, 243, 243)
+      }
+    }
+
+  }
+}
+
+// ---------------------------------------- partners page ------------------------------------------

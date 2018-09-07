@@ -1,0 +1,149 @@
+.md-header {
+    height: 76px;
+    padding: 13px 0;
+    background: #026FCE;
+    background: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
+    background-image: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
+    display: flex;
+    align-items: center;
+}
+
+.md-nav__link--active {
+    color: #1E88E5;
+}
+
+.md-nav__link:focus, .md-nav__link:hover {
+    color: #1E88E5;
+}
+
+.md-typeset a {
+    color: rgb(24, 105, 175);
+}
+
+.md-header-nav__button.md-logo {
+    transform: scale(1.7) translateX(5px);
+}
+
+.md-footer-nav {
+    background: #026FCE;
+    background: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
+    background-image: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
+}
+
+.md-container {
+    padding-top: 7.8rem;
+}
+
+.md-sidebar[data-md-state="lock"] {
+    top: 10.8rem;
+}
+
+.md-sidebar--secondary {
+    display: none;
+}
+
+.md-content {
+    margin-right: 0!important;
+}
+@media (min-width: 767px) {
+
+    .col-sm-4 {
+        width: 50%;
+        display: flex;
+    
+    }
+}
+
+.row {
+    display: flex;
+}
+
+.blocks.row {
+    flex-direction: column;
+}
+
+.main-caption {
+    text-align: center;
+    font-weight: bold!important;
+}
+
+.panel-title>a  {
+    color: #000;
+}
+.list-styled.list-icon.article_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.list-styled.list-icon.article_list li{
+    padding: 5px 0;
+    margin: 0;
+}
+.md-typeset a:hover, .md-typeset a:active {
+    color: #1E88E5;
+}
+
+.md-nav__title.md-nav__title--site {
+    display: none;
+}
+
+.article-footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.article-votes {
+    border-top: 1px solid #ddd;
+    padding: 30px 0;
+    text-align: center;
+}
+.article-more-questions {
+    margin: 10px 0 20px;
+    text-align: center;
+}
+.share {
+    padding: 0;
+    white-space: nowrap;
+}
+.share a {
+    border-radius: 50%;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    width: 25px;
+}
+
+.article-vote {
+    background: transparent;
+    border: 1px solid #1B7ED7;
+    color: #1B7ED7;
+    margin: 10px 5px;
+    min-width: 90px;
+    width: auto;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+.article-vote:hover {
+    background-color: #1B7ED7;
+    color: #fff!important;
+}
+
+.article-votes {
+    border-top: 1px solid #ddd;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.each-article-footer {
+    margin-top: 200px;
+}
+
+.article-votes-question {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.article-vote-label {
+    display: inline-block;
+    margin-top: 10px;
+}
