@@ -802,4 +802,133 @@ function setPricingHeaderTOAbsolute() {
   });
   
 })(jQuery);
+
+// --------------------- prohibition of slider images load in max-width: 768px -------------------------
+
+if (window.matchMedia("(min-width: 768px)").matches) {
+  [].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = function() {
+      img.removeAttribute('data-src');
+      };
+  });
+}
+// --------------------- prohibition of slider images load in max-width: 768px -------------------------
+
+
+$('.slider-single').slick({
+slidesToShow: 1,
+slidesToScroll: 1,
+arrows: false,
+fade: false,
+adaptiveHeight: true,
+infinite: false,
+useTransform: true,
+speed: 400,
+cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+});
+$('.infogr-slider').slick({
+slidesToShow: 1,
+slidesToScroll: 1,
+arrows: false,
+swipe: false,
+fade: false,
+adaptiveHeight: true,
+infinite: false,
+useTransform: true,
+speed: 400,
+cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+});
+
+$('.slider-nav')
+.on('init', function(event, slick) {
+  $('.slider-nav .slick-slide.slick-current').addClass('active');
+})
+.slick({
+  slidesToShow: 4,
+  seipeToSlide: true,
+  dots: false,
+  slidesToScroll: 1,
+  focusOnSelect: false,
+  infinite: false,
+  variableWidth: true,
+  arrows: false,
+  infinite: false,
+
+  prevArrow: '<button class="btn btn-icon btn-link btn-prev" type="button" data-click="prev-tab"><i class="zmdi zmdi-chevron-left"></i></button>',
+  nextArrow: '<button class="btn btn-icon btn-link btn-next" type="button" data-click="next-tab"><i class="zmdi zmdi-chevron-right"></i></button>',
+
+  responsive: [{
+      breakpoint: 1215,
+      settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+      }
+  },  {
+  }, {
+      breakpoint: 1040,
+      settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: true
+      }
+  }, {
+      breakpoint: 640,
+      settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+      }
+  },{
+      breakpoint: 420,
+      settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+  }
+  }]
+});
+
+$('.slider-single').on('afterChange', function(event, slick, currentSlide) {
+$('.slider-nav').slick('slickGoTo', currentSlide);
+$('.infogr-slider').slick('slickGoTo', currentSlide);
+var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+$('.slider-nav .slick-slide.active').removeClass('active');
+$(currrentNavSlideElem).addClass('active');
+});
+
+$('.slider-nav').on('click', '.slick-slide', function(event) {
+event.preventDefault();
+var goToSingleSlide = $(this).data('slick-index');
+
+$('.slider-single').slick('slickGoTo', goToSingleSlide);
+$('.infogr-slider').slick('slickGoTo', goToSingleSlide);
+});
+
+
+$(document).ready(function(){
+$('.browser__slider').slick({
+slidesToShow: 1,
+slidesToScroll: 1,
+autoplay: true,
+pauseOnHover: false,
+pauseOnFocus: false,
+arrows: false,
+});
+});
+
+
+// ----------   function for hiding main form, if bitrix24 site is out of order
+
+setTimeout(function() {
+if ($('.feedback-form').height() < 400) {
+$('.feedback-form').hide();
+$('#spare-form').show();
+setTimeout(function() {
+$('.b24-widget-button-wrapper.b24-widget-button-position-bottom-right.b24-widget-button-visible').hide();
+}, 4)
+}
+}, 5000);
+
+// ----------   function for hiding main form, if bitrix24 site is out of order
+
+
 // -----------------------  spare form ajax sent --------------------------

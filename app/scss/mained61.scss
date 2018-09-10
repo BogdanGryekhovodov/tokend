@@ -9132,32 +9132,32 @@ position: absolute;
 
 
 // ---------------------------------------- paresources page ------------------------------------------resources
+.page-banner-resources {
+  padding-top: 100px;
+  background: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
+  background-image: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
+
+.banner-search {
+  margin-bottom: 30px;
+}
+
+.banner-slogan.banner-slogan-hero {
+padding-bottom: 0;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.btn--search {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+}
+
 
 .resources {
-
-  .page-banner {
-    padding-top: 100px;
-    background: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
-    background-image: linear-gradient(45deg, #0B4182 1%, #1e88e5 64%, #40BAF5 97%);
-  }
-
-  .banner-search {
-    margin-bottom: 30px;
-  }
-
-  .banner-slogan.banner-slogan-hero {
-padding-bottom: 0;
-  }
-
-  .input-icon {
-    position: relative;
-  }
-
-  .btn--search {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
 
   .service .btn {
     // opacity: 1;
@@ -9200,3 +9200,31 @@ padding-bottom: 0;
 
 
 
+.product-guide-categories {
+  .main {
+    margin-top: 40px;
+  }
+
+  .blocks.row {
+    .row {
+      @media (min-width: 768px) {
+        display: flex;
+      }
+    }
+
+    
+  }
+
+  .panel.panel-block {
+    border: none;
+  }
+
+  .zmdi-case {
+    font-size: 26px;
+    margin-right: 10px;
+  }
+
+  .zmdi-file-text {
+    font-size: 18px;
+  }
+}
