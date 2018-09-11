@@ -1673,9 +1673,11 @@ display: none;
 /* 2.6 Page: Footer */
 .page-footer {
   position: relative;
-  background: white;
+  background: #ebeff1;
   padding: 60px 0 0;
-  z-index: 998; }
+  z-index: 998; 
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
 
 .page-footer ul {
   padding: 0;
