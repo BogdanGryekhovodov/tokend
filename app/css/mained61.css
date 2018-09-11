@@ -785,9 +785,6 @@ a {
   width: 120px;
   margin: 0 auto; }
 
-.rotating-block .panel-block-icon.panel:hover {
-  border-color: #666666; }
-
 .navbar-main > li.active > a,
 .navbar-main > li.open > a,
 .navbar-main > li:hover > a,
@@ -8927,7 +8924,7 @@ input[type=number]::-webkit-outer-spin-button {
 .resources .service {
   border: 1px solid #e6e9eb; }
   .resources .service:hover {
-    border-color: black; }
+    border-color: #1E88E5; }
 
 .resources .key-features .row {
   margin-top: 20px; }
