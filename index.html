@@ -169,23 +169,26 @@
                     <div class="navbar-container">
                         <ul class="nav navbar-nav navbar-main">
                             <li>
-                                <a href="#home" style="display: none;">Home</a>
+                                <a id="link-home" href="#home" style="display: none;">Home</a>
                             </li>
                             <li>
-                                <a href="#pricing">Pricing</a>
+                                <a id="link-pricing" href="#pricing">Pricing</a>
                             </li>
 
                             <li>
-                                <a href="#benefits">Benefits</a>
+                                <a id="link-benefits" href="#benefits">Benefits</a>
                             </li>
                             <li>
-                                <a href="#full-featured">Features</a>
+                                <a id="link-featured" href="#full-featured">Features</a>
                             </li>
                             <li>
-                                <a href="#resources">Resources</a>
+                                <a id="link-resources" href="#resources">Resources</a>
                             </li>
                             <li>
-                                <a href="#pricing">Contact us</a>
+                                <a id="link-pricing2" href="#pricing">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="./resources.html">Resources</a>
                             </li>
                         </ul>
                     </div>
@@ -5740,6 +5743,196 @@
     <script src="app/js/core.mined61.js?v=395"></script>
     <script src="app/js/slick.js"></script>
     <script src="app/js/mained61.js?v=395"></script>
+    <script>
+        //ticking machine
+        var percentTime;
+        var tick;
+        var progressBarIndex = 0;
+        let currentSlide;
+        let nextSlide;
+        let currentFlowCount;
+        let currentSlideIndex;
+
+        $('.progressBarContainer .progressBar').each(function(index) {
+            var progress = "<div class='inProgress inProgress" + index + "'></div>";
+            $(this).html(progress);
+        });
+
+        function startProgressbar() {
+            resetProgressbar();
+            percentTime = 0;
+            tick = setInterval(interval, 7);
+        }
+        function drow() {
+        currentSlide = $('.browser__slider .slick-track .slick-current.slick-active').data("index");
+        nextSlide = $('.browser__slider .slick-track img[data-index="' + (currentSlide + 1) + '"]').data('slickIndex');
+        progressBarIndex++;
+
+        if (!$('.browser__slider .slick-track img[data-index="' + (currentSlide + 1) + '"]').length) {
+            $('.browser__slider').slick('slickGoTo', 0, false);
+            progressBarIndex = 0;
+        }
+
+        $('.browser__slider').slick('slickGoTo', nextSlide, false);
+        startProgressbar();
+        }
+
+        function interval() {
+        currentSlideIndex = $('.browser__slider .slick-track .slick-current.slick-active').data("index");
+            if (($('.browser__slider .slick-track img[data-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+                progressBarIndex = $('.browser__slider .slick-current.slick-active').data("index");
+                percentTime += 0.1;
+
+                $('.inProgress' + progressBarIndex).css({
+                width: percentTime + "%"
+                });
+
+                if (currentFlowCount == 3) {
+                if (percentTime >= 33.9 && percentTime <= 34) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 66.9 && percentTime <= 67) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                }  
+                if (currentFlowCount == 4) {
+                if (percentTime >= 24.9 && percentTime <= 25) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 49.9 && percentTime <= 50) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 74.9 && percentTime <= 75) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                }  
+                if (currentFlowCount == 5) {
+                if (percentTime >= 19.9 && percentTime <= 20) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 39.9 && percentTime <= 40) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 59.9 && percentTime <= 60) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 79.9 && percentTime <= 80) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                }  
+        
+
+                if (percentTime >= 100) {
+                drow();
+                }
+
+            } else {
+            currentFlowCount = $('.browser__slider .slick-track img[data-index="' + currentSlideIndex + '"]').length;
+                percentTime += 0.1;
+                $('.inProgress' + progressBarIndex).css({
+                    width: percentTime + "%"
+                });
+
+                if (currentFlowCount == 3) {
+                if (percentTime >= 33.9 && percentTime <= 34) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 66.9 && percentTime <= 67) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                }  
+                if (currentFlowCount == 4) {
+                if (percentTime >= 24.9 && percentTime <= 25) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 49.9 && percentTime <= 50) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 74.9 && percentTime <= 75) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                }  
+                if (currentFlowCount == 5) {
+                if (percentTime >= 19.9 && percentTime <= 20) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 39.9 && percentTime <= 40) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 59.9 && percentTime <= 60) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                if (percentTime >= 79.9 && percentTime <= 80) {
+                    $('.browser__slider').slick('slickNext');
+                }
+                }  
+
+                if (percentTime >= 100) {
+                drow();
+                }
+            }
+        }
+
+        function resetProgressbar() {
+            $('.inProgress').css({
+                width: 0 + '%'
+            });
+            clearInterval(tick);
+        }
+        startProgressbar();
+    // End ticking machine
+
+
+    
+//  ---------------------------------------- smooth nav scroll -----------------------------------------------
+
+jQuery(document).ready(function ($) {
+	var contentSections = $('#home, #benefits, #benefits, #white-label, #unprecedented-security, #well-documented, #enterprise-ready, #easy-to-deploy, #affordable, #full-featured, #resources, #pricing'),
+    navigationItems = $('.point-nav a');
+    menuNavigationItems = $('#link-pricing, #link-benefits, #link-featured, #link-resources, #link-pricing2');
+
+	updateNavigation();
+	$(window).on('scroll', function () {
+		updateNavigation();
+	});
+
+	//smooth scroll to the section
+	navigationItems.on('click', function (event) {
+		event.preventDefault();
+		smoothScroll($(this).attr('href'));
+  });
+  
+	menuNavigationItems.on('click', function (event) {
+		event.preventDefault();
+		smoothScroll($(this).attr('href'));
+  });
+
+	function updateNavigation() {
+		contentSections.each(function () {
+			$this = $(this);
+			var activeNavigationItem = $('.point-nav a[href="#' + $this.attr('id') + '"]');
+			var activeMenuNavigationItem = $('.navbar-main a[href="#' + $this.attr('id') + '"]');
+
+			if ($(window).scrollTop() >= $this.offset().top - $(window).height() / 2) {
+				navigationItems.removeClass('point-active');
+				activeNavigationItem.addClass('point-active');
+				menuNavigationItems.removeClass('active');
+				activeMenuNavigationItem.addClass('active');
+			}
+		});
+	}
+
+	function smoothScroll(target) {
+		$('body, html').animate(
+			{ 'scrollTop': $(target).offset().top },
+			600
+		);
+	}
+});
+
+//  ---------------------------------------- smooth nav scroll -----------------------------------------------
+
+    </script>
 </body>
 
 </html>

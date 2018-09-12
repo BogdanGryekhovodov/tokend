@@ -1,0 +1,54 @@
+site_name: User Guide
+
+theme:
+  name: null
+  custom_dir: 'mkdocs-material/material'
+  logo: 'images/logo.svg'
+
+  language: en
+  palette: false
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  feature: false
+
+extra_css:
+- 'stylesheets/extra.css'
+- 'stylesheets/coreed61.css'
+- 'stylesheets/mained61.css'
+- 'stylesheets/paneled61.css'
+
+use_directory_urls: false
+
+nav:
+    - Sign in/Sign out: index.md
+    - Recover an account: recover-an-account.md
+    - Registration: registration.md
+    - Crowdfunding campaigns:
+        - Overview: ./Crowdfunding-campaigns/overview.md
+        - Crowdfunding campaign creation: ./Crowdfunding-campaigns/crowdfunding-campaign-creation.md
+        - How to access your crowdfunding campaign: ./Crowdfunding-campaigns/how-to-access-your-crowdfunding-campaign.md
+        - Fundraiser-investors communication: ./Crowdfunding-campaigns/fundraiser-investors-communication.md
+        - Update the crowdfunding creation request: ./Crowdfunding-campaigns/update-the-crowdfunding-creation-request.md
+    - User-issued tokens:
+        - Overview: ./User-issued-tokens/overview.md
+        - Token creation: ./User-issued-tokens/token-creation.md
+        - The two ways to pre-issue tokens: ./User-issued-tokens/the-two-ways-to-pre-issue-tokens.md
+        - Upload the pre-issuance file to the platform: ./User-issued-tokens/upload-the-pre-issuance-file-to-the-platform.md
+        - The two ways to issue tokens: ./User-issued-tokens/the-two-ways-to-issue-tokens.md
+        - Manual issuance: ./User-issued-tokens/manual-issuance.md
+        - Properties of user-issued tokens: ./User-issued-tokens/properties-of-user-issued-tokens.md
+        - Check the state of the requests: ./User-issued-tokens/check-the-state-of-the-requests.md
+        - Update the token creation request: ./User-issued-tokens/update-the-token-creation-request.md
+    - Trade:
+        - Overview: ./Trade/overview.md
+        - Cancel an open order: ./Trade/cancel-an-open-order.md
+        - Create orders in one click: ./Trade/create-orders-in-one-click.md
+    - Wallet:
+        - Deposit: ./Wallet/Deposit.md
+        - Withdraw: ./Wallet/Withdraw.md
+        - Transfer tokens between the accounts: ./Wallet/Transfer-tokens-between-the-accounts.md
+        - Mass transfers: ./Wallet/Mass-transfers.md
+        - CSV file for mass transfers: ./Wallet/CSV-file-for-mass-transfers.md
+        - Dashboard: ./Wallet/Dashboard.md
+        - Add the token to your wallet: ./Wallet/Add-the-token-to-your-wallet.md
