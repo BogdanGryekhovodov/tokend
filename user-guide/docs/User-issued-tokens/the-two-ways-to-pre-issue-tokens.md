@@ -12,7 +12,7 @@ When making a token creation request a corporate user defines how the pre-issuan
 If a user selected **I want to make additional issuance later **check box [during the token creation](./token-creation.html)**, **then all the 1000 tokens will be pre-issued automatically after admin approved the token creation request.
 
 
-## Pre-issuance by several stages
+## <a name="pre-issuance"></a>Pre-issuance by several stages
 
 **_Example:_** a corporate user has created the token with the 1000 **_max issuance amount. _**
 

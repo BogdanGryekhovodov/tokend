@@ -16,4 +16,4 @@ _**Note:** it is impossible to recover an account in case the seed is lost, beca
 1.  In the **Password **box, type the new password to your account
 1.  In the **Confirm password **box, type the password again
 1.  Click **Recover**
-1.  You will be redirected to the **[Sign in](https://docs.google.com/document/d/1FdmTnHAeGjzhgHgve_Y8HmEu2fBfNwsJTprQHC7w2Tg/edit#heading=h.e5coys3uryb5) **page
+1.  You will be redirected to the **[Sign in](../user-account/sign-in-out.html) **page

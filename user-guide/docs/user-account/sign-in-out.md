@@ -21,6 +21,6 @@ _**Note:** it is highly recommended to enable 2FA to improve the security of you
 
 
 1.  In the upper-right corner of the page, click on the 
-![alt_text](images/sign-in/User-Guide0.png "image_tooltip")
+![alt_text](../images/sign-in/User-Guide0.png "image_tooltip")
 button
 1.  Click **Sign out**

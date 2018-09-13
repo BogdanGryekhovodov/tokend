@@ -25,12 +25,27 @@ nav:
         - Registration: ./user-account/registration.md
         - Sign in/Sign out: ./user-account/sign-in-out.md
         - Account recovery: ./user-account/recover-an-account.md
-    - Crowdfunding campaigns:
-        - Overview: ./Crowdfunding-campaigns/overview.md
-        - Crowdfunding campaign creation: ./Crowdfunding-campaigns/crowdfunding-campaign-creation.md
-        - How to access your crowdfunding campaign: ./Crowdfunding-campaigns/how-to-access-your-crowdfunding-campaign.md
-        - Fundraiser-investors communication: ./Crowdfunding-campaigns/fundraiser-investors-communication.md
-        - Update the crowdfunding creation request: ./Crowdfunding-campaigns/update-the-crowdfunding-creation-request.md
+
+    - Types of accounts: 
+        - Overview: ./types-of-accounts/overview.md
+        - Unverified account: ./types-of-accounts/unverified-account-general.md
+        - Verified individual account (General): ./types-of-accounts/verified-individual-account-general.md
+        - Corporate account: ./types-of-accounts/corporate-account.md
+        
+    - Verification (KYC): 
+        - Overview: ./verification-kyc/overview.md
+        - General account KYC: ./verification-kyc/general-account-kyc.md
+        - Corporate account KYC: ./verification-kyc/corporate-account-kyc.md
+        
+    - Wallet:
+        - Deposit: ./Wallet/Deposit.md
+        - Withdraw: ./Wallet/Withdraw.md
+        - Transfer tokens between the accounts: ./Wallet/Transfer-tokens-between-the-accounts.md
+        - Mass transfers: ./Wallet/Mass-transfers.md
+        - Create a CSV file for mass transfer: ./Wallet/CSV-file-for-mass-transfers.md
+        - Dashboard: ./Wallet/Dashboard.md
+        - Add the token to your wallet: ./Wallet/Add-the-token-to-your-wallet.md
+        
     - User-issued tokens:
         - Overview: ./User-issued-tokens/overview.md
         - Token creation: ./User-issued-tokens/token-creation.md
@@ -40,17 +55,39 @@ nav:
         - Properties of user-issued tokens: ./User-issued-tokens/properties-of-user-issued-tokens.md
         - Check the requests state: ./User-issued-tokens/check-the-state-of-the-requests.md
         - Update the token creation request: ./User-issued-tokens/update-the-token-creation-request.md
+        
+    - Offline application: 
+        - Overview: ./offline-application/overview.md
+        - Login to the offline application: ./offline-application/login-to-the-offline-application.md
+        - Keyfile generation: ./offline-application/keyfile-generation.md
+        - Pre-issuance file generation: ./offline-application/pre-issuance-file-generation.md
+        - Pre-issuance files review: ./offline-application/pre-issuance-file-review.md
+        - Change asset issuer: ./offline-application/change-asset-issuer.md
+        
+    - Crowdfunding campaigns:
+        - Overview: ./Crowdfunding-campaigns/overview.md
+        - Crowdfunding campaign creation: ./Crowdfunding-campaigns/crowdfunding-campaign-creation.md
+        - How to access your crowdfunding campaign: ./Crowdfunding-campaigns/how-to-access-your-crowdfunding-campaign.md
+        - Fundraiser-investors communication: ./Crowdfunding-campaigns/fundraiser-investors-communication.md
+        - Update the crowdfunding creation request: ./Crowdfunding-campaigns/update-the-crowdfunding-creation-request.md
+        
+    - Invest: 
+        - Overview: ./invest/overview.md
+        - Explore crowdfunding campaigns: ./invest/explore-crowdfunding-campaigns.md
+        - Invest in crowdfunding campaigns: ./invest/invest-in-crowdfunding-campaigns.md
+        - Update the investment amount: ./invest/update-the-investment-amount.md
+        - Cancel the investment: ./invest/cancel-the-investment.md
+        
     - Trade:
         - Overview: ./Trade/overview.md
         - Internal exchange interface: ./Trade/internal-exchange-interface.md
         - Place buy/sell orders: ./Trade/place-buy-sell-orders.md
         - Cancel an open order: ./Trade/cancel-an-open-order.md
         - Create orders in one click: ./Trade/create-orders-in-one-click.md
-    - Wallet:
-        - Deposit: ./Wallet/Deposit.md
-        - Withdraw: ./Wallet/Withdraw.md
-        - Transfer tokens between the accounts: ./Wallet/Transfer-tokens-between-the-accounts.md
-        - Mass transfers: ./Wallet/Mass-transfers.md
-        - Create a CSV file for mass transfer: ./Wallet/CSV-file-for-mass-transfers.md
-        - Dashboard: ./Wallet/Dashboard.md
-        - Add the token to your wallet: ./Wallet/Add-the-token-to-your-wallet.md
+        
+    - Settings: 
+        - Change the password: ./settings/change-the-password.md
+        - Enable 2FA: ./settings/enable-2fa.md
+        - Disable 2FA: ./settings/disable-2fa.md
+        - View the account ID: ./settings/view-the-account-id.md
+        - View the secret seed: ./settings/view-the-secret-seed.md
