@@ -3,7 +3,7 @@
 
 # Transfer tokens between the accounts
 
-**Note: **you can transfer tokens of both system assets and user-issued assets, BUT only if they are transferable**. **Admins and corporate users define this parameter when creating the asset _(admin flow is described in system assets management, user flow – in [custom tokens](https://docs.google.com/document/d/1_TGlJRS_O0n_FJbS0F-yl0nthGrNDpku17GlV5fmBaU/edit#))._
+**Note: **you can transfer tokens of both system assets and user-issued assets, BUT only if they are transferable**. **Admins and corporate users define this parameter when creating the asset _(admin flow is described in system assets management, user flow – in [custom tokens](../User-issued-tokens/overview.md))._
 
 **Case example: **you want to transfer 10 user-issued CSTT tokens to another address.
 

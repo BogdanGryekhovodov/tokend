@@ -12,4 +12,4 @@ In the navigation bar, go to **Dashboard **and select the **asset**. You will se
 *   All the operations fulfilled with the selected asset _(deposit, transfer, withdrawal, etc)_
 *   The details of all operations _(who is the sender and receiver, what is the amount, date, fees, etc)_
 
-_**Note**: To see a specific token in the dashboard you have to [add it to your wallet](#heading=h.o816rotyy5yl)._
+_**Note**: To see a specific token in the dashboard you have to [add it to your wallet](./Add-the-token-to-your-wallet.md)._

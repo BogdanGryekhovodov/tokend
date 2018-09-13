@@ -1,7 +1,7 @@
 
 
 
-# CSV file for mass transfers
+# Create a CSV file for mass transfer
 
 **CSV** file for mass transfers contain the following information: 
 
@@ -28,4 +28,4 @@ Your document may look as follows:
 
 
 
-_**Note:** save your file with the **CSV** extension and [upload the file](#heading=h.tquw9lf91pb7) to the platform._
+_**Note:** save your file with the **CSV** extension and [upload the file](./Mass-transfers.md) to the platform._

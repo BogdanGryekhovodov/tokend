@@ -5,7 +5,7 @@ There are two basic ways you can login to the offline application:
 
 
 
-1.  Via seed _(you get a seed when creating an account and can [view it in your Account Settings](https://docs.google.com/document/d/10FP0gzjQ8o_1S2INJewQ-B_nUq17K5LOPi9JJLwzdsY/edit#heading=h.uawwjxpgriou))_
+1.  Via seed _(you get a seed when creating an account and can [view it in your Account Settings](../settings/view-the-secret-seed.md))_
 1.  Via encrypted keyfile _(you can [generate the keyfile](./keyfile-generation.md) in an offline application before you  login into it)_
 
 

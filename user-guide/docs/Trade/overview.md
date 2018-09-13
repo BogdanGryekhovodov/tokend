@@ -7,8 +7,8 @@ The basic features for users are the following:
 
 
 
-*  [Monitor the open orders, market price, and trade history of the asset pairs](#heading=h.p2jpbzi8zkwk)
-*  [Place buy/sell orders](#heading=h.3cpbrg379vqs)
+*  [Monitor the open orders, market price, and trade history of the asset pairs](./internal-exchange-interface.md)
+*  [Place buy/sell orders](./place-buy-sell-orders.md)
 *  [Create orders in one click](./create-orders-in-one-click.html) _(basing on the existing orders that satisfy the user)_
 
 

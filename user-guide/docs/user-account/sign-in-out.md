@@ -7,8 +7,8 @@
 
 
 1.  Go to the **Sign in **page
-1.  In the **Email **box, type your email (if you don't have an account, check [how to register on the platform](#heading=h.qnzg857tyipj).)
-1.  In the **Password **box, type your password _(in case you forget or lost your password, you can set up a new one by passing the [account recovery](https://docs.google.com/document/d/1-SVmZLVLLid_Ky98yPI1n90IiBOxTYogzQRfAijph0k/edit#heading=h.isylwpvt3ra5).)_
+1.  In the **Email **box, type your email (if you don't have an account, check [how to register on the platform](./registration.md).)
+1.  In the **Password **box, type your password _(in case you forget or lost your password, you can set up a new one by passing the [account recovery](recover-an-account.md).)_
 1.  Click **Sign in**
 1.  If enabled, enter the 2FA in the **Verification code **box and click **Submit**
 1.  You're logged in

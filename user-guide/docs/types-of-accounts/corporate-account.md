@@ -1,6 +1,6 @@
 # Corporate account
 
-**_Description: _**a corporate user who has signed up to the platform and passed the verification (KYC) on behalf of the company, firm or enterprise _(not an individual). To learn more, check users' [verification (KYC)](https://docs.google.com/document/d/1HxecxkhmOvcH3QnzvfvW1GqZOPOaD-pfTiGH7vfBwBk/edit)._
+**_Description: _**a corporate user who has signed up to the platform and passed the verification (KYC) on behalf of the company, firm or enterprise _(not an individual). To learn more, check users' [verification (KYC)](../verification-kyc/overview.md)._
 
 **_Scope: _**
 

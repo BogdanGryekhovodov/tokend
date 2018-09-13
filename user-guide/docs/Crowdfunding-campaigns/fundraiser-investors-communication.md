@@ -4,11 +4,11 @@ A corporate user who has created and successfully launched their crowdfunding ca
 
 
 
-*   [Via short messages](#heading=h.oq18mb5vks3v)
-*  [By uploading any documents](#heading=h.tcmazl7nfurx) that may increase investors' confidence _(it may be any terms of use document, offering memorandum, etc)_
+*   [Via short messages](#messages)
+*  [By uploading any documents](#documents) that may increase investors' confidence _(it may be any terms of use document, offering memorandum, etc)_
 
 
-## Sharing short messages:
+## <a name="messages"></a>Sharing short messages:
 
 
 
@@ -21,7 +21,7 @@ A corporate user who has created and successfully launched their crowdfunding ca
 1.  Click **Confirm**
 
 
-## Sharing documents: 
+## <a name="documents"></a>Sharing documents: 
 
 
 

@@ -9,7 +9,7 @@
 1.  In the **Confirm password **box, type your password again
 1.  Click **Sign up _(you will be displayed a Seed dialogue box)_**
 1.  In the **Seed **box, click on the ![alt_text](../images/registration/eye.png "image_tooltip") button 
-1.  In the same box, copy the seed _(a seed is a secret data that proves your ownership of the account. It allows you to [restore the access to the account](https://docs.google.com/document/d/1FdmTnHAeGjzhgHgve_Y8HmEu2fBfNwsJTprQHC7w2Tg/edit#heading=h.64zujcwoje2y) in case you lost your password.)_
+1.  In the same box, copy the seed _(a seed is a secret data that proves your ownership of the account. It allows you to [restore the access to the account](./recover-an-account.md) in case you lost your password.)_
 1.  Put this **seed **into a safe and secret place _(it can be a decrypted file on your computer. **Important: **a person who has the seed controls the account, so NEVER expose it anywhere and store it securely)_
 1.  Go back to **Seed **dialogue box
 1.  In the **Validate seed **box, enter the copied seed

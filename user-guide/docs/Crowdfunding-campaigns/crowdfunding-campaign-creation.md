@@ -2,9 +2,9 @@
 
 # Crowdfunding campaign creation
 
-By this stage, the token which you plan to put up for sale on the campaign should already be [created](https://docs.google.com/document/d/1_TGlJRS_O0n_FJbS0F-yl0nthGrNDpku17GlV5fmBaU/edit#heading=h.35fo6wgg0wx2) and [pre-issued](https://docs.google.com/document/d/1_TGlJRS_O0n_FJbS0F-yl0nthGrNDpku17GlV5fmBaU/edit#heading=h.qcfsedu7xsv1).
+By this stage, the token which you plan to put up for sale on the campaign should already be [created](../User-issued-tokens/token-creation.md) and [pre-issued](../User-issued-tokens/upload-the-pre-issuance-file-to-the-platform.md).
 
-_**Note:** only corporate users can create their crowdfunding campaigns. To learn more, check the [types of accounts in TokenD](https://docs.google.com/document/u/1/d/1mcvPHWHwnDVOA00kIFKyP-VyFeOxDZ7ltrFnA0qCuM0/edit?usp=drive_web&ouid=104378834969986631558)._
+_**Note:** only corporate users can create their crowdfunding campaigns. To learn more, check the [types of accounts in TokenD](../types-of-accounts/overview.md)._
 
 
 ## Step-by-step
@@ -47,6 +47,6 @@ _**Note:** only corporate users can create their crowdfunding campaigns. To lear
 1.  In the **Full description **box, type the full description of your campaign, where you describe the underlying concept of your project
 1.  Click **Create fund**
 1.  Click **Confirm**
-1.  Wait for the admin approval _(the flow on the part of admin is described in the crowdfunding campaign management. **Note: **you can [check the state of your request ](https://docs.google.com/document/d/1_TGlJRS_O0n_FJbS0F-yl0nthGrNDpku17GlV5fmBaU/edit#heading=h.stfg6ql5puvp)and even [update it](./update-the-crowdfunding-creation-request.html) while it's pending)_
+1.  Wait for the admin approval _(the flow on the part of admin is described in the crowdfunding campaign management. **Note: **you can [check the state of your request ](../User-issued-tokens/check-the-state-of-the-requests.md)and even [update it](./update-the-crowdfunding-creation-request.html) while it's pending)_
 
-After your campaign has been confirmed, you can [monitor it on the Explore funds page](https://docs.google.com/document/d/1aUSxlTkSR6suFw9ZEdTRCCIsScEJw46Xgr7otGSIJSA/edit#heading=h.fedxzchwc4us)** **along with other users on the platform. There you can also [communicate](./fundraiser-investors-communication.html) with your potential and actual investors. You can also [ access your crowdfunding campaign](./how-to-access-your-crowdfunding-campaign.html) via **Requests.**
+After your campaign has been confirmed, you can [monitor it on the Explore funds page](../invest/explore-crowdfunding-campaigns.md)** **along with other users on the platform. There you can also [communicate](./fundraiser-investors-communication.html) with your potential and actual investors. You can also [ access your crowdfunding campaign](./how-to-access-your-crowdfunding-campaign.html) via **Requests.**

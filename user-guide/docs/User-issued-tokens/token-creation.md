@@ -22,7 +22,7 @@ _Note: Token creation is just an announcement that states the existence of a tok
 1.  In the **Upload terms, **upload the terms of use file _(a pdf document that states the terms of use for your token)_
 1.  Select/clear the **I want to make additional issuance later **check box _(to learn more, check [two ways to pre-issue tokens](./the-two-ways-to-pre-issue-tokens.html))_
 1.  In the **Pre-issued asset signer **box, enter the public key which will later be used to pre-issue the tokens _(**Note: **this step is essential only if you selected the **I want to make additional issuance later **check box)_
-1.  In the **Initial pre-issued amount **box, enter the amount of coins that will be pre-issued automatically after admin approved the token creation request (You can set 0 as well. **_Note: this step is only essential if you selected the I want to make additional issuance later check box)_**
+1.  In the **Initial pre-issued amount **box, enter the amount of coins that will be pre-issued automatically after admin approved the token creation request (You can set 0 as well. _**Note:** this step is only essential if you selected the I want to make additional issuance later check box)_
 1.  Click **Submit** 
 1.  Wait for the admin approval _(the flow on the part of admin is described in user tokens management. **Note: **you can [check the state of your request](./check-the-state-of-the-requests.html) and even [update it ](./update-the-token-creation-request.html) while it's pending)._
 
