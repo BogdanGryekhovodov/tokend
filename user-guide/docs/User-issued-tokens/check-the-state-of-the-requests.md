@@ -1,6 +1,6 @@
 
 
-# Check the state of the requests
+# Check the requests state
 
 If you go to **Requests **in the navigation bar, you will be able to check the state of your requests by clicking on the following tabs:
 

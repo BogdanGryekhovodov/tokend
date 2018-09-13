@@ -9231,19 +9231,36 @@ padding-bottom: 0;
   }
 }
 
-// .coming-soooon {
-//   position: relative;
+.coming-soon-text {
+  top: -.5em;
+    margin-left: 5px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 1);
+}
 
-//   &::before {
-//     position: absolute;
-//     left: -50px;
-//     content: 'coming soon';
-//     font-size: 12px;
-//     border-radius: 3px;
-//     // border: 1px solid #616366;
-//     // background-color: #616366;
-//     color: #61636694;
-//     display: block;
-//     padding: 0 10px;
-//   }
-// }
+.coming-soon-category {
+  .panel-title {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .article_list>li>a,
+  .article_list>li>a>i{
+    color: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+  }
+}
+
+.coming-soon-block {
+  pointer-events: none;
+  filter: grayscale(1);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    content: 'coming soon';
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+  }
+}

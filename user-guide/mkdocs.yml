@@ -21,9 +21,10 @@ extra_css:
 use_directory_urls: false
 
 nav:
-    - Sign in/Sign out: index.md
-    - Recover an account: recover-an-account.md
-    - Registration: registration.md
+    - User account: 
+        - Registration: ./user-account/registration.md
+        - Sign in/Sign out: ./user-account/sign-in-out.md
+        - Account recovery: ./user-account/recover-an-account.md
     - Crowdfunding campaigns:
         - Overview: ./Crowdfunding-campaigns/overview.md
         - Crowdfunding campaign creation: ./Crowdfunding-campaigns/crowdfunding-campaign-creation.md
@@ -33,15 +34,16 @@ nav:
     - User-issued tokens:
         - Overview: ./User-issued-tokens/overview.md
         - Token creation: ./User-issued-tokens/token-creation.md
-        - The two ways to pre-issue tokens: ./User-issued-tokens/the-two-ways-to-pre-issue-tokens.md
-        - Upload the pre-issuance file to the platform: ./User-issued-tokens/upload-the-pre-issuance-file-to-the-platform.md
-        - The two ways to issue tokens: ./User-issued-tokens/the-two-ways-to-issue-tokens.md
-        - Manual issuance: ./User-issued-tokens/manual-issuance.md
+        - Token pre-issuance: ./User-issued-tokens/the-two-ways-to-pre-issue-tokens.md
+        - Pre-issuance file upload: ./User-issued-tokens/upload-the-pre-issuance-file-to-the-platform.md
+        - Token issuance: ./User-issued-tokens/the-two-ways-to-issue-tokens.md
         - Properties of user-issued tokens: ./User-issued-tokens/properties-of-user-issued-tokens.md
-        - Check the state of the requests: ./User-issued-tokens/check-the-state-of-the-requests.md
+        - Check the requests state: ./User-issued-tokens/check-the-state-of-the-requests.md
         - Update the token creation request: ./User-issued-tokens/update-the-token-creation-request.md
     - Trade:
         - Overview: ./Trade/overview.md
+        - Internal exchange interface: ./Trade/internal-exchange-interface.md
+        - Place buy/sell orders: ./Trade/place-buy-sell-orders.md
         - Cancel an open order: ./Trade/cancel-an-open-order.md
         - Create orders in one click: ./Trade/create-orders-in-one-click.md
     - Wallet:
@@ -49,6 +51,6 @@ nav:
         - Withdraw: ./Wallet/Withdraw.md
         - Transfer tokens between the accounts: ./Wallet/Transfer-tokens-between-the-accounts.md
         - Mass transfers: ./Wallet/Mass-transfers.md
-        - CSV file for mass transfers: ./Wallet/CSV-file-for-mass-transfers.md
+        - Create a CSV file for mass transfer: ./Wallet/CSV-file-for-mass-transfers.md
         - Dashboard: ./Wallet/Dashboard.md
         - Add the token to your wallet: ./Wallet/Add-the-token-to-your-wallet.md

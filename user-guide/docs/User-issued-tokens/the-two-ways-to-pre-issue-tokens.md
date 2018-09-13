@@ -1,6 +1,6 @@
 
 
-# The two ways to pre-issue tokens
+# Token pre-issuance
 
 When making a token creation request a corporate user defines how the pre-issuance of tokens will be provided – **with **or** without additional issuance later. **
 

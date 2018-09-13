@@ -88,14 +88,14 @@
         <div class="container">
             <div class="banner-slogan banner-slogan-hero">
                 <h1 class="slogan-title text-center">User Guide Categories</h1>
-                <div class="banner-search">
+                <!-- <div class="banner-search">
                     <form method="get">
                         <div class="input-icon">
-                            <input name="query" class="form-control input-lg" type="text" placeholder="Search For Question..." value="" required="">
+                            <input name="query" class="form-control input-lg" type="text" placeholder="Search" value="" required="">
                             <button class="btn btn-link btn-icon btn-lg btn--search" type="button"><i class="zmdi zmdi-search"></i></button>
                         </div>
                     </form>
-                </div>
+                </div> -->
             </div>
 
 
@@ -113,7 +113,7 @@
                             <span></span>
                         </div>
                     </button>
-                    <a href="/index.html" class="navbar-header">
+                    <a href="../../index.html" class="navbar-header">
                         <svg data-v-2a286e69="" class="logo-svg" xmlns="https://www.w3.org/2000/svg" width="94" height="31"><g
                                 class="svg-color" data-v-2a286e69="" fill="#3A4180" fill-rule="evenodd">
                                 <path data-v-2a286e69=""
@@ -125,23 +125,23 @@
                     <div class="navbar-container">
                         <ul class="nav navbar-nav navbar-main">
                             <li>
-                                <a href="#home" style="display: none;">Home</a>
+                                <a id="link-home" href="../../index.html#home" style="display: none;">Home</a>
                             </li>
                             <li>
-                                <a href="#pricing">Pricing</a>
+                                <a id="link-pricing" href="../../index.html#pricing">Pricing</a>
                             </li>
-
+                
                             <li>
-                                <a href="#benefits">Benefits</a>
-                            </li>
-                            <li>
-                                <a href="#full-featured">Features</a>
+                                <a id="link-benefits" href="../../index.html#benefits">Benefits</a>
                             </li>
                             <li>
-                                <a href="#resources">Resources</a>
+                                <a id="link-featured" href="../../index.html#full-featured">Features</a>
                             </li>
                             <li>
-                                <a href="#pricing">Contact us</a>
+                                <a href="../../resources.html">Resources</a>
+                            </li>
+                            <li>
+                                <a id="link-pricing2" href="../../index.html#pricing">Contact us</a>
                             </li>
                         </ul>
                     </div>
@@ -179,17 +179,17 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="panel panel-block">
-                                        <h2 class="panel-title h3 coming-soooon"><i class="zmdi zmdi-case"></i>User account</h2>
+                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>User account</h2>
                                         <ul class="list-styled list-icon article_list ">
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Registration</a></li>
-                                            <li><a href="./Wallet/Deposit.html"><i class="zmdi zmdi-file-text"></i>Sign in/Sign out</a></li>
-                                            <li><a href="./Wallet/Withdraw.html"><i class="zmdi zmdi-file-text"></i>Account recovery</a></li>
+                                            <li><a href="./user-account/registration.html"><i class="zmdi zmdi-file-text"></i>Registration</a></li>
+                                            <li><a href="./user-account/sign-in-out.html"><i class="zmdi zmdi-file-text"></i>Sign in/Sign out</a></li>
+                                            <li><a href="./user-account/recover-an-account.html"><i class="zmdi zmdi-file-text"></i>Account recovery</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    <div class="panel panel-block">
-                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Types of accounts</h2>
+                                    <div class="panel panel-block coming-soon-category">
+                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Types of accounts<sup class="coming-soon-text">coming soon</sup> </h2>
                                         <ul class="list-styled list-icon article_list">
                                             <li><a href="/docs/installing-fork-cms-on-debian-9"><i class="zmdi zmdi-file-text"></i>Overview</a></li>
                                             <li><a href="/docs/how-to-install-dokuwiki-on-debian-9"><i class="zmdi zmdi-file-text"></i>Unverified account</a></li>
@@ -199,8 +199,8 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    <div class="panel panel-block">
-                                        <h2 class="panel-title h3 coming-soooon"><i class="zmdi zmdi-case"></i>Verification (KYC)</h2>
+                                    <div class="panel panel-block coming-soon-category">
+                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Verification (KYC)<sup class="coming-soon-text">coming soon</sup></h2>
                                         <ul class="list-styled list-icon article_list">
                                             <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Overview</a></li>
                                             <li><a href="./Wallet/Deposit.html"><i class="zmdi zmdi-file-text"></i>General account KYC</a></li>
@@ -215,35 +215,35 @@
                                     <div class="panel panel-block">
                                         <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Wallet</h2>
                                         <ul class="list-styled list-icon article_list">
-                                            <li><a href="/docs/installing-fork-cms-on-debian-9"><i class="zmdi zmdi-file-text"></i>Deposit</a></li>
-                                            <li><a href="/docs/how-to-install-dokuwiki-on-debian-9"><i class="zmdi zmdi-file-text"></i>Withdraw</a></li>
-                                            <li><a href="/docs/how-to-install-dokuwiki-on-debian-9"><i class="zmdi zmdi-file-text"></i>Transfer tokens between the accounts</a></li>
-                                            <li><a href="/docs/how-to-install-dokuwiki-on-debian-9"><i class="zmdi zmdi-file-text"></i>Mass transfers</a></li>
-                                            <li><a href="/docs/how-to-install-dokuwiki-on-debian-9"><i class="zmdi zmdi-file-text"></i>Create a CSV file for mass transfer</a></li>
-                                            <li><a href="/docs/how-to-install-dokuwiki-on-debian-9"><i class="zmdi zmdi-file-text"></i>Dashboard</a></li>
-                                            <li><a href="/docs/how-to-install-dokuwiki-on-debian-9"><i class="zmdi zmdi-file-text"></i>Add the token to your wallet</a></li>
+                                            <li><a href="./Wallet/Deposit.html"><i class="zmdi zmdi-file-text"></i>Deposit</a></li>
+                                            <li><a href="./Wallet/Withdraw.html"><i class="zmdi zmdi-file-text"></i>Withdraw</a></li>
+                                            <li><a href="./Wallet/Transfer-tokens-between-the-accounts.html"><i class="zmdi zmdi-file-text"></i>Transfer tokens between the accounts</a></li>
+                                            <li><a href="./Wallet/Mass-transfers.html"><i class="zmdi zmdi-file-text"></i>Mass transfers</a></li>
+                                            <li><a href="./Wallet/CSV-file-for-mass-transfers.html"><i class="zmdi zmdi-file-text"></i>Create a CSV file for mass transfer</a></li>
+                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Dashboard</a></li>
+                                            <li><a href="./Wallet/Add-the-token-to-your-wallet.html"><i class="zmdi zmdi-file-text"></i>Add the token to your wallet</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="panel panel-block">
-                                        <h2 class="panel-title h3 coming-soooon"><i class="zmdi zmdi-case"></i>User-issued tokens</h2>
+                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>User-issued tokens</h2>
                                         <ul class="list-styled list-icon article_list">
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Overview</a></li>
-                                            <li><a href="./Wallet/Deposit.html"><i class="zmdi zmdi-file-text"></i>Token creation</a></li>
-                                            <li><a href="./Wallet/Withdraw.html"><i class="zmdi zmdi-file-text"></i>Token pre-issuance</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Pre-issuance file upload</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Token issuance</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Properties of user-issued tokens</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Check the requests state</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Update the token creation request</a></li>
+                                            <li><a href="./User-issued-tokens/overview.html"><i class="zmdi zmdi-file-text"></i>Overview</a></li>
+                                            <li><a href="./User-issued-tokens/token-creation.html"><i class="zmdi zmdi-file-text"></i>Token creation</a></li>
+                                            <li><a href="./User-issued-tokens/the-two-ways-to-pre-issue-tokens.html"><i class="zmdi zmdi-file-text"></i>Token pre-issuance</a></li>
+                                            <li><a href="./User-issued-tokens/upload-the-pre-issuance-file-to-the-platform.html"><i class="zmdi zmdi-file-text"></i>Pre-issuance file upload</a></li>
+                                            <li><a href="./User-issued-tokens/the-two-ways-to-issue-tokens.html"><i class="zmdi zmdi-file-text"></i>Token issuance</a></li>
+                                            <li><a href="./User-issued-tokens/properties-of-user-issued-tokens.html"><i class="zmdi zmdi-file-text"></i>Properties of user-issued tokens</a></li>
+                                            <li><a href="./User-issued-tokens/check-the-state-of-the-requests.html"><i class="zmdi zmdi-file-text"></i>Check the requests state</a></li>
+                                            <li><a href="./User-issued-tokens/update-the-token-creation-request.html"><i class="zmdi zmdi-file-text"></i>Update the token creation request</a></li>
 
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    <div class="panel panel-block">
-                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Offline application</h2>
+                                    <div class="panel panel-block coming-soon-category">
+                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Offline application<sup class="coming-soon-text">coming soon</sup></h2>
                                         <ul class="list-styled list-icon article_list">
                                             <li><a href="/docs/installing-fork-cms-on-debian-9"><i class="zmdi zmdi-file-text"></i>Login to the offline application</a></li>
                                             <li><a href="/docs/installing-fork-cms-on-debian-9"><i class="zmdi zmdi-file-text"></i>Keyfile generation</a></li>
@@ -259,17 +259,17 @@
                                     <div class="panel panel-block">
                                         <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Crowdfunding campaigns</h2>
                                         <ul class="list-styled list-icon article_list">
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Overview</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Crowdfunding campaign creation</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>How to access your crowdfunding campaign</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Fundraiser-investors communication</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Update the crowdfunding creation request</a></li>
+                                            <li><a href="./Crowdfunding-campaigns/overview.html"><i class="zmdi zmdi-file-text"></i>Overview</a></li>
+                                            <li><a href="./Crowdfunding-campaigns/crowdfunding-campaign-creation.html"><i class="zmdi zmdi-file-text"></i>Crowdfunding campaign creation</a></li>
+                                            <li><a href="./Crowdfunding-campaigns/how-to-access-your-crowdfunding-campaign.html"><i class="zmdi zmdi-file-text"></i>How to access your crowdfunding campaign</a></li>
+                                            <li><a href="./Crowdfunding-campaigns/fundraiser-investors-communication.html"><i class="zmdi zmdi-file-text"></i>Fundraiser-investors communication</a></li>
+                                            <li><a href="./Crowdfunding-campaigns/update-the-crowdfunding-creation-request.html"><i class="zmdi zmdi-file-text"></i>Update the crowdfunding creation request</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    <div class="panel panel-block">
-                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Invest</h2>
+                                    <div class="panel panel-block coming-soon-category">
+                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Invest<sup class="coming-soon-text">coming soon</sup></h2>
                                         <ul class="list-styled list-icon article_list">
                                             <li><a href="/docs/installing-fork-cms-on-debian-9"><i class="zmdi zmdi-file-text"></i>Overview</a></li>
                                             <li><a href="/docs/how-to-install-dokuwiki-on-debian-9"><i class="zmdi zmdi-file-text"></i>Cancel an open order</a></li>
@@ -281,19 +281,19 @@
                                     <div class="panel panel-block">
                                         <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Trade</h2>
                                         <ul class="list-styled list-icon article_list">
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Overview</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Internal exchange interface</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Place buy/sell orders</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Cancel an open order</a></li>
-                                            <li><a href="./Wallet/Dashboard.html"><i class="zmdi zmdi-file-text"></i>Create orders in one click</a></li>
+                                            <li><a href="./Trade/overview.html"><i class="zmdi zmdi-file-text"></i>Overview</a></li>
+                                            <li><a href="./Trade/internal-exchange-interface.html"><i class="zmdi zmdi-file-text"></i>Internal exchange interface</a></li>
+                                            <li><a href="./Trade/place-buy-sell-orders.html"><i class="zmdi zmdi-file-text"></i>Place buy/sell orders</a></li>
+                                            <li><a href="./Trade/cancel-an-open-order.html"><i class="zmdi zmdi-file-text"></i>Cancel an open order</a></li>
+                                            <li><a href="./Trade/create-orders-in-one-click.html"><i class="zmdi zmdi-file-text"></i>Create orders in one click</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <div class="panel panel-block">
-                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Settings</h2>
+                                    <div class="panel panel-block coming-soon-category">
+                                        <h2 class="panel-title h3"><i class="zmdi zmdi-case"></i>Settings<sup class="coming-soon-text">coming soon</sup></h2>
                                         <ul class="list-styled list-icon article_list">
                                             <li><a href="/docs/installing-fork-cms-on-debian-9"><i class="zmdi zmdi-file-text"></i>Change the password </a></li>
                                             <li><a href="/docs/installing-fork-cms-on-debian-9"><i class="zmdi zmdi-file-text"></i>Enable 2FA</a></li>
