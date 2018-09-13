@@ -8969,15 +8969,3 @@ input[type=number]::-webkit-outer-spin-button {
 
 .product-guide-categories .zmdi-file-text {
   font-size: 18px; }
-
-.coming-soooon {
-  position: relative; }
-  .coming-soooon::before {
-    position: absolute;
-    left: -50px;
-    content: 'coming soon';
-    font-size: 12px;
-    border-radius: 3px;
-    color: #61636694;
-    display: block;
-    padding: 0 10px; }
