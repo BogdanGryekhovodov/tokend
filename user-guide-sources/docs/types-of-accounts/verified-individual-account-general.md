@@ -6,6 +6,6 @@
 
 
 
-*   can conduct basic operations with assets (trade, transfer, deposit/withdraw) 
-*   can participate (invest) in all crowdfunding campaigns of corporate users
+*   can conduct basic operations with assets ([trade](../Trade/overview.md), [transfer](../Wallet/Transfer-tokens-between-the-accounts.md), [deposit](../Wallet/Deposit.md)/[withdraw](../Wallet/Withdraw.md))
+*   can [participate (invest) in all crowdfunding campaigns](../invest/invest-in-crowdfunding-campaigns.md) of corporate users
 *   cannot create their tokens and crowdfunding campaigns
