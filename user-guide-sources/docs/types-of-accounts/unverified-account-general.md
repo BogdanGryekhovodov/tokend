@@ -1,6 +1,6 @@
 
 
-# Unverified account (General)
+# Unverified account
 
 **_Description: _**an individual person who has signed up to the platform but hasn't passed any user verification (KYC) procedure. _To learn more, check users' [verification (KYC)](../verification-kyc/overview.md)._
 
