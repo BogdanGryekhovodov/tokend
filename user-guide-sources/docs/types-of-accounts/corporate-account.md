@@ -9,4 +9,4 @@
 *   can conduct basic operations with assets (trade, transfer, deposit/withdraw)
 *   can participate (invest) in crowdfunding campaigns of other corporate users
 *   can create, pre-issue, and issue tokens on the platform
-*   can create crowdfunding campaigns
+*   can [create crowdfunding campaigns](../Crowdfunding-campaigns/crowdfunding-campaign-creation.md).
